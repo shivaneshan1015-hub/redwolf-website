@@ -1,0 +1,215 @@
+{
+  "brand": {
+    "name": "Redwolf",
+    "tagline": "Digital Solutions for All Your Problems",
+    "positioning": "Technology + Consulting + Digital Solutions",
+    "headline": "Your business has a problem.\nWe build the digital solution.",
+    "subheadline": "Redwolf combines strategy, branding, marketing, web engineering, and software to help businesses build, scale, and automate their digital presence worldwide.",
+    "deliveryModel": "Based in India. Built for businesses anywhere."
+  },
+  "capabilities": [
+    {
+      "id": "strategy",
+      "name": "Strategy",
+      "tagline": "Digital Transformation & Business Alignment",
+      "description": "We diagnose root commercial bottlenecks, map optimal digital architectures, and build actionable roadmaps for execution.",
+      "problemAddressed": "Unclear digital direction, wasted ad spend, & fragmented tech tools.",
+      "solution": "Comprehensive digital audit & target architecture blueprint.",
+      "icon": "Compass"
+    },
+    {
+      "id": "brand",
+      "name": "Brand",
+      "tagline": "Positioning, Visual Identity & Tone",
+      "description": "Crafting high-authority brand identities that build immediate trust with global clients.",
+      "problemAddressed": "Outdated brand image & lack of premium market positioning.",
+      "solution": "Complete visual identity system, brand guidelines & messaging strategy.",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "tagline": "Performance, SEO & Lead Generation",
+      "description": "Connecting your value proposition to high-intent global audiences through multi-channel growth systems.",
+      "problemAddressed": "Low online visibility & inconsistent lead flow.",
+      "solution": "Data-driven SEO, conversion rate optimization & targeted campaigns.",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "web",
+      "name": "Web",
+      "tagline": "Next.js Web Applications & Digital Platforms",
+      "description": "Engineering lightning-fast, conversion-optimized web applications with modern design aesthetics.",
+      "problemAddressed": "Slow, unresponsive, or basic websites that fail to convert visitors.",
+      "solution": "Custom full-stack web applications with high-performance frameworks.",
+      "icon": "Globe"
+    },
+    {
+      "id": "software",
+      "name": "Software",
+      "tagline": "Custom Business Systems & Automation",
+      "description": "Building bespoke internal tools, workflow automation engines, and custom operational software.",
+      "problemAddressed": "Manual data entry, fragmented spreadsheets, and operational friction.",
+      "solution": "Tailored web software, internal dashboards, and API integrations.",
+      "icon": "Cpu"
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "tagline": "Product Design, MVP Development & Scaling",
+      "description": "Taking software products from early conceptual wireframes to scalable multi-tenant Cloud applications.",
+      "problemAddressed": "Turning software ideas into market-ready SaaS products efficiently.",
+      "solution": "Full-lifecycle SaaS product architecture, UI/UX, and cloud engineering.",
+      "icon": "Layers"
+    }
+  ],
+  "problems": [
+    {
+      "id": "brand",
+      "label": "I need to build my brand",
+      "response": "Your brand should communicate authority before you speak a word. We craft positioning, visual identity, and messaging that establish immediate trust.",
+      "recommendedCapability": "Brand Strategy & Visual Systems",
+      "ctaText": "Explore Brand Solutions"
+    },
+    {
+      "id": "visibility",
+      "label": "I need more visibility",
+      "response": "Visibility is earned through relevance and search intent. We deploy technical SEO, high-authority positioning, and growth strategies to place you front and center.",
+      "recommendedCapability": "Performance Marketing & SEO Systems",
+      "ctaText": "Explore Marketing Solutions"
+    },
+    {
+      "id": "website",
+      "label": "I need a better website",
+      "response": "Your website shouldn't just look nice—it should work as hard as your business. We build Next.js applications that communicate value and drive conversions.",
+      "recommendedCapability": "Web Application Engineering",
+      "ctaText": "Explore Web Solutions"
+    },
+    {
+      "id": "leads",
+      "label": "I need more leads",
+      "response": "Lead generation requires eliminating user friction. We combine high-converting UX, targeted lead capture flows, and automated CRM integrations.",
+      "recommendedCapability": "Conversion Rate & Growth Systems",
+      "ctaText": "Explore Lead Systems"
+    },
+    {
+      "id": "automation",
+      "label": "I need to automate my business",
+      "response": "Repetitive tasks waste valuable talent. We build custom Node.js automation pipelines, workflow tools, and API connectors that streamline your daily operations.",
+      "recommendedCapability": "Custom Software & Automation",
+      "ctaText": "Explore Business Automation"
+    },
+    {
+      "id": "software",
+      "label": "I want to build software",
+      "response": "Building custom software requires balancing speed with scalable architecture. We engineer custom web software tailored to your specific business logic.",
+      "recommendedCapability": "Custom Web Applications",
+      "ctaText": "Explore Software Engineering"
+    },
+    {
+      "id": "saas",
+      "label": "I have a SaaS idea",
+      "response": "From MVP to production-ready platform, we help founder vision transform into resilient cloud software with seamless user experience.",
+      "recommendedCapability": "SaaS Product Development",
+      "ctaText": "Explore SaaS Architecture"
+    },
+    {
+      "id": "unsure",
+      "label": "I'm not sure yet",
+      "response": "That's completely fine. Start with the problem. Our consulting approach helps identify where digital leverage will yield the highest return for your business.",
+      "recommendedCapability": "Strategic Consultation",
+      "ctaText": "Talk to Redwolf"
+    }
+  ],
+  "selectedWork": [
+    {
+      "id": "sri-nandha",
+      "client": "Sri Nantha Glasses & Stickers",
+      "industry": "Automotive & Industrial Manufacturing",
+      "challenge": "A major automotive glass manufacturer needed a high-performance web platform to present specialized laminated windshields, pre-framed bus window assemblies, and custom stickering across 19 South Indian districts.",
+      "intervention": "Redwolf engineered a high-converting Next.js web application with localized regional SEO, structured Product Schemas (AEO/GEO), and zero-friction WhatsApp quotation integration.",
+      "solution": "Digital Brand Identity + Full-Stack Next.js Web Platform + Local SEO Architecture",
+      "highlights": ["100% SEO/AEO/GEO Audit Score", "Instant WhatsApp Pre-Filled Lead Generation", "Interactive Product Catalog"]
+    },
+    {
+      "id": "mahalakshmi-tours",
+      "client": "Mahalakshmi Tours & Travels",
+      "industry": "Travel & Commercial Logistics",
+      "challenge": "Outdated legacy website failed to showcase luxury bus charter services, route availability, and corporate fleet bookings effectively.",
+      "intervention": "Redwolf redesigned the brand experience, engineered a modern dynamic portal with route discovery tools and instant fleet inquiry integration.",
+      "solution": "Brand Positioning + Fleet Showcase Portal + Automated Inquiry Routing",
+      "highlights": ["Mobile-First Fleet Explorer", "Instant Route Enquiry Engine", "Enhanced B2B Corporate Trust"]
+    },
+    {
+      "id": "gateway-holidays",
+      "client": "Gateway Holidays",
+      "industry": "Global Tourism & Hospitality",
+      "challenge": "High bounce rates on destination packages and fragmented customer inquiry tracking.",
+      "intervention": "Redwolf architected an immersive, visually captivating web platform highlighting curated itinerary packages and structured customer onboarding.",
+      "solution": "Immersive Web UX + Itinerary Showcase + Centralized Booking System",
+      "highlights": ["Interactive Destination Catalog", "Seamless Multi-Tier Inquiry Funnel", "High-Engagement Visual Layout"]
+    }
+  ],
+  "productShowcase": {
+    "name": "Easy Track",
+    "tagline": "A product built by Redwolf",
+    "headline": "Streamlined Operations & Fleet Tracking for Modern Enterprises",
+    "description": "Easy Track is an enterprise management and dispatch tracking platform designed by Redwolf. Built to solve operational opacity in logistics, fleet management, and workflow dispatching.",
+    "problemAddressed": "Scattered spreadsheets, manual phone updates, and lack of real-time visibility in fleet and dispatch logistics.",
+    "features": [
+      "Real-Time Vehicle & Job Status Dashboard",
+      "Automated WhatsApp & SMS Customer Notifications",
+      "Digital Trip Sheets & Revenue Analytics",
+      "Role-Based Driver & Admin Portals"
+    ]
+  },
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Understand",
+      "description": "We dive deep into your business model, operational friction points, customer expectations, and competitive landscape."
+    },
+    {
+      "step": "02",
+      "title": "Find the Path",
+      "description": "We define the exact digital architecture—combining strategy, branding, marketing, web software, or SaaS tools."
+    },
+    {
+      "step": "03",
+      "title": "Build",
+      "description": "Our engineering and design team executes the solution with high aesthetic precision and clean, production-grade code."
+    },
+    {
+      "step": "04",
+      "title": "Launch",
+      "description": "We deploy your solution to high-reliability cloud infrastructure with full analytics, SEO, and performance optimization."
+    },
+    {
+      "step": "05",
+      "title": "Improve",
+      "description": "We continuously analyze real-world metrics, iterate on user feedback, and scale the technology with your business growth."
+    }
+  ],
+  "principles": [
+    {
+      "title": "Think before we build.",
+      "description": "Strategy comes before execution. We never write a line of code or launch a campaign without defining the commercial objective."
+    },
+    {
+      "title": "Solve the actual problem.",
+      "description": "We don't force businesses into predefined templates or unnecessary tech stacks. We recommend only what solves your root friction."
+    },
+    {
+      "title": "Build for the real world.",
+      "description": "A beautiful design is useless if it fails in daily operations. We build robust, accessible, high-performance digital tools."
+    },
+    {
+      "title": "One problem. Multiple capabilities.",
+      "description": "Branding, marketing, web engineering, and software development work together as a single unified system under Redwolf."
+    },
+    {
+      "title": "Build for what comes next.",
+      "description": "Our solutions are engineered with modular scalability, allowing your digital architecture to grow effortlessly as your business expands."
+    }
+  ]
+}
