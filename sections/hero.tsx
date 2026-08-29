@@ -83,11 +83,11 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="pt-6 flex items-center justify-center lg:justify-start gap-6 text-xs text-slate-400 border-t border-slate-800/80 mt-6"
+              className="pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs text-slate-400 border-t border-slate-800/80 mt-6"
             >
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-red-500" />
-                <span>Strategy + Web + SaaS</span>
+                <span className="font-semibold text-slate-200">Digital Marketing • SEO/AEO/GEO • Ads • SaaS</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-slate-600" />
@@ -109,7 +109,7 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                 <div className="flex items-center gap-2">
                   <Terminal className="h-4 w-4 text-red-500" />
                   <span className="font-mono text-xs uppercase tracking-widest text-slate-300 font-bold">
-                    REDWOLF SYSTEM ARCHITECTURE
+                    REDWOLF GROWTH ARCHITECTURE
                   </span>
                 </div>
                 <div className="flex gap-1.5">
@@ -130,8 +130,8 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                     01
                   </div>
                   <div>
-                    <div className="text-xs font-mono text-red-400 font-bold uppercase">PROBLEM IDENTIFIED</div>
-                    <div className="text-sm font-semibold text-white">Business Growth & Operational Bottleneck</div>
+                    <div className="text-xs font-mono text-red-400 font-bold uppercase">DIAGNOSTIC</div>
+                    <div className="text-sm font-semibold text-white">Low Search Traffic & Zero AI Visibility</div>
                   </div>
                 </div>
 
@@ -141,8 +141,8 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                     02
                   </div>
                   <div>
-                    <div className="text-xs font-mono text-amber-400 font-bold uppercase">REDWOLF THINKING</div>
-                    <div className="text-sm font-semibold text-white">Digital Strategy + Tech Architecture</div>
+                    <div className="text-xs font-mono text-amber-400 font-bold uppercase">MARKETING & TECH ENGINE</div>
+                    <div className="text-sm font-semibold text-white">SEO + AEO + GEO + Paid Ad Funnel</div>
                   </div>
                 </div>
 
@@ -152,8 +152,8 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                     03
                   </div>
                   <div>
-                    <div className="text-xs font-mono text-emerald-400 font-bold uppercase">PRODUCTION DEPLOYMENT</div>
-                    <div className="text-sm font-semibold text-white">High-Converting Web App / Software</div>
+                    <div className="text-xs font-mono text-emerald-400 font-bold uppercase">REVENUE & PRODUCT RESULT</div>
+                    <div className="text-sm font-semibold text-white">#1 Rankings + EasyTrack SaaS Stack</div>
                   </div>
                 </div>
               </div>

@@ -27,15 +27,15 @@ export function EnquiryModal({ isOpen, onClose, initialProblemId }: EnquiryModal
   const [submitted, setSubmitted] = useState(false);
 
   const problemOptions = [
-    "Build a brand",
-    "Improve digital presence",
-    "Build a website",
-    "Generate leads",
-    "Improve marketing",
-    "Automate a process",
-    "Build custom software",
-    "Build a SaaS product",
-    "Something else"
+    "SEO, AEO & GEO Search Dominance",
+    "Performance Ads (Google & Meta Ads)",
+    "Local SEO & Google Maps Ranking",
+    "Build a brand & visual identity",
+    "Build a high-converting website",
+    "Automate business workflow",
+    "Build custom web software",
+    "Build a SaaS product (like EasyTrack)",
+    "Full Digital Marketing Audit"
   ];
 
   const handleNext = () => {

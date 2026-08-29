@@ -6,10 +6,11 @@ import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 
 const navLinks = [
+  { name: "Marketing & SEO", href: "#marketing" },
   { name: "System", href: "#system" },
   { name: "Problem Finder", href: "#problem-finder" },
   { name: "Selected Work", href: "#work" },
-  { name: "Easy Track", href: "#product" },
+  { name: "Easy Track SaaS", href: "#product" },
   { name: "Methodology", href: "#methodology" },
 ];
 

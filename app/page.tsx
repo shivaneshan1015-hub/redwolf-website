@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/sections/hero";
+import { DigitalMarketingSection } from "@/sections/digital-marketing";
 import { RedwolfSystemSection } from "@/sections/redwolf-system";
 import { ProblemFinderSection } from "@/sections/problem-finder";
 import { SelectedWorkSection } from "@/sections/selected-work";
@@ -34,6 +35,7 @@ export default function Home() {
 
       <main className="flex-1">
         <HeroSection onOpenEnquiry={handleOpenEnquiry} />
+        <DigitalMarketingSection onOpenEnquiry={handleOpenEnquiry} />
         <RedwolfSystemSection onOpenEnquiry={handleOpenEnquiry} />
         <ProblemFinderSection onOpenEnquiryWithProblem={handleOpenEnquiryWithProblem} />
         <SelectedWorkSection onOpenEnquiry={handleOpenEnquiry} />

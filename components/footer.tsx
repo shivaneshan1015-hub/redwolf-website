@@ -60,15 +60,16 @@ export function Footer() {
           {/* Capabilities */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="font-heading font-extrabold text-xs text-white uppercase tracking-wider">
-              Capabilities
+              Services & SaaS
             </h4>
             <div className="flex flex-wrap gap-1.5 text-[11px] font-mono">
-              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Strategy</span>
-              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Brand</span>
-              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Marketing</span>
-              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Web App</span>
-              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Software</span>
-              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">SaaS</span>
+              <span className="bg-slate-900 border border-slate-800 text-red-400 px-2.5 py-1 rounded font-bold">SEO</span>
+              <span className="bg-slate-900 border border-slate-800 text-amber-400 px-2.5 py-1 rounded font-bold">AEO</span>
+              <span className="bg-slate-900 border border-slate-800 text-emerald-400 px-2.5 py-1 rounded font-bold">GEO</span>
+              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Meta & Google Ads</span>
+              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Local SEO</span>
+              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Next.js Web Apps</span>
+              <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">EasyTrack SaaS</span>
             </div>
           </div>
         </div>
