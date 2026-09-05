@@ -1,66 +1,80 @@
 {
+  "countries": {
+    "IN": { "countryCode": "IN", "countryName": "India", "flag": "🇮🇳", "currency": "INR", "symbol": "₹", "rateVsINR": 1, "formatLocale": "en-IN" },
+    "US": { "countryCode": "US", "countryName": "United States", "flag": "🇺🇸", "currency": "USD", "symbol": "$", "rateVsINR": 0.012, "formatLocale": "en-US" },
+    "GB": { "countryCode": "GB", "countryName": "United Kingdom", "flag": "🇬🇧", "currency": "GBP", "symbol": "£", "rateVsINR": 0.0094, "formatLocale": "en-GB" },
+    "EU": { "countryCode": "EU", "countryName": "European Union", "flag": "🇪🇺", "currency": "EUR", "symbol": "€", "rateVsINR": 0.011, "formatLocale": "de-DE" },
+    "AE": { "countryCode": "AE", "countryName": "United Arab Emirates", "flag": "🇦🇪", "currency": "AED", "symbol": "AED ", "rateVsINR": 0.044, "formatLocale": "ar-AE" },
+    "CA": { "countryCode": "CA", "countryName": "Canada", "flag": "🇨🇦", "currency": "CAD", "symbol": "CA$", "rateVsINR": 0.016, "formatLocale": "en-CA" },
+    "AU": { "countryCode": "AU", "countryName": "Australia", "flag": "🇦🇺", "currency": "AUD", "symbol": "A$", "rateVsINR": 0.018, "formatLocale": "en-AU" },
+    "SG": { "countryCode": "SG", "countryName": "Singapore", "flag": "🇸🇬", "currency": "SGD", "symbol": "S$", "rateVsINR": 0.016, "formatLocale": "en-SG" }
+  },
   "currencies": {
     "INR": { "code": "INR", "symbol": "₹", "name": "Indian Rupee", "rateVsINR": 1, "formatLocale": "en-IN" },
     "USD": { "code": "USD", "symbol": "$", "name": "US Dollar", "rateVsINR": 0.012, "formatLocale": "en-US" },
     "EUR": { "code": "EUR", "symbol": "€", "name": "Euro", "rateVsINR": 0.011, "formatLocale": "de-DE" },
     "GBP": { "code": "GBP", "symbol": "£", "name": "British Pound", "rateVsINR": 0.0094, "formatLocale": "en-GB" },
-    "AED": { "code": "AED", "symbol": "AED ", "name": "UAE Dirham", "rateVsINR": 0.044, "formatLocale": "ar-AE" }
+    "AED": { "code": "AED", "symbol": "AED ", "name": "UAE Dirham", "rateVsINR": 0.044, "formatLocale": "ar-AE" },
+    "CAD": { "code": "CAD", "symbol": "CA$", "name": "Canadian Dollar", "rateVsINR": 0.016, "formatLocale": "en-CA" },
+    "AUD": { "code": "AUD", "symbol": "A$", "name": "Australian Dollar", "rateVsINR": 0.018, "formatLocale": "en-AU" },
+    "SGD": { "code": "SGD", "symbol": "S$", "name": "Singapore Dollar", "rateVsINR": 0.016, "formatLocale": "en-SG" }
   },
   "servicePlans": [
     {
-      "id": "starter",
-      "name": "Starter Organic & Local",
-      "badge": "Small Business",
+      "id": "micro-sme",
+      "name": "Micro SME & Local Starter",
+      "badge": "Small Business Special",
       "popular": false,
-      "tagline": "Kickstart Local Search & Foundational SEO",
-      "priceINR": 24999,
-      "priceUSD": 299,
+      "tagline": "Affordable Growth for Local Shops, Service Providers & Early Startups",
+      "priceINR": 14999,
+      "priceUSD": 189,
       "period": "month",
       "features": [
-        "Local SEO & Google Business Profile",
-        "Technical SEO & Speed Optimization",
-        "Targeted Keyword Optimization (Up to 15)",
-        "Monthly Ranking & Organic Growth Report",
-        "Standard Email Support"
+        "Local SEO & Google Business Profile Optimization",
+        "Technical SEO & Page Speed Audit",
+        "10 High-Intent Keyword Optimization",
+        "Basic Voice & AEO Schema Setup",
+        "Monthly Ranking & Traffic Performance Report",
+        "Standard Email & WhatsApp Support"
       ],
-      "ctaText": "Get Starter Plan"
+      "ctaText": "Start Micro SME Plan"
     },
     {
-      "id": "growth",
-      "name": "Tri-Engine Growth Stack",
-      "badge": "Most Popular",
+      "id": "sme-growth",
+      "name": "SME Industrial Growth Stack",
+      "badge": "Most Popular for SMEs",
       "popular": true,
-      "tagline": "Complete SEO + AEO + GEO + Meta & Google Ads",
-      "priceINR": 59999,
-      "priceUSD": 749,
+      "tagline": "Complete SEO + Voice AEO + AI GEO + Meta/Google Ads Funnel",
+      "priceINR": 34999,
+      "priceUSD": 429,
       "period": "month",
       "features": [
-        "Tri-Engine Dominance (SEO + Voice AEO + AI GEO)",
-        "Google & Meta Paid Ad Campaign Setup & Optimization",
-        "ChatGPT, Perplexity & Gemini Schema Mapping",
-        "Social Media & Brand Growth Strategy",
-        "High-Authority Link Building & Content Silos",
-        "Dedicated Growth Manager & Weekly Reporting"
+        "Tri-Engine Dominance (Google SEO + Siri/Alexa AEO + AI GEO)",
+        "Google Search & Meta (FB/IG) Paid Ad Campaign Management",
+        "ChatGPT, Perplexity & Gemini Entity Knowledge Mapping",
+        "District & Regional High-Intent Landing Pages",
+        "High-Authority Backlink Acquisition & Content Silos",
+        "Dedicated Growth Manager & Bi-Weekly Strategy Sync"
       ],
-      "ctaText": "Get Growth Dominance"
+      "ctaText": "Claim SME Growth Plan"
     },
     {
-      "id": "enterprise",
-      "name": "Custom App & Enterprise SaaS",
-      "badge": "Full Engineering",
+      "id": "enterprise-stack",
+      "name": "Custom Web App & Enterprise Scale",
+      "badge": "Full Engineering + Marketing",
       "popular": false,
-      "tagline": "Custom Web & Mobile App Building + Full Scale Marketing",
-      "priceINR": 149999,
-      "priceUSD": 1799,
+      "tagline": "Custom High-Performance Web Platform + Full-Funnel Growth",
+      "priceINR": 99999,
+      "priceUSD": 1199,
       "period": "month / project",
       "features": [
-        "Full-Stack Next.js / Mobile App Engineering",
-        "Custom SaaS Architecture (Like EasyTrack)",
-        "360-Degree Growth Marketing & Paid Ads Funnel",
-        "Custom API & Workflow Automation",
-        "24/7 SLA & Dedicated Engineering Team"
+        "Full-Stack Next.js Custom Web Application Engineering",
+        "360-Degree Omnichannel Paid Ads & Lead Generation",
+        "Custom API Integrations & Business Automation Tools",
+        "Advanced Conversion Rate Optimization (CRO)",
+        "Priority 24/7 Support & Dedicated SLA Engineering Team"
       ],
-      "ctaText": "Build Custom App"
+      "ctaText": "Get Custom Enterprise Stack"
     }
   ],
   "saasPlans": [

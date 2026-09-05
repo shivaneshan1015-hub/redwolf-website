@@ -12,6 +12,7 @@ import { RedwolfSystemSection } from "@/sections/redwolf-system";
 import { ProblemFinderSection } from "@/sections/problem-finder";
 import { SelectedWorkSection } from "@/sections/selected-work";
 import { EasyTrackSection } from "@/sections/easy-track";
+import { FaqAeoSection } from "@/sections/faq-aeo-section";
 import { MethodologySection } from "@/sections/methodology";
 import { WhyRedwolfSection } from "@/sections/why-redwolf";
 import { GlobalRemoteSection } from "@/sections/global-remote";
@@ -49,6 +50,7 @@ export default function Home() {
         <ProblemFinderSection onOpenEnquiryWithProblem={handleOpenEnquiryWithProblem} />
         <SelectedWorkSection onOpenEnquiry={handleOpenEnquiry} />
         <EasyTrackSection onOpenEnquiry={handleOpenEnquiry} />
+        <FaqAeoSection />
         <MethodologySection onOpenEnquiry={handleOpenEnquiry} />
         <WhyRedwolfSection />
         <GlobalRemoteSection onOpenEnquiry={handleOpenEnquiry} />
@@ -67,3 +69,4 @@ export default function Home() {
     </div>
   );
 }
+
