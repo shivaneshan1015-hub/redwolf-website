@@ -2,14 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { Menu, X, ArrowRight, Sparkles, Globe } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
+import { useCurrency, CurrencyCode } from "@/context/currency-context";
 
 const navLinks = [
-  { name: "Marketing & SEO", href: "/#marketing" },
+  { name: "Services", href: "/#marketing" },
+  { name: "Pricing", href: "/#pricing" },
   { name: "ROI Calculator", href: "/#roi-calculator" },
   { name: "Problem Finder", href: "/#problem-finder" },
-  { name: "Selected Work", href: "/#work" },
+  { name: "Work", href: "/#work" },
   { name: "EasyTrack SaaS", href: "/products/easytrack" },
   { name: "Insights", href: "/insights" },
 ];
@@ -21,6 +23,7 @@ interface NavbarProps {
 export function Navbar({ onOpenEnquiry }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { currency, setCurrency } = useCurrency();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +46,7 @@ export function Navbar({ onOpenEnquiry }: NavbarProps) {
         <BrandLogo variant="header" />
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 bg-slate-900/60 border border-slate-800/80 rounded-full px-6 py-2 backdrop-blur-lg">
+        <nav className="hidden lg:flex items-center gap-6 bg-slate-900/60 border border-slate-800/80 rounded-full px-6 py-2 backdrop-blur-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -55,8 +58,25 @@ export function Navbar({ onOpenEnquiry }: NavbarProps) {
           ))}
         </nav>
 
-        {/* Desktop CTA Action */}
+        {/* Desktop Actions (Currency + CTA) */}
         <div className="hidden lg:flex items-center gap-4">
+          {/* Currency Switcher */}
+          <div className="flex items-center gap-1.5 bg-slate-900/80 border border-slate-800 rounded-full px-3 py-1.5 text-xs text-slate-300 font-mono">
+            <Globe className="h-3.5 w-3.5 text-red-500" />
+            <select
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+              className="bg-transparent text-xs font-bold text-slate-200 focus:outline-none cursor-pointer pr-1"
+              aria-label="Select Currency"
+            >
+              <option value="INR" className="bg-slate-900 text-slate-200">₹ INR</option>
+              <option value="USD" className="bg-slate-900 text-slate-200">$ USD</option>
+              <option value="EUR" className="bg-slate-900 text-slate-200">€ EUR</option>
+              <option value="GBP" className="bg-slate-900 text-slate-200">£ GBP</option>
+              <option value="AED" className="bg-slate-900 text-slate-200">AED</option>
+            </select>
+          </div>
+
           <button
             onClick={onOpenEnquiry}
             className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg shadow-red-600/25 transition-all active:scale-95 cursor-pointer"
@@ -66,14 +86,33 @@ export function Navbar({ onOpenEnquiry }: NavbarProps) {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile Actions */}
+        <div className="flex lg:hidden items-center gap-3">
+          {/* Mobile Currency Switcher */}
+          <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-xs text-slate-300 font-mono">
+            <Globe className="h-3 w-3 text-red-500" />
+            <select
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+              className="bg-transparent text-xs font-bold text-slate-200 focus:outline-none cursor-pointer"
+              aria-label="Select Currency"
+            >
+              <option value="INR" className="bg-slate-900">₹ INR</option>
+              <option value="USD" className="bg-slate-900">$ USD</option>
+              <option value="EUR" className="bg-slate-900">€ EUR</option>
+              <option value="GBP" className="bg-slate-900">£ GBP</option>
+              <option value="AED" className="bg-slate-900">AED</option>
+            </select>
+          </div>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Drawer */}

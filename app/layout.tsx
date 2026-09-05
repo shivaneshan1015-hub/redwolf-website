@@ -47,6 +47,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { CurrencyProvider } from "@/context/currency-context";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -80,7 +82,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[#090d16] text-slate-100 antialiased selection:bg-red-500 selection:text-white">
-        {children}
+        <CurrencyProvider>
+          {children}
+        </CurrencyProvider>
       </body>
     </html>
   );

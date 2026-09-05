@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/sections/hero";
 import { DigitalMarketingSection } from "@/sections/digital-marketing";
+import { PricingSection } from "@/sections/pricing";
+import { ProjectEstimatorSection } from "@/sections/project-estimator";
 import { ROICalculatorSection } from "@/sections/roi-calculator";
+import { DeliverablesTimelineSection } from "@/sections/deliverables-timeline";
 import { RedwolfSystemSection } from "@/sections/redwolf-system";
 import { ProblemFinderSection } from "@/sections/problem-finder";
 import { SelectedWorkSection } from "@/sections/selected-work";
@@ -15,6 +18,7 @@ import { GlobalRemoteSection } from "@/sections/global-remote";
 import { EnquirySection } from "@/sections/enquiry-section";
 import { Footer } from "@/components/footer";
 import { EnquiryModal } from "@/components/enquiry-modal";
+import { WhatsAppWidget } from "@/components/whatsapp-widget";
 
 export default function Home() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
@@ -31,13 +35,16 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
       <Navbar onOpenEnquiry={handleOpenEnquiry} />
 
       <main className="flex-1">
         <HeroSection onOpenEnquiry={handleOpenEnquiry} />
         <DigitalMarketingSection onOpenEnquiry={handleOpenEnquiry} />
+        <PricingSection onOpenEnquiry={handleOpenEnquiry} />
+        <ProjectEstimatorSection onOpenEnquiry={handleOpenEnquiry} />
         <ROICalculatorSection onOpenEnquiry={handleOpenEnquiry} />
+        <DeliverablesTimelineSection onOpenEnquiry={handleOpenEnquiry} />
         <RedwolfSystemSection onOpenEnquiry={handleOpenEnquiry} />
         <ProblemFinderSection onOpenEnquiryWithProblem={handleOpenEnquiryWithProblem} />
         <SelectedWorkSection onOpenEnquiry={handleOpenEnquiry} />
@@ -49,6 +56,8 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <WhatsAppWidget onOpenEnquiry={handleOpenEnquiry} />
 
       <EnquiryModal
         isOpen={isEnquiryOpen}

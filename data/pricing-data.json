@@ -1,0 +1,113 @@
+{
+  "currencies": {
+    "INR": { "code": "INR", "symbol": "₹", "name": "Indian Rupee", "rateVsINR": 1, "formatLocale": "en-IN" },
+    "USD": { "code": "USD", "symbol": "$", "name": "US Dollar", "rateVsINR": 0.012, "formatLocale": "en-US" },
+    "EUR": { "code": "EUR", "symbol": "€", "name": "Euro", "rateVsINR": 0.011, "formatLocale": "de-DE" },
+    "GBP": { "code": "GBP", "symbol": "£", "name": "British Pound", "rateVsINR": 0.0094, "formatLocale": "en-GB" },
+    "AED": { "code": "AED", "symbol": "AED ", "name": "UAE Dirham", "rateVsINR": 0.044, "formatLocale": "ar-AE" }
+  },
+  "servicePlans": [
+    {
+      "id": "starter",
+      "name": "Starter Organic & Local",
+      "badge": "Small Business",
+      "popular": false,
+      "tagline": "Kickstart Local Search & Foundational SEO",
+      "priceINR": 24999,
+      "priceUSD": 299,
+      "period": "month",
+      "features": [
+        "Local SEO & Google Business Profile",
+        "Technical SEO & Speed Optimization",
+        "Targeted Keyword Optimization (Up to 15)",
+        "Monthly Ranking & Organic Growth Report",
+        "Standard Email Support"
+      ],
+      "ctaText": "Get Starter Plan"
+    },
+    {
+      "id": "growth",
+      "name": "Tri-Engine Growth Stack",
+      "badge": "Most Popular",
+      "popular": true,
+      "tagline": "Complete SEO + AEO + GEO + Meta & Google Ads",
+      "priceINR": 59999,
+      "priceUSD": 749,
+      "period": "month",
+      "features": [
+        "Tri-Engine Dominance (SEO + Voice AEO + AI GEO)",
+        "Google & Meta Paid Ad Campaign Setup & Optimization",
+        "ChatGPT, Perplexity & Gemini Schema Mapping",
+        "Social Media & Brand Growth Strategy",
+        "High-Authority Link Building & Content Silos",
+        "Dedicated Growth Manager & Weekly Reporting"
+      ],
+      "ctaText": "Get Growth Dominance"
+    },
+    {
+      "id": "enterprise",
+      "name": "Custom App & Enterprise SaaS",
+      "badge": "Full Engineering",
+      "popular": false,
+      "tagline": "Custom Web & Mobile App Building + Full Scale Marketing",
+      "priceINR": 149999,
+      "priceUSD": 1799,
+      "period": "month / project",
+      "features": [
+        "Full-Stack Next.js / Mobile App Engineering",
+        "Custom SaaS Architecture (Like EasyTrack)",
+        "360-Degree Growth Marketing & Paid Ads Funnel",
+        "Custom API & Workflow Automation",
+        "24/7 SLA & Dedicated Engineering Team"
+      ],
+      "ctaText": "Build Custom App"
+    }
+  ],
+  "saasPlans": [
+    {
+      "id": "easytrack-starter",
+      "name": "EasyTrack Starter Fleet",
+      "tagline": "Ideal for regional fleet operators & small logistics",
+      "priceINR": 4999,
+      "priceUSD": 59,
+      "period": "month",
+      "features": [
+        "Up to 10 Fleet Vehicles",
+        "Real-Time Live Map Dispatch Console",
+        "Automated WhatsApp Driver & Client Alerts",
+        "Digital Trip Sheet Management",
+        "Standard Email & Chat Support"
+      ]
+    },
+    {
+      "id": "easytrack-pro",
+      "name": "EasyTrack Pro Logistics",
+      "tagline": "For growing commercial fleets & transport companies",
+      "priceINR": 14999,
+      "priceUSD": 179,
+      "period": "month",
+      "features": [
+        "Up to 50 Fleet Vehicles",
+        "Multi-Branch Owner & Dispatcher Portals",
+        "Automated Fuel & Ledger Analytics",
+        "Route Optimization & Delay Predictor",
+        "Priority 24/7 Support"
+      ]
+    },
+    {
+      "id": "easytrack-custom",
+      "name": "Enterprise Custom SaaS",
+      "tagline": "Custom SaaS built specifically for your fleet or workflow",
+      "priceINR": 49999,
+      "priceUSD": 599,
+      "period": "month / custom",
+      "features": [
+        "Unlimited Vehicles & Multi-Tenant Support",
+        "Custom Feature Engineering & ERP Integrations",
+        "White-Label Mobile App & Custom Branding",
+        "Dedicated Cloud Server Infrastructure",
+        "Dedicated Account Executive"
+      ]
+    }
+  ]
+}

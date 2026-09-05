@@ -41,28 +41,36 @@
       "features": ["Google Search & Shopping Ads", "Meta (FB & IG) Retargeting", "LinkedIn B2B Lead Gen", "Conversion Tracking & CRO"]
     },
     {
+      "id": "smm",
+      "name": "Social Media Marketing",
+      "badge": "Social Dominance",
+      "tagline": "Organic & Viral Brand Growth across Instagram, LinkedIn & X",
+      "description": "Content strategy, creative reels, community management, and paid social campaigns that build active brand advocacy.",
+      "features": ["Short-Form Reel Production", "Multi-Platform Content Calendar", "Social Audience Retargeting", "Community & DMs Lead Gen"]
+    },
+    {
+      "id": "branding",
+      "name": "Branding & Visual Identity",
+      "badge": "Brand Authority",
+      "tagline": "Positioning, Visual Systems & Premium Brand Identity",
+      "description": "Crafting iconic brand logos, design systems, copywriting frameworks, and visual assets that command premium positioning.",
+      "features": ["Visual Brand Strategy", "Logo & Design Systems", "High-Converting Copywriting", "Brand Style Guidelines"]
+    },
+    {
       "id": "localseo",
       "name": "Local SEO & Map Pack",
       "badge": "Regional Dominance",
       "tagline": "Rank #1 on Google Maps & Local City/District Searches",
       "description": "Google Business Profile optimization, local citation building, and geographic landing pages for maximum local footfall and calls.",
       "features": ["Google Business Profile Audit", "Multi-Branch Local Citation", "Geo-Targeted Content Pages", "Review & Rating Management"]
-    },
-    {
-      "id": "content",
-      "name": "Content Strategy & Copywriting",
-      "badge": "Brand Authority",
-      "tagline": "Persuasive Copywriting & Growth Content",
-      "description": "High-converting ad copy, landing page copy, and strategic articles that educate prospects and move them to take action.",
-      "features": ["Conversion Copywriting", "Sales Funnel Content", "Thought Leadership", "Multi-Channel Social Copy"]
     }
   ],
   "capabilities": [
     {
       "id": "digital-marketing",
       "name": "Digital Marketing",
-      "tagline": "SEO, AEO, GEO & Paid Ads Dominance",
-      "description": "Full-funnel organic and paid growth engine combining traditional Search Engine Optimization (SEO), Voice Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and high-ROI Meta/Google Ads.",
+      "tagline": "SEO, AEO, GEO, SMM & Paid Ads Dominance",
+      "description": "Full-funnel organic and paid growth engine combining traditional SEO, Voice Search AEO, Generative AI GEO, Social Media Marketing, and high-ROI Meta/Google Ads.",
       "problemAddressed": "Low website traffic, zero AI visibility, and poor return on digital ad campaigns.",
       "solution": "360-degree Digital Marketing & Search Dominance system.",
       "icon": "TrendingUp"
@@ -96,18 +104,18 @@
     },
     {
       "id": "web-apps",
-      "name": "Web Engineering",
-      "tagline": "Next.js Web Applications & Conversion Sites",
-      "description": "Engineering high-speed, SEO-optimized Next.js web applications with modern design aesthetics.",
-      "problemAddressed": "Slow, outdated websites that fail to convert marketing traffic.",
-      "solution": "Full-stack custom web applications optimized for conversion.",
+      "name": "App Building & Tech Support",
+      "tagline": "Custom Web & Mobile Apps + Software Engineering",
+      "description": "Engineering high-speed Next.js web applications, cross-platform mobile apps, and providing dedicated technology support for scaling businesses.",
+      "problemAddressed": "Slow outdated sites, missing mobile apps, and technical debt.",
+      "solution": "Full-stack custom app development & ongoing tech support.",
       "icon": "Globe"
     },
     {
       "id": "saas-products",
-      "name": "SaaS Products",
-      "tagline": "In-House Products & Custom Software",
-      "description": "Designing and deploying enterprise SaaS products like EasyTrack, as well as building custom software tools for client operations.",
+      "name": "SaaS Products & Custom Software",
+      "tagline": "In-House Products (EasyTrack) & Client SaaS Engineering",
+      "description": "We built and operate enterprise SaaS products like EasyTrack in-house, and engineer custom SaaS platforms and automation tools for clients.",
       "problemAddressed": "Operational friction, manual dispatches, and lack of custom business software.",
       "solution": "Production-ready SaaS architecture & custom software development.",
       "icon": "Layers"
