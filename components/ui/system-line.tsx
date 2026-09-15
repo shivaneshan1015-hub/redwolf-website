@@ -1,6 +1,6 @@
 import React from "react";
 import { brandData } from "@/data/brand";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export interface SystemLineProps {
   className?: string;
@@ -34,9 +34,9 @@ export function RedwolfSystemLine({ className = "", activeStage }: SystemLinePro
                   {isActive && <CheckCircle2 className="h-4 w-4 text-red-500 animate-pulse" />}
                 </div>
 
-                <h4 className="text-sm font-heading font-extrabold text-white tracking-wider">
+                <h3 className="text-sm font-heading font-extrabold text-white tracking-wider">
                   {stg.title}
-                </h4>
+                </h3>
                 <p className="text-[11px] text-slate-400 mt-1 leading-normal line-clamp-3">
                   {stg.description}
                 </p>

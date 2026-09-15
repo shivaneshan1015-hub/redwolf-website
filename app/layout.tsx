@@ -3,6 +3,8 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { CurrencyProvider } from "@/context/currency-context";
 import { siteConfig } from "@/lib/config";
+import { Header } from "@/components/navigation/Header";
+import { Footer } from "@/components/navigation/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -112,11 +114,13 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-[#0B1220] text-[#F7F7F5] antialiased selection:bg-red-500 selection:text-white">
         <CurrencyProvider>
-          {children}
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
         </CurrencyProvider>
       </body>
     </html>
   );
 }
-
-

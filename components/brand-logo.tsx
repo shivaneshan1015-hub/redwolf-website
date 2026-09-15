@@ -6,55 +6,55 @@ import Link from "next/link";
 interface BrandLogoProps {
   variant?: "header" | "footer" | "hero";
   className?: string;
+  showTagline?: boolean;
 }
 
-export function BrandLogo({ variant = "header", className = "" }: BrandLogoProps) {
-  const sizeClasses = {
-    header: "h-8 sm:h-9",
-    footer: "h-8",
-    hero: "h-12 sm:h-14"
-  };
-
+export function BrandLogo({ variant = "header", className = "", showTagline = true }: BrandLogoProps) {
   return (
     <Link href="/" className={`group inline-flex items-center gap-3 transition-opacity ${className}`}>
       {/* Redwolf C1.5 Wolf + R Master Emblem */}
-      <div className="relative flex items-center justify-center">
-        <div className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center shadow-lg shadow-red-600/30 group-hover:shadow-red-600/50 transition-all duration-300 group-hover:scale-105 border border-red-500/30">
-          <svg
-            viewBox="0 0 36 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 sm:h-6 sm:w-6 text-white"
-          >
-            {/* Master Wolf + R Geometric Path */}
-            <path
-              d="M18 4L7 12L10 22L18 32L26 22L29 12L18 4Z"
-              fill="currentColor"
-              fillOpacity="0.15"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M13 14L18 9L23 14L20 23L18 27L16 23L13 14Z"
-              fill="currentColor"
-              fillOpacity="0.9"
-            />
-            <circle cx="18" cy="17" r="2.5" fill="#090D16" />
-          </svg>
-        </div>
-        {/* Ambient Backlight Glow */}
-        <div className="absolute -inset-1 bg-red-600/20 rounded-xl blur-md -z-10 group-hover:bg-red-600/40 transition-all duration-300" />
+      <div className="relative flex items-center justify-center shrink-0">
+        <svg
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-9 w-9 sm:h-10 sm:w-10 transition-transform duration-300 group-hover:scale-105"
+        >
+          {/* Left Wolf Outer Face & Ear (White) */}
+          <path
+            d="M 50 14 L 28 8 L 32 38 L 18 38 L 32 64 L 50 90 L 50 78 L 38 60 L 36 44 L 44 44 L 50 28 Z"
+            fill="#FFFFFF"
+          />
+          {/* Left Red Eye */}
+          <polygon points="32,36 40,38 36,44 30,42" fill="#E53935" />
+
+          {/* Right Integrated Red 'R' (Red #E53935) */}
+          {/* Top Ear & Stem */}
+          <path
+            d="M 50 14 L 72 8 L 68 34 L 50 28 Z"
+            fill="#E53935"
+          />
+          {/* R Body & Loop */}
+          <path
+            d="M 48 32 H 72 C 82 32 88 38 88 46 C 88 54 82 60 72 60 H 58 V 86 H 48 V 32 Z M 58 40 V 52 H 70 C 74 52 78 50 78 46 C 78 42 74 40 70 40 H 58 Z"
+            fill="#E53935"
+          />
+          {/* R Leg extending downward */}
+          <path
+            d="M 66 58 L 88 90 H 74 L 54 60 Z"
+            fill="#E53935"
+          />
+        </svg>
       </div>
 
-      {/* Brand Typography */}
+      {/* Brand Wordmark & Subline */}
       <div className="flex flex-col">
         <span className="font-heading font-extrabold tracking-wider text-white text-lg sm:text-xl uppercase group-hover:text-red-400 transition-colors">
-          RED<span className="text-red-500">WOLF</span>
+          <span className="text-[#E53935]">RED</span>WOLF
         </span>
-        {variant !== "footer" && (
-          <span className="text-[10px] uppercase font-mono tracking-widest text-slate-400 -mt-1 font-semibold">
-            DIGITAL SOLUTIONS
+        {showTagline && variant !== "footer" && (
+          <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-widest text-slate-400 -mt-1 font-bold">
+            DIGITAL SOLUTIONS FOR ALL YOUR PROBLEMS
           </span>
         )}
       </div>

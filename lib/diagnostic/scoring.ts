@@ -1,4 +1,4 @@
-import { diagnosticQuestions, OptionItem } from "@/data/diagnostic-questions";
+import { diagnosticQuestions } from "@/data/diagnostic-questions";
 import { solutionsData } from "@/data/solutions";
 
 export interface DiagnosticState {
@@ -67,11 +67,11 @@ export function calculateDiagnosticScore(answers: Record<string, string>): Score
     confidence = "Medium";
   }
 
-  let title = `Primary Digital Path: ${primary.data.name} Solutions`;
-  let description = `${primary.data.positioning} We recommend starting with our ${primary.data.name} capability to resolve immediate operational friction.`;
+  const title = `Primary Digital Path: ${primary.data.name} Solutions`;
+  const description = `${primary.data.positioning} We recommend starting with our ${primary.data.name} capability to resolve immediate operational friction.`;
   let steps: string[] = [];
-  let suggestedLink = `/solutions/${primary.cap}`;
-  let suggestedLinkText = `Explore ${primary.data.name} Solutions`;
+  const suggestedLink = `/solutions/${primary.cap}`;
+  const suggestedLinkText = `Explore ${primary.data.name} Solutions`;
 
   if (primary.cap === "grow") {
     steps = [

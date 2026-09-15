@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, CheckCircle2, TrendingUp, Compass, Cpu, Box, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export interface BasicCardProps {
   title: string;
@@ -168,7 +167,7 @@ export interface InsightCardProps {
   className?: string;
 }
 
-export function InsightCard({ title, excerpt, category, type, readTime, href, className = "" }: InsightCardProps) {
+export function InsightCard({ title, excerpt, type, readTime, href, className = "" }: InsightCardProps) {
   return (
     <Link
       href={href}

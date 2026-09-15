@@ -3,7 +3,7 @@ import Link from "next/link";
 import { constructMetadata } from "@/lib/seo";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
-import { SolutionCard, WorkCard, ProductCard, InsightCard } from "@/components/ui/cards";
+import { SolutionCard, WorkCard, InsightCard } from "@/components/ui/cards";
 import { RedwolfSystemLine } from "@/components/ui/system-line";
 import { ProblemSignalCard } from "@/components/ui/problem-signal";
 import { brandData } from "@/data/brand";
@@ -12,21 +12,7 @@ import { industriesData } from "@/data/industries";
 import { workData } from "@/data/work";
 import { productsData } from "@/data/products";
 import { insightsData } from "@/data/insights";
-import { generateFaqSchema } from "@/lib/schema";
-import {
-  Compass,
-  ArrowRight,
-  CheckCircle2,
-  AlertCircle,
-  Truck,
-  Activity,
-  Factory,
-  Globe,
-  Building2,
-  Shield,
-  Layers,
-  Sparkles,
-} from "lucide-react";
+import { Compass, ArrowRight } from "lucide-react";
 
 export const metadata = constructMetadata({
   title: "Redwolf — From Business Problem to Digital Solution",
@@ -44,7 +30,7 @@ export default function HomePage() {
     <div className="space-y-20 sm:space-y-28 pb-20 pt-20 sm:pt-24">
       {/* 1. HERO SECTION */}
       <section className="relative bg-[#0B1220] text-white pt-8 pb-20 sm:pb-28 overflow-hidden border-b border-slate-800/80">
-        <div className="absolute inset-0 bg-grid-pattern opacity-40" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -180,7 +166,7 @@ export default function HomePage() {
                 </span>
                 <h3 className="text-lg font-heading font-bold text-white">Not sure which problem is primary?</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Take our 2-minute diagnostic questionnaire to identify your core digital path.
+                  Take our diagnostic questionnaire to identify your core digital path.
                 </p>
               </div>
 
@@ -406,7 +392,7 @@ export default function HomePage() {
               You don&apos;t need to know the solution. Start with the problem.
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Answer 8 diagnostic questions regarding your business friction and receive a personalized capability recommendation and digital path.
+              Answer diagnostic questions regarding your business friction and receive a personalized capability recommendation and digital path.
             </p>
           </div>
 

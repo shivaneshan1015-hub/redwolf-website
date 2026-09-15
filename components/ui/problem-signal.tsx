@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, AlertCircle, HelpCircle } from "lucide-react";
+import { ArrowRight, AlertCircle } from "lucide-react";
 
 export interface ProblemSignalProps {
   category: string;
