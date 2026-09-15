@@ -1,10 +1,10 @@
 <svg viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Wolf Emblem -->
   <g transform="translate(10, 10)">
-    <!-- Left Wolf Outer Face & Ear (White stroke & fill) -->
+    <!-- Left Wolf Outer Face & Ear (Dark Navy stroke & fill) -->
     <path
       d="M 50 16 L 24 8 L 28 40 L 14 40 L 30 68 L 50 94 L 50 82 L 36 64 L 34 46 L 42 46 L 50 30 Z"
-      fill="#FFFFFF"
+      fill="#0B1220"
     />
     <!-- Left Red Eye -->
     <polygon points="30,38 38,40 34,46 28,44" fill="#E53935" />
@@ -26,12 +26,12 @@
 
   <!-- REDWOLF Wordmark -->
   <text x="130" y="68" font-family="'Manrope', 'Inter', sans-serif" font-weight="900" font-size="48" letter-spacing="4">
-    <tspan fill="#E53935">RED</tspan><tspan fill="#FFFFFF">WOLF</tspan>
+    <tspan fill="#E53935">RED</tspan><tspan fill="#0B1220">WOLF</tspan>
   </text>
 
   <!-- Flanking Lines & Tagline -->
   <line x1="130" y1="92" x2="150" y2="92" stroke="#E53935" stroke-width="2" />
-  <text x="160" y="96" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#94A3B8" letter-spacing="2.5">
+  <text x="160" y="96" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#0B1220" letter-spacing="2.5">
     DIGITAL SOLUTIONS FOR ALL YOUR PROBLEMS
   </text>
   <line x1="480" y1="92" x2="500" y2="92" stroke="#E53935" stroke-width="2" />
