@@ -25,7 +25,7 @@ export function Footer() {
             </p>
 
             <div className="pt-2 flex flex-col gap-2 text-xs font-mono text-slate-400">
-              <div>📍 {brandData.address}</div>
+              <div>📍 {brandData.address.city} &amp; South India Operations</div>
               <div>📞 {brandData.phone}</div>
               <div>✉️ {brandData.email}</div>
             </div>
