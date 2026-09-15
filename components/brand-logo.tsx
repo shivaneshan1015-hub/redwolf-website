@@ -6,10 +6,9 @@ import Link from "next/link";
 interface BrandLogoProps {
   variant?: "header" | "footer" | "hero";
   className?: string;
-  showTagline?: boolean;
 }
 
-export function BrandLogo({ variant = "header", className = "", showTagline = true }: BrandLogoProps) {
+export function BrandLogo({ className = "" }: BrandLogoProps) {
   return (
     <Link href="/" className={`group inline-flex items-center gap-3 transition-opacity ${className}`}>
       {/* Redwolf C1.5 Wolf + R Master Emblem */}
@@ -47,16 +46,11 @@ export function BrandLogo({ variant = "header", className = "", showTagline = tr
         </svg>
       </div>
 
-      {/* Brand Wordmark & Subline */}
+      {/* Brand Wordmark */}
       <div className="flex flex-col">
         <span className="font-heading font-extrabold tracking-wider text-white text-lg sm:text-xl uppercase group-hover:text-red-400 transition-colors">
           <span className="text-[#E53935]">RED</span>WOLF
         </span>
-        {showTagline && variant !== "footer" && (
-          <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-widest text-slate-400 -mt-1 font-bold">
-            DIGITAL SOLUTIONS FOR ALL YOUR PROBLEMS
-          </span>
-        )}
       </div>
     </Link>
   );

@@ -90,7 +90,7 @@ export default function RootLayout({
       {
         "@type": "LocalBusiness",
         "@id": `${siteConfig.url}/#localbusiness`,
-        "name": "Redwolf Digital Solutions",
+        "name": "Redwolf",
         "image": `${siteConfig.url}/logo.png`,
         "telephone": siteConfig.phone,
         "address": {
