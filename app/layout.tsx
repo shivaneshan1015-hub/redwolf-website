@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { CurrencyProvider } from "@/context/currency-context";
+import { siteConfig } from "@/lib/config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -9,47 +10,42 @@ const inter = Inter({
   display: "swap",
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-manrope",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://redwolf.digital"),
-  title: "Redwolf | Affordable Digital Marketing, SEO/AEO/GEO & Web Development for SMEs",
-  description:
-    "Redwolf is a full-stack digital marketing agency and technology partner for Small and Medium Industries (SMEs). We specialize in Google SEO, Voice AEO, AI GEO (ChatGPT/Perplexity ranking), Meta & Google Ads, and custom Next.js web applications.",
+  metadataBase: new URL(siteConfig.url),
+  title: "Redwolf | From Business Problem to Digital Solution",
+  description: siteConfig.positioning,
   keywords: [
     "Redwolf",
-    "Redwolf Digital Marketing",
-    "Affordable digital marketing for SMEs",
-    "Small business SEO agency",
-    "SEO AEO GEO agency",
-    "Generative Engine Optimization",
-    "Answer Engine Optimization",
-    "Google Maps Local SEO",
-    "Meta and Google Ads for small business",
-    "Custom Next.js web development"
+    "Digital growth and technology company",
+    "Business digital transformation",
+    "Custom web application engineering",
+    "SaaS product development",
+    "FMCG distribution software",
+    "Technical SEO and local search",
+    "Redwolf System"
   ],
   authors: [{ name: "Redwolf Strategy & Engineering" }],
   alternates: {
-    canonical: "https://redwolf.digital"
+    canonical: siteConfig.url
   },
   openGraph: {
-    title: "Redwolf | Tri-Engine Search Dominance & Web Software for SMEs",
-    description:
-      "Affordable digital marketing, SEO, AEO, GEO, performance ads, and high-speed web apps tailored for small and medium industries.",
-    url: "https://redwolf.digital",
-    siteName: "Redwolf",
-    locale: "en_US",
+    title: "Redwolf | From Business Problem to Digital Solution",
+    description: siteConfig.positioning,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redwolf | Digital Marketing & Web Engineering for SMEs",
-    description:
-      "Dominate Google, Voice Search, and AI Search Engines like ChatGPT & Perplexity with Redwolf.",
+    title: "Redwolf | Digital Growth & Technology Company",
+    description: siteConfig.positioning,
   },
   robots: {
     index: true,
@@ -74,31 +70,32 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://redwolf.digital/#organization",
-        "name": "Redwolf",
-        "url": "https://redwolf.digital",
-        "logo": "https://redwolf.digital/logo.png",
-        "description": "Full-stack Digital Marketing Agency, SEO/AEO/GEO Growth Specialist, and Custom Software Engineering Partner for Small & Medium Industries.",
-        "sameAs": ["https://github.com/redwolf-digital"],
+        "@id": `${siteConfig.url}/#organization`,
+        "name": siteConfig.name,
+        "url": siteConfig.url,
+        "logo": `${siteConfig.url}/logo.png`,
+        "description": siteConfig.positioning,
+        "sameAs": [siteConfig.social.github, siteConfig.social.linkedin],
         "knowsAbout": [
-          "Digital Marketing for SMEs",
+          "Digital Growth & Strategy",
+          "Brand & User Experience Architecture",
+          "Web Application & Software Engineering",
+          "SaaS Product Engineering",
           "Search Engine Optimization (SEO)",
-          "Answer Engine Optimization (AEO)",
-          "Generative Engine Optimization (GEO)",
-          "Performance PPC Ads",
-          "Next.js Web Application Engineering"
+          "FMCG Distribution Software"
         ]
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://redwolf.digital/#localbusiness",
+        "@id": `${siteConfig.url}/#localbusiness`,
         "name": "Redwolf Digital Solutions",
-        "image": "https://redwolf.digital/logo.png",
-        "priceRange": "$$",
-        "telephone": "+91-9000000000",
+        "image": `${siteConfig.url}/logo.png`,
+        "telephone": siteConfig.phone,
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "IN"
+          "addressLocality": siteConfig.address.city,
+          "addressRegion": siteConfig.address.region,
+          "addressCountry": siteConfig.address.country
         },
         "areaServed": ["IN", "US", "GB", "AE", "EU", "CA", "AU", "SG"]
       }
@@ -106,14 +103,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
+    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#090d16] text-slate-100 antialiased selection:bg-red-500 selection:text-white">
+      <body className="min-h-screen flex flex-col bg-[#0B1220] text-[#F7F7F5] antialiased selection:bg-red-500 selection:text-white">
         <CurrencyProvider>
           {children}
         </CurrencyProvider>
@@ -121,4 +118,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

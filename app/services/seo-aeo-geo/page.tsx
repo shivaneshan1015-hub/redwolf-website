@@ -5,17 +5,17 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "SEO, AEO & GEO Search Dominance | Redwolf Digital Marketing",
+  title: "SEO, AEO & GEO Search Optimization | Redwolf Digital Growth",
   description:
-    "Future-proof your business search rankings across Google SEO, Voice AEO, and AI Search Engines (ChatGPT, Perplexity, Google Gemini) with Redwolf's Tri-Engine Search Strategy.",
+    "Future-proof your business search visibility across Google SEO, Voice AEO, and AI Search Engines (ChatGPT, Perplexity, Google Gemini) with Redwolf's Tri-Engine Search Strategy.",
   keywords: [
-    "SEO agency India",
+    "SEO strategy",
     "AEO Answer Engine Optimization",
     "GEO Generative Engine Optimization",
-    "ChatGPT business ranking",
+    "ChatGPT business visibility",
     "Perplexity AI SEO",
     "Voice Search Optimization",
-    "Schema.org knowledge graph agency"
+    "Schema.org knowledge graph"
   ],
 };
 
@@ -23,11 +23,11 @@ export default function SEOAEOGEOPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "SEO, AEO & GEO Search Dominance",
+    "name": "SEO, AEO & GEO Search Optimization",
     "provider": {
       "@type": "Organization",
       "name": "Redwolf",
-      "url": "https://redwolf.digital"
+      "url": "https://redwolf.in"
     },
     "serviceType": "Search Engine & AI Optimization",
     "description": "Comprehensive Search Engine Optimization (SEO), Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) for Google, Siri, and AI Search Models."
@@ -59,7 +59,7 @@ export default function SEOAEOGEOPage() {
           <nav className="flex items-center gap-2 text-xs font-mono text-slate-400">
             <Link href="/" className="hover:text-red-400">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span>Services</span>
+            <span>Capabilities</span>
             <ChevronRight className="h-3 w-3" />
             <span className="text-red-400 font-bold">SEO, AEO & GEO</span>
           </nav>
@@ -68,13 +68,13 @@ export default function SEOAEOGEOPage() {
           <div className="space-y-6 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs uppercase tracking-wider">
               <Sparkles className="h-3.5 w-3.5" />
-              <span>Next-Gen Search Dominance Engine</span>
+              <span>Next-Gen Search Visibility Engine</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight">
               Rank on Google, Voice Devices & <span className="text-red-500">AI Search Engines</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed">
-              Search is no longer limited to traditional Google links. Buyers ask Siri for local services and rely on ChatGPT, Perplexity, and Gemini for business recommendations. Redwolf deploys a Tri-Engine Search Strategy (**SEO + AEO + GEO**) to dominate all search surfaces.
+              Search is no longer limited to traditional Google links. Buyers ask Siri for local services and rely on ChatGPT, Perplexity, and Gemini for business recommendations. Redwolf deploys a Tri-Engine Search Strategy (**SEO + AEO + GEO**) across search surfaces.
             </p>
           </div>
 

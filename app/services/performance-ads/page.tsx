@@ -39,7 +39,7 @@ export default function PerformanceAdsPage() {
               <span>Paid Growth & Conversion Engine</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight">
-              High-ROI Google, Meta & <span className="text-red-500">LinkedIn Ad Campaigns</span>
+              Intent-Driven Google, Meta & <span className="text-red-500">LinkedIn Ad Campaigns</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed">
               Stop wasting marketing budget on un-targeted ad clicks. Redwolf engineers high-converting ad funnels focused on Cost Per Acquisition (CPA), Return On Ad Spend (ROAS), and real sales pipeline.

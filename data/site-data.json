@@ -1,19 +1,19 @@
 {
   "brand": {
     "name": "Redwolf",
-    "tagline": "Digital Marketing & Software Solutions for All Your Problems",
-    "positioning": "Digital Marketing + Technology + SaaS Products",
-    "headline": "Your business has a growth problem.\nWe build the digital marketing & software solution.",
-    "subheadline": "Redwolf is a full-stack digital marketing agency and software company. We drive revenue with SEO, AEO, GEO, Meta & Google Ads, and Local SEO while engineering high-converting web applications and SaaS products like EasyTrack.",
-    "deliveryModel": "Based in India. Serving brands & enterprises worldwide."
+    "tagline": "From problem to digital solution.",
+    "positioning": "Redwolf is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
+    "headline": "From business problem to digital solution.",
+    "subheadline": "Redwolf combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.",
+    "deliveryModel": "Based in South India. Partnering with businesses worldwide."
   },
   "marketingServices": [
     {
       "id": "seo",
       "name": "SEO (Search Engine Optimization)",
       "badge": "Organic Growth",
-      "tagline": "Dominate Google & Organic Search Rankings",
-      "description": "Comprehensive technical, on-page, and off-page SEO strategies designed to rank your business for high-intent commercial keywords.",
+      "tagline": "Organic Search & Technical Visibility",
+      "description": "Comprehensive technical, on-page, and off-page search strategies designed to help your business answer high-intent commercial queries.",
       "features": ["Technical Site Audits", "Keyword Architecture", "High-Authority Link Building", "Content Silo Strategy"]
     },
     {
@@ -21,253 +21,212 @@
       "name": "AEO (Answer Engine Optimization)",
       "badge": "Voice & AI Search",
       "tagline": "Optimize for Voice Assistants & Direct Answer Snippets",
-      "description": "Structured data engineering, Schema.org markup, and Q&A optimization that position your brand directly in AI voice answers and featured snippets.",
+      "description": "Structured data engineering, Schema.org markup, and Q&A optimization that position your brand clearly in AI voice answers and featured snippets.",
       "features": ["Schema.org JSON-LD", "Voice Search Optimization", "Featured Snippet Capture", "Structured FAQ Mapping"]
     },
     {
       "id": "geo",
       "name": "GEO (Generative Engine Optimization)",
-      "badge": "Next-Gen AI Ranking",
-      "tagline": "Be the Top Recommended Entity on ChatGPT, Perplexity & Gemini",
-      "description": "Structuring brand knowledge graphs and entity relationships so LLM search engines recommend your services first.",
+      "badge": "Next-Gen AI Search",
+      "tagline": "AI Search Engine & Entity Recognition",
+      "description": "Structuring brand knowledge graphs and entity relationships so LLM search engines recommend your services accurately.",
       "features": ["LLM Knowledge Graphing", "AI Entity Authority Mapping", "Vector-Search Readiness", "Generative AI Citations"]
     },
     {
       "id": "ads",
       "name": "Performance Ads & PPC",
       "badge": "Paid Growth",
-      "tagline": "High-ROI Google, Meta & LinkedIn Ad Campaigns",
-      "description": "Laser-targeted paid advertising campaigns engineered to generate immediate, high-converting leads and sales pipeline.",
+      "tagline": "Intent-Driven Google & Meta Ad Campaigns",
+      "description": "Targeted paid advertising campaigns engineered to connect with qualified commercial intent rather than vanity clicks.",
       "features": ["Google Search & Shopping Ads", "Meta (FB & IG) Retargeting", "LinkedIn B2B Lead Gen", "Conversion Tracking & CRO"]
     },
     {
       "id": "smm",
-      "name": "Social Media Marketing",
-      "badge": "Social Dominance",
-      "tagline": "Organic & Viral Brand Growth across Instagram, LinkedIn & X",
-      "description": "Content strategy, creative reels, community management, and paid social campaigns that build active brand advocacy.",
-      "features": ["Short-Form Reel Production", "Multi-Platform Content Calendar", "Social Audience Retargeting", "Community & DMs Lead Gen"]
+      "name": "Social Media Strategy",
+      "badge": "Brand Engagement",
+      "tagline": "Organic Brand & Audience Growth",
+      "description": "Content strategy, visual storytelling, community engagement, and paid social campaigns that build genuine audience advocacy.",
+      "features": ["Short-Form Video Production", "Multi-Platform Content Calendar", "Social Audience Retargeting", "Community & DMs Inquiry Management"]
     },
     {
       "id": "branding",
       "name": "Branding & Visual Identity",
       "badge": "Brand Authority",
-      "tagline": "Positioning, Visual Systems & Premium Brand Identity",
-      "description": "Crafting iconic brand logos, design systems, copywriting frameworks, and visual assets that command premium positioning.",
-      "features": ["Visual Brand Strategy", "Logo & Design Systems", "High-Converting Copywriting", "Brand Style Guidelines"]
+      "tagline": "Positioning, Visual Systems & Brand Identity",
+      "description": "Crafting clear visual brand systems, typography frameworks, copywriting, and design assets that command commercial trust.",
+      "features": ["Visual Brand Strategy", "Logo & Design Systems", "Message Hierarchy & Copywriting", "Brand Style Guidelines"]
     },
     {
       "id": "localseo",
       "name": "Local SEO & Map Pack",
-      "badge": "Regional Dominance",
-      "tagline": "Rank #1 on Google Maps & Local City/District Searches",
-      "description": "Google Business Profile optimization, local citation building, and geographic landing pages for maximum local footfall and calls.",
+      "badge": "Regional Search",
+      "tagline": "Local Business & Multi-Branch Search Optimization",
+      "description": "Google Business Profile optimization, local citation building, and geographic landing pages for physical business locations.",
       "features": ["Google Business Profile Audit", "Multi-Branch Local Citation", "Geo-Targeted Content Pages", "Review & Rating Management"]
     }
   ],
   "capabilities": [
     {
-      "id": "digital-marketing",
-      "name": "Digital Marketing",
-      "tagline": "SEO, AEO, GEO, SMM & Paid Ads Dominance",
-      "description": "Full-funnel organic and paid growth engine combining traditional SEO, Voice Search AEO, Generative AI GEO, Social Media Marketing, and high-ROI Meta/Google Ads.",
-      "problemAddressed": "Low website traffic, zero AI visibility, and poor return on digital ad campaigns.",
-      "solution": "360-degree Digital Marketing & Search Dominance system.",
+      "id": "grow",
+      "name": "GROW",
+      "tagline": "Make your business easier to find, trust and choose.",
+      "description": "Turn digital attention into business growth through technical SEO, targeted ad campaigns, landing page engineering, and conversion architecture.",
+      "problemAddressed": "Low organic visibility, high customer acquisition costs, and poor website lead conversion.",
+      "solution": "Integrated customer discovery and commercial conversion architecture.",
       "icon": "TrendingUp"
     },
     {
-      "id": "seo-aeo-geo",
-      "name": "SEO / AEO / GEO Stack",
-      "tagline": "Google, Voice & AI Search Optimization",
-      "description": "Future-proofing your online presence across traditional Google Search, Siri/Alexa voice queries, and AI engines like ChatGPT, Perplexity, and Google Gemini.",
-      "problemAddressed": "Invisible on AI search engines and missing out on voice search leads.",
-      "solution": "Multi-engine AI & Search Optimization framework.",
-      "icon": "Search"
+      "id": "define",
+      "name": "DEFINE",
+      "tagline": "Make your business clear before you make it bigger.",
+      "description": "Clarify what your business stands for, how it should be perceived, and how that thinking translates into every digital touchpoint.",
+      "problemAddressed": "Unclear messaging, outdated digital identity, and brand positioning mismatch.",
+      "solution": "Strategic brand positioning, message hierarchy, and visual identity systems.",
+      "icon": "Compass"
     },
     {
-      "id": "performance-ads",
-      "name": "Performance Ads",
-      "tagline": "Google Ads, Meta Ads & Funnel Retargeting",
-      "description": "Data-backed paid ad campaigns focused strictly on Cost Per Acquisition (CPA), Return On Ad Spend (ROAS), and high-converting lead forms.",
-      "problemAddressed": "Wasted ad budget with high cost per lead and low conversion rates.",
-      "solution": "Precision audience targeting & high-converting ad copy.",
-      "icon": "Zap"
+      "id": "build",
+      "name": "BUILD",
+      "tagline": "Turn business processes into digital systems.",
+      "description": "Engineer web applications, internal operational platforms, and workflow automation around how your business actually works.",
+      "problemAddressed": "Manual processes, reliance on spreadsheets, and fragmented business software.",
+      "solution": "Custom Next.js web application and operational workflow platform engineering.",
+      "icon": "Cpu"
     },
     {
-      "id": "local-seo",
-      "name": "Local SEO & GMB",
-      "tagline": "Google Maps & District Search Dominance",
-      "description": "Driving local customer footfall, phone calls, and location inquiries through optimized Google Business Profiles and local map rankings.",
-      "problemAddressed": "Losing local customers to nearby competitors on Google Maps.",
-      "solution": "Local map pack optimization & localized citation strategy.",
-      "icon": "MapPin"
-    },
-    {
-      "id": "web-apps",
-      "name": "App Building & Tech Support",
-      "tagline": "Custom Web & Mobile Apps + Software Engineering",
-      "description": "Engineering high-speed Next.js web applications, cross-platform mobile apps, and providing dedicated technology support for scaling businesses.",
-      "problemAddressed": "Slow outdated sites, missing mobile apps, and technical debt.",
-      "solution": "Full-stack custom app development & ongoing tech support.",
-      "icon": "Globe"
-    },
-    {
-      "id": "saas-products",
-      "name": "SaaS Products & Custom Software",
-      "tagline": "In-House Products (EasyTrack) & Client SaaS Engineering",
-      "description": "We built and operate enterprise SaaS products like EasyTrack in-house, and engineer custom SaaS platforms and automation tools for clients.",
-      "problemAddressed": "Operational friction, manual dispatches, and lack of custom business software.",
-      "solution": "Production-ready SaaS architecture & custom software development.",
-      "icon": "Layers"
+      "id": "productize",
+      "name": "PRODUCTIZE",
+      "tagline": "Turn ideas and workflows into software products.",
+      "description": "Transform internal operational expertise or market concepts into standalone SaaS platforms, field applications, or digital products.",
+      "problemAddressed": "Internal workflow inefficiency or desire to launch commercial SaaS products.",
+      "solution": "Full-stack SaaS architecture, offline-first engineering, and multi-tenant platforms.",
+      "icon": "Box"
     }
   ],
   "problems": [
     {
       "id": "seo-aeo-geo",
-      "label": "I need to rank on Google & AI Search (SEO / AEO / GEO)",
-      "response": "Search has evolved beyond basic keywords. We deploy technical SEO for Google, AEO for voice assistants, and GEO to ensure AI engines like ChatGPT recommend your business first.",
-      "recommendedCapability": "SEO / AEO / GEO Search Dominance",
-      "ctaText": "Explore Organic Search Solutions"
+      "label": "We're doing marketing, but the right customers aren't finding us.",
+      "response": "Search has evolved beyond basic keywords. We deploy technical SEO, voice AEO, and AI GEO to ensure high-intent buyers discover your business.",
+      "recommendedCapability": "GROW",
+      "ctaText": "Explore GROW Solutions"
     },
     {
-      "id": "paid-ads",
-      "label": "I need more leads from Ads (Google & Meta)",
-      "response": "Stop wasting ad budget on cold audiences. We build targeted Meta, Google, and LinkedIn ad campaigns with high-converting landing pages and retargeting funnels.",
-      "recommendedCapability": "Performance Ads & PPC Growth",
-      "ctaText": "Explore Performance Ad Solutions"
-    },
-    {
-      "id": "local-seo",
-      "label": "I need more local customers & Google Map calls",
-      "response": "Local searchers are ready to buy. We optimize your Google Business Profile, build local citations, and create district-focused landing pages to dominate local map packs.",
-      "recommendedCapability": "Local SEO & Google Map Pack Optimization",
-      "ctaText": "Explore Local SEO Solutions"
-    },
-    {
-      "id": "website",
-      "label": "I need a better high-converting website",
-      "response": "Your website should be your top sales rep. We engineer Next.js web applications with high speed, clear value messaging, and seamless conversion paths.",
-      "recommendedCapability": "Next.js Web Application Engineering",
-      "ctaText": "Explore Web Solutions"
+      "id": "operations",
+      "label": "Our team still depends on spreadsheets, calls and manual processes.",
+      "response": "Repetitive manual work slows growth. We design and build custom web applications and operational tools tailored to your workflow.",
+      "recommendedCapability": "BUILD",
+      "ctaText": "Explore BUILD Solutions"
     },
     {
       "id": "brand",
-      "label": "I need to build a high-authority brand",
-      "response": "Your brand identity builds immediate trust. We engineer cohesive visual systems, positioning, and copywriting that establish industry authority.",
-      "recommendedCapability": "Brand Positioning & Visual Systems",
-      "ctaText": "Explore Brand Solutions"
+      "label": "Our website doesn't represent the business we've become.",
+      "response": "Your digital brand should reflect your true commercial scale. We define clear brand positioning, message hierarchy, and modern UIs.",
+      "recommendedCapability": "DEFINE",
+      "ctaText": "Explore DEFINE Solutions"
     },
     {
-      "id": "automation",
-      "label": "I need to automate my business workflow",
-      "response": "Repetitive tasks waste valuable time. We build custom software tools, API integrations, and workflow automation pipelines.",
-      "recommendedCapability": "Custom Software & Business Automation",
-      "ctaText": "Explore Automation Solutions"
-    },
-    {
-      "id": "saas",
-      "label": "I want to build a SaaS product like EasyTrack",
-      "response": "From early product wireframes to cloud infrastructure, we help turn software concepts into market-ready SaaS applications.",
-      "recommendedCapability": "SaaS Architecture & Product Engineering",
-      "ctaText": "Explore SaaS Solutions"
-    },
-    {
-      "id": "unsure",
-      "label": "I'm not sure yet — I need digital consultation",
-      "response": "That's completely fine. Tell us what's not working, and Redwolf will diagnose your digital bottleneck and map the right growth path.",
-      "recommendedCapability": "Full Digital Marketing & Strategy Audit",
-      "ctaText": "Talk to Redwolf"
+      "id": "product",
+      "label": "We have an internal workflow that could become a software product.",
+      "response": "From early scope validation to resilient multi-tenant architecture, we help turn operational workflows into market-ready SaaS applications.",
+      "recommendedCapability": "PRODUCTIZE",
+      "ctaText": "Explore PRODUCTIZE Solutions"
     }
   ],
   "selectedWork": [
     {
-      "id": "sri-nandha",
+      "id": "sri-nantha",
       "client": "Sri Nantha Glasses & Stickers",
-      "industry": "Automotive & Industrial Manufacturing",
-      "challenge": "A major regional automobile glass manufacturer needed to dominate search rankings across 19 South Indian districts and showcase specialized bus window frames, windshields, and custom stickering.",
-      "intervention": "Redwolf executed an aggressive Digital Marketing strategy combining Local SEO, structured AEO/GEO Schema markup, district-targeted landing pages, and a high-performance Next.js catalog.",
-      "solution": "Digital Marketing Strategy + Local SEO Dominance + Next.js Web Platform",
-      "highlights": ["100% SEO / AEO / GEO Audit Score", "Top Regional Rankings across 19 Districts", "Direct WhatsApp Quotation Leads"]
+      "industry": "Automotive & Vehicle Body Building",
+      "challenge": "An automotive glass supplier and window assembler needed a clear web presence to showcase ready-to-fit aluminum sliding window assemblies and vehicle glass options.",
+      "intervention": "Redwolf re-architected brand positioning around ready-to-fit window assembly solutions, built an interactive Vehicle Glass Finder wizard, and optimized local search profiles.",
+      "solution": "Brand Positioning + Vehicle Glass Finder + Local Search Architecture",
+      "highlights": ["Interactive 7-Step Vehicle Glass Finder", "Ready-to-Fit Window Assembly Positioning", "Direct WhatsApp Quote Integration"]
     },
     {
       "id": "mahalakshmi-tours",
       "client": "Mahalakshmi Tours & Travels",
-      "industry": "Travel & Logistics",
-      "challenge": "Legacy web presence failed to generate digital leads for bus charters, corporate fleet rentals, and tour packages.",
-      "intervention": "Redwolf launched targeted Google Search Ads, re-engineered the digital brand identity, and built a conversion-focused web portal.",
-      "solution": "Performance PPC Ads + Digital Brand Identity + Route Booking Portal",
-      "highlights": ["3x Increase in Charter Inquiries", "Optimized Ad Conversion Rate", "Instant Route Enquiry Engine"]
+      "industry": "Travel & Transport Operations",
+      "challenge": "Travelers struggled to compare tour package itineraries and vehicle options on mobile devices, leading to dropped calls.",
+      "intervention": "Redwolf structured transparent day-by-day package itineraries, mobile tour showcases, and instant 1-tap WhatsApp consultation pathways.",
+      "solution": "Mobile Tour Catalog + WhatsApp Inquiry Integration",
+      "highlights": ["Structured Day-by-Day Itineraries", "1-Tap WhatsApp Consultations", "Optimized Mobile Load Speed"]
     },
     {
       "id": "gateway-holidays",
       "client": "Gateway Holidays",
-      "industry": "Global Tourism & Hospitality",
-      "challenge": "Low organic search visibility for global tour packages and high bounce rates on landing pages.",
-      "intervention": "Redwolf implemented full SEO package optimization, social media ad campaigns, and an interactive itinerary showcase.",
-      "solution": "Organic SEO Campaign + Social Media Ads + Itinerary Showcase",
-      "highlights": ["High Organic Search Ranking", "Seamless Multi-Tier Inquiry Funnel", "Enhanced Brand Engagement"]
+      "industry": "Travel & Hospitality",
+      "challenge": "Previous digital presence failed to reflect the premium quality of custom vacation planning services.",
+      "intervention": "Redwolf designed an editorial destination showcase, clear planning process guides, and custom holiday inquiry pathways.",
+      "solution": "Editorial Destination Platform + Custom Inquiry Integration",
+      "highlights": ["Editorial Visual Presentation", "Structured Custom Inquiry Engine", "Enhanced Traveler Confidence"]
     }
   ],
   "productShowcase": {
-    "name": "Easy Track",
+    "name": "EasyTrack",
     "tagline": "A SaaS product built by Redwolf",
-    "headline": "Enterprise Logistics, Route Management & Fleet Tracking SaaS",
-    "description": "Easy Track is a proprietary SaaS product designed, built, and operated by Redwolf. Engineered to solve operational opacity for commercial fleet operators, distributors, and logistics enterprises across India.",
-    "problemAddressed": "Manual trip dispatching, unorganized driver updates, and lack of real-time route visibility.",
+    "headline": "Distribution operations, connected.",
+    "description": "EasyTrack helps FMCG distributors manage field sales, van inventory, routes, orders, credit, collections and distribution operations from one connected platform.",
+    "problemAddressed": "Manual order entry, unorganized van stock reconciliation, and lack of real-world offline connectivity on rural distribution routes.",
     "features": [
-      "Real-Time Dispatch Console & Vehicle Status",
-      "Automated WhatsApp Customer & Driver Notifications",
-      "Digital Trip Sheets & Ledger Analytics",
-      "Multi-Tenant Owner & Agent Portals"
+      "Offline-First Field Sales Ordering App",
+      "Van Stock Loading & End-of-Day Audit",
+      "Retailer Credit Limit Enforcement & Overdue Alerts",
+      "Route Profitability & Sales Rep Performance Analytics"
     ]
   },
   "methodology": [
     {
       "step": "01",
-      "title": "Understand & Audit",
-      "description": "We analyze your target market, search intent, ad funnel friction, and operational bottlenecks."
+      "title": "DISCOVER",
+      "description": "Understand the true business problem, market context, and operational bottlenecks before prescribing technology."
     },
     {
       "step": "02",
-      "title": "Strategy & Path",
-      "description": "We map the exact digital growth mix—combining SEO, AEO, GEO, Meta/Google Ads, web software, or SaaS tools."
+      "title": "DIAGNOSE",
+      "description": "Isolate root friction—whether in positioning, customer discovery, manual processes, or software architecture."
     },
     {
       "step": "03",
-      "title": "Build & Optimize",
-      "description": "Our team builds high-converting ad campaigns, optimizes search schemas, and engineers custom software with precision."
+      "title": "DESIGN",
+      "description": "Craft intentional user experiences, system architectures, and clear brand messaging designed for real human workflows."
     },
     {
       "step": "04",
-      "title": "Launch & Rank",
-      "description": "We push campaigns live, index schemas across AI search engines, and deploy web software to cloud infrastructure."
+      "title": "BUILD",
+      "description": "Engineer resilient web platforms, business systems, or SaaS products using modern, reliable software standards."
     },
     {
       "step": "05",
-      "title": "Scale & Evolve",
-      "description": "We continuously analyze conversion data, scale winning ad channels, refine SEO rankings, and upgrade software features."
+      "title": "DEPLOY",
+      "description": "Launch systems safely into operational environments with full team onboarding, zero downtime, and robust performance."
+    },
+    {
+      "step": "06",
+      "title": "EVOLVE",
+      "description": "Iterate continuously based on real-world usage evidence, growth data, and evolving operational demands."
     }
   ],
   "principles": [
     {
-      "title": "Digital Marketing with Engineering Precision.",
-      "description": "We treat marketing as a measurable science—combining data-driven SEO, AI engine schemas, and performance ad funnels."
+      "title": "Problem before platform.",
+      "description": "We never push a tech stack or framework before understanding what is actually preventing growth or operational efficiency."
     },
     {
-      "title": "Rank on Google and AI Search Engines.",
-      "description": "We optimize your brand for traditional search (SEO), voice search (AEO), and generative AI assistants like ChatGPT and Gemini (GEO)."
+      "title": "Evidence before assumptions.",
+      "description": "Decisions are rooted in verified user behavior, operational data, and business reality—never speculative trends."
     },
     {
-      "title": "Build Real Software & SaaS Products.",
-      "description": "We don't just run ads; we design and engineer scalable web applications and SaaS products like EasyTrack."
+      "title": "Simple before complex.",
+      "description": "The best digital system is the simplest one that solves the underlying problem cleanly and reliably."
     },
     {
-      "title": "One Goal: Business Conversion.",
-      "description": "Whether running ads, building websites, or deploying SaaS tools, every action is designed to generate revenue and qualified leads."
+      "title": "Build for reality.",
+      "description": "Software must perform on actual field devices, unreliable networks, and real workshop floors—not just ideal demos."
     },
     {
-      "title": "Remote First, Serving Worldwide.",
-      "description": "Headquartered in India, serving startups, commercial brands, and enterprise clients across the globe."
+      "title": "Launch isn't the finish line.",
+      "description": "A system's value is proven after deployment. We refine, optimize, and scale based on real-world impact."
     }
   ]
 }

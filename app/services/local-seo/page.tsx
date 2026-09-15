@@ -5,15 +5,15 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Google Maps Pack Optimization | Redwolf Digital Marketing",
+  title: "Local SEO & Google Maps Pack Optimization | Redwolf Digital Growth",
   description:
-    "Dominate Google Maps Pack rankings and local city/district search results with Redwolf's Local Business SEO and multi-branch Google Business Profile optimization.",
+    "Optimize Google Maps Pack visibility and local city/district search results with Redwolf's Local Business SEO and multi-branch Google Business Profile optimization.",
   keywords: [
-    "Local SEO agency India",
+    "Local SEO strategy",
     "Google Business Profile optimization",
-    "Google Maps pack ranking",
-    "multi-branch local SEO",
-    "local citation building agency"
+    "Google Maps pack visibility",
+    "multi-branch local search",
+    "local citation building"
   ],
 };
 
@@ -27,7 +27,7 @@ export default function LocalSEOPage() {
           <nav className="flex items-center gap-2 text-xs font-mono text-slate-400">
             <Link href="/" className="hover:text-red-400">Home</Link>
             <ChevronRight className="h-3 w-3" />
-            <span>Services</span>
+            <span>Capabilities</span>
             <ChevronRight className="h-3 w-3" />
             <span className="text-red-400 font-bold">Local SEO & Google Maps</span>
           </nav>
@@ -35,13 +35,13 @@ export default function LocalSEOPage() {
           <div className="space-y-6 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs uppercase tracking-wider">
               <MapPin className="h-3.5 w-3.5" />
-              <span>Regional Search Dominance Engine</span>
+              <span>Regional Local Search Engine</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight">
-              Rank #1 on <span className="text-red-500">Google Maps</span> & Local Searches
+              Optimize for <span className="text-red-500">Google Maps</span> & Local Searches
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed">
-              When customers in your city search for services "near me", your business should appear at the very top. Redwolf optimizes Google Business Profiles, builds structured local citations, and creates district-focused landing pages.
+              When customers in your city search for services "near me", your business should be clearly discoverable. Redwolf optimizes Google Business Profiles, builds structured local citations, and creates district-focused landing pages.
             </p>
           </div>
 
