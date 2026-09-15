@@ -2,29 +2,58 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowRight, Sparkles, Globe, ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ArrowRight, ChevronDown, Compass, Search } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
-import { useCurrency } from "@/context/currency-context";
-import { CountrySelectorModal } from "@/components/country-selector-modal";
 
-const navLinks = [
-  { name: "Services", href: "/#marketing" },
-  { name: "Pricing", href: "/#pricing" },
-  { name: "ROI Calculator", href: "/#roi-calculator" },
-  { name: "Problem Finder", href: "/#problem-finder" },
-  { name: "Work", href: "/#work" },
-  { name: "Insights", href: "/insights" },
+const navGroups = [
+  {
+    name: "Solutions",
+    href: "/solutions",
+    items: [
+      { name: "GROW", href: "/solutions/grow", description: "Make your business easier to find, trust and choose." },
+      { name: "DEFINE", href: "/solutions/define", description: "Make your business clear before you make it bigger." },
+      { name: "BUILD", href: "/solutions/build", description: "Turn business processes into digital systems." },
+      { name: "PRODUCTIZE", href: "/solutions/productize", description: "Turn ideas and workflows into software products." },
+    ],
+  },
+  {
+    name: "Industries",
+    href: "/industries",
+    items: [
+      { name: "FMCG & Distribution", href: "/industries/fmcg-distribution", description: "Field sales, van inventory & beat routes" },
+      { name: "Healthcare", href: "/industries/healthcare", description: "Patient booking & clinical trust portals" },
+      { name: "Manufacturing", href: "/industries/manufacturing", description: "Custom quote systems & dealer portals" },
+      { name: "Travel & Hospitality", href: "/industries/travel-hospitality", description: "Tour discovery & instant WhatsApp bookings" },
+      { name: "SMEs & Growing Businesses", href: "/industries/smes", description: "Enterprise digital transformation for SMEs" },
+    ],
+  },
+  {
+    name: "Work",
+    href: "/work",
+  },
+  {
+    name: "Products",
+    href: "/products",
+    items: [
+      { name: "EasyTrack", href: "/products/easytrack", description: "FMCG Distribution Management Software" },
+    ],
+  },
+  {
+    name: "Insights",
+    href: "/insights",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
 ];
 
-interface NavbarProps {
-  onOpenEnquiry?: () => void;
-}
-
-export function Navbar({ onOpenEnquiry }: NavbarProps) {
+export function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isCountryModalOpen, setIsCountryModalOpen] = useState(false);
-  const { countryInfo } = useCurrency();
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,132 +64,168 @@ export function Navbar({ onOpenEnquiry }: NavbarProps) {
   }, []);
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#090d16]/90 backdrop-blur-xl border-b border-slate-800/80 py-3 shadow-2xl shadow-black/60"
-            : "bg-transparent py-5"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo */}
-          <BrandLogo variant="header" />
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#0B1220]/95 backdrop-blur-xl border-b border-slate-800/80 py-3 shadow-2xl shadow-black/60"
+          : "bg-[#0B1220]/80 backdrop-blur-md py-4 border-b border-slate-800/50"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        {/* Brand Logo */}
+        <BrandLogo variant="header" />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1.5 bg-slate-900/80 border border-slate-800/80 rounded-full px-5 py-1.5 backdrop-blur-xl shadow-inner shadow-black/40">
-            {navLinks.map((link) => (
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-1.5">
+          {navGroups.map((group) => {
+            const hasDropdown = group.items && group.items.length > 0;
+            const isActive = pathname?.startsWith(group.href);
+
+            if (hasDropdown) {
+              return (
+                <div
+                  key={group.name}
+                  className="relative group/dropdown"
+                  onMouseEnter={() => setActiveDropdown(group.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <Link
+                    href={group.href}
+                    className={`text-xs font-bold font-heading uppercase tracking-wider transition-colors px-3 py-2 rounded-lg flex items-center gap-1 ${
+                      isActive
+                        ? "text-red-400 font-extrabold bg-slate-900/60"
+                        : "text-slate-300 hover:text-white hover:bg-slate-900/40"
+                    }`}
+                  >
+                    <span>{group.name}</span>
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70 group-hover/dropdown:rotate-180 transition-transform" />
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  <div className="absolute left-0 top-full pt-2 w-72 opacity-0 group-hover/dropdown:opacity-100 pointer-events-none group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
+                    <div className="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-2.5 space-y-1">
+                      {group.items?.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="block px-3 py-2.5 rounded-xl hover:bg-slate-800/80 transition-colors group/item"
+                        >
+                          <span className="text-xs font-bold text-white block group-hover/item:text-red-400">
+                            {item.name}
+                          </span>
+                          {item.description && (
+                            <span className="text-[11px] text-slate-400 block line-clamp-1 mt-0.5">
+                              {item.description}
+                            </span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
               <Link
-                key={link.name}
-                href={link.href}
-                className="text-[12px] font-bold uppercase tracking-wider text-slate-300 hover:text-white px-3 py-1.5 rounded-full hover:bg-slate-800/70 transition-all"
+                key={group.name}
+                href={group.href}
+                className={`text-xs font-bold font-heading uppercase tracking-wider transition-colors px-3 py-2 rounded-lg ${
+                  isActive
+                    ? "text-red-400 font-extrabold bg-slate-900/60"
+                    : "text-slate-300 hover:text-white hover:bg-slate-900/40"
+                }`}
               >
-                {link.name}
+                {group.name}
               </Link>
-            ))}
-          </nav>
+            );
+          })}
+        </nav>
 
-          {/* Desktop Actions (Country Switcher + CTA) */}
-          <div className="hidden lg:flex items-center gap-3.5">
-            {/* Country & Region Switcher Trigger */}
-            <button
-              onClick={() => setIsCountryModalOpen(true)}
-              className="flex items-center gap-2 bg-slate-900/90 border border-slate-800/90 hover:border-slate-700 rounded-full px-3.5 py-1.5 text-xs text-slate-200 font-mono transition-all hover:bg-slate-800/80 active:scale-95 cursor-pointer shadow-sm"
-              title="Change Country & Currency"
-              aria-label="Select Country"
-            >
-              <span className="text-base leading-none">{countryInfo.flag}</span>
-              <span className="font-bold">{countryInfo.countryCode}</span>
-              <span className="text-slate-400 text-[11px]">({countryInfo.symbol.trim()})</span>
-              <ChevronDown className="h-3 w-3 text-slate-400" />
-            </button>
+        {/* Desktop Actions */}
+        <div className="hidden lg:flex items-center gap-3.5">
+          <Link
+            href="/diagnostic"
+            className="inline-flex items-center gap-1.5 text-slate-300 hover:text-amber-400 text-xs font-semibold tracking-normal transition-colors"
+          >
+            <Compass className="h-4 w-4 text-amber-400" />
+            <span>Find your digital path →</span>
+          </Link>
 
-            <button
-              onClick={onOpenEnquiry}
-              className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg shadow-red-600/30 transition-all active:scale-95 cursor-pointer"
-            >
-              <span>Start a Project</span>
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </button>
-          </div>
-
-          {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-2.5">
-            {/* Mobile Country Switcher Trigger */}
-            <button
-              onClick={() => setIsCountryModalOpen(true)}
-              className="flex items-center gap-1.5 bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 font-mono cursor-pointer"
-              aria-label="Select Country"
-            >
-              <span className="text-sm leading-none">{countryInfo.flag}</span>
-              <span className="font-bold">{countryInfo.countryCode}</span>
-            </button>
-
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
-              aria-label="Toggle Menu"
-            >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-1.5 bg-[#E53935] hover:bg-[#D32F2F] text-white text-xs font-heading font-extrabold uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-lg shadow-red-600/20 transition-all hover:scale-[1.02]"
+          >
+            <span>Start a conversation</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
 
-        {/* Mobile Menu Drawer */}
-        {isOpen && (
-          <div className="lg:hidden bg-[#090d16]/95 border-b border-slate-800 backdrop-blur-2xl px-4 py-6 animate-in fade-in slide-in-from-top-4">
-            <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) => (
+        {/* Mobile Toggle */}
+        <div className="flex lg:hidden items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Drawer */}
+      {isOpen && (
+        <div className="lg:hidden bg-[#0B1220]/95 border-b border-slate-800 backdrop-blur-2xl px-4 py-6 animate-in fade-in slide-in-from-top-4">
+          <nav className="flex flex-col space-y-4">
+            {navGroups.map((group) => (
+              <div key={group.name} className="space-y-1">
                 <Link
-                  key={link.name}
-                  href={link.href}
+                  href={group.href}
+                  className="text-sm font-bold text-amber-400 px-3 py-1.5 block uppercase tracking-wider"
                   onClick={() => setIsOpen(false)}
-                  className="text-sm font-semibold uppercase tracking-wider text-slate-200 hover:text-red-400 px-3 py-2.5 rounded-lg hover:bg-slate-900/80 transition-colors"
                 >
-                  {link.name}
+                  {group.name}
                 </Link>
-              ))}
 
-              <div className="pt-4 border-t border-slate-800/80 flex flex-col gap-3">
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    setIsCountryModalOpen(true);
-                  }}
-                  className="w-full flex items-center justify-between bg-slate-900 border border-slate-800 text-slate-300 px-4 py-2.5 rounded-xl text-xs font-mono"
-                >
-                  <div className="flex items-center gap-2">
-                    <Globe className="h-4 w-4 text-red-500" />
-                    <span>Country & Currency</span>
+                {group.items && (
+                  <div className="pl-4 space-y-1 border-l-2 border-slate-800 ml-3">
+                    {group.items.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className="block text-xs font-medium text-slate-300 hover:text-white py-1"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
                   </div>
-                  <div className="flex items-center gap-1.5 font-bold text-white">
-                    <span>{countryInfo.flag}</span>
-                    <span>{countryInfo.countryName} ({countryInfo.symbol.trim()})</span>
-                  </div>
-                </button>
-
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    if (onOpenEnquiry) onOpenEnquiry();
-                  }}
-                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl shadow-lg shadow-red-600/30 cursor-pointer"
-                >
-                  <Sparkles className="h-4 w-4" />
-                  <span>Start a Project</span>
-                </button>
+                )}
               </div>
-            </nav>
-          </div>
-        )}
-      </header>
+            ))}
 
-      {/* Country Switcher Modal */}
-      <CountrySelectorModal
-        isOpen={isCountryModalOpen}
-        onClose={() => setIsCountryModalOpen(false)}
-      />
-    </>
+            <div className="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
+              <Link
+                href="/diagnostic"
+                className="flex items-center justify-center gap-2 bg-slate-900 border border-slate-800 text-amber-400 text-xs font-bold py-3 rounded-xl w-full"
+                onClick={() => setIsOpen(false)}
+              >
+                <Compass className="h-4 w-4" />
+                <span>Find your digital path →</span>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="flex items-center justify-center gap-2 bg-[#E53935] text-white text-xs font-extrabold uppercase tracking-wider py-3.5 rounded-xl shadow-lg shadow-red-600/30 w-full"
+                onClick={() => setIsOpen(false)}
+              >
+                <span>Start a conversation →</span>
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }
-
