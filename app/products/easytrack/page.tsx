@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Cpu, Play, CheckCircle2, Activity } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { productsData } from "@/data/products";
+import { getProductBySlug } from "@/lib/cms";
 
 export const metadata: Metadata = {
   title: "EasyTrack — FMCG Distribution Management Software | Redwolf Product",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function EasyTrackProductPage() {
-  const easytrack = productsData.easytrack;
+  const easytrack = getProductBySlug("easytrack")!;
 
   const jsonLd = {
     "@context": "https://schema.org",
