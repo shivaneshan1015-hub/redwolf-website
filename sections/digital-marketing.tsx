@@ -10,6 +10,8 @@ import {
   Target, 
   MapPin, 
   FileText, 
+  Share2,
+  Palette,
   ArrowRight, 
   CheckCircle2,
   Zap
@@ -21,6 +23,8 @@ const serviceIconMap: Record<string, React.ElementType> = {
   aeo: Bot,
   geo: Sparkles,
   ads: Target,
+  smm: Share2,
+  branding: Palette,
   localseo: MapPin,
   content: FileText
 };

@@ -1,0 +1,127 @@
+{
+  "countries": {
+    "IN": { "countryCode": "IN", "countryName": "India", "flag": "🇮🇳", "currency": "INR", "symbol": "₹", "rateVsINR": 1, "formatLocale": "en-IN" },
+    "US": { "countryCode": "US", "countryName": "United States", "flag": "🇺🇸", "currency": "USD", "symbol": "$", "rateVsINR": 0.012, "formatLocale": "en-US" },
+    "GB": { "countryCode": "GB", "countryName": "United Kingdom", "flag": "🇬🇧", "currency": "GBP", "symbol": "£", "rateVsINR": 0.0094, "formatLocale": "en-GB" },
+    "EU": { "countryCode": "EU", "countryName": "European Union", "flag": "🇪🇺", "currency": "EUR", "symbol": "€", "rateVsINR": 0.011, "formatLocale": "de-DE" },
+    "AE": { "countryCode": "AE", "countryName": "United Arab Emirates", "flag": "🇦🇪", "currency": "AED", "symbol": "AED ", "rateVsINR": 0.044, "formatLocale": "ar-AE" },
+    "CA": { "countryCode": "CA", "countryName": "Canada", "flag": "🇨🇦", "currency": "CAD", "symbol": "CA$", "rateVsINR": 0.016, "formatLocale": "en-CA" },
+    "AU": { "countryCode": "AU", "countryName": "Australia", "flag": "🇦🇺", "currency": "AUD", "symbol": "A$", "rateVsINR": 0.018, "formatLocale": "en-AU" },
+    "SG": { "countryCode": "SG", "countryName": "Singapore", "flag": "🇸🇬", "currency": "SGD", "symbol": "S$", "rateVsINR": 0.016, "formatLocale": "en-SG" }
+  },
+  "currencies": {
+    "INR": { "code": "INR", "symbol": "₹", "name": "Indian Rupee", "rateVsINR": 1, "formatLocale": "en-IN" },
+    "USD": { "code": "USD", "symbol": "$", "name": "US Dollar", "rateVsINR": 0.012, "formatLocale": "en-US" },
+    "EUR": { "code": "EUR", "symbol": "€", "name": "Euro", "rateVsINR": 0.011, "formatLocale": "de-DE" },
+    "GBP": { "code": "GBP", "symbol": "£", "name": "British Pound", "rateVsINR": 0.0094, "formatLocale": "en-GB" },
+    "AED": { "code": "AED", "symbol": "AED ", "name": "UAE Dirham", "rateVsINR": 0.044, "formatLocale": "ar-AE" },
+    "CAD": { "code": "CAD", "symbol": "CA$", "name": "Canadian Dollar", "rateVsINR": 0.016, "formatLocale": "en-CA" },
+    "AUD": { "code": "AUD", "symbol": "A$", "name": "Australian Dollar", "rateVsINR": 0.018, "formatLocale": "en-AU" },
+    "SGD": { "code": "SGD", "symbol": "S$", "name": "Singapore Dollar", "rateVsINR": 0.016, "formatLocale": "en-SG" }
+  },
+  "servicePlans": [
+    {
+      "id": "micro-sme",
+      "name": "Micro SME & Local Starter",
+      "badge": "Small Business Special",
+      "popular": false,
+      "tagline": "Affordable Growth for Local Shops, Service Providers & Early Startups",
+      "priceINR": 14999,
+      "priceUSD": 189,
+      "period": "month",
+      "features": [
+        "Local SEO & Google Business Profile Optimization",
+        "Technical SEO & Page Speed Audit",
+        "10 High-Intent Keyword Optimization",
+        "Basic Voice & AEO Schema Setup",
+        "Monthly Ranking & Traffic Performance Report",
+        "Standard Email & WhatsApp Support"
+      ],
+      "ctaText": "Start Micro SME Plan"
+    },
+    {
+      "id": "sme-growth",
+      "name": "SME Industrial Growth Stack",
+      "badge": "Most Popular for SMEs",
+      "popular": true,
+      "tagline": "Complete SEO + Voice AEO + AI GEO + Meta/Google Ads Funnel",
+      "priceINR": 34999,
+      "priceUSD": 429,
+      "period": "month",
+      "features": [
+        "Tri-Engine Dominance (Google SEO + Siri/Alexa AEO + AI GEO)",
+        "Google Search & Meta (FB/IG) Paid Ad Campaign Management",
+        "ChatGPT, Perplexity & Gemini Entity Knowledge Mapping",
+        "District & Regional High-Intent Landing Pages",
+        "High-Authority Backlink Acquisition & Content Silos",
+        "Dedicated Growth Manager & Bi-Weekly Strategy Sync"
+      ],
+      "ctaText": "Claim SME Growth Plan"
+    },
+    {
+      "id": "enterprise-stack",
+      "name": "Custom Web App & Enterprise Scale",
+      "badge": "Full Engineering + Marketing",
+      "popular": false,
+      "tagline": "Custom High-Performance Web Platform + Full-Funnel Growth",
+      "priceINR": 99999,
+      "priceUSD": 1199,
+      "period": "month / project",
+      "features": [
+        "Full-Stack Next.js Custom Web Application Engineering",
+        "360-Degree Omnichannel Paid Ads & Lead Generation",
+        "Custom API Integrations & Business Automation Tools",
+        "Advanced Conversion Rate Optimization (CRO)",
+        "Priority 24/7 Support & Dedicated SLA Engineering Team"
+      ],
+      "ctaText": "Get Custom Enterprise Stack"
+    }
+  ],
+  "saasPlans": [
+    {
+      "id": "easytrack-starter",
+      "name": "EasyTrack Starter Fleet",
+      "tagline": "Ideal for regional fleet operators & small logistics",
+      "priceINR": 4999,
+      "priceUSD": 59,
+      "period": "month",
+      "features": [
+        "Up to 10 Fleet Vehicles",
+        "Real-Time Live Map Dispatch Console",
+        "Automated WhatsApp Driver & Client Alerts",
+        "Digital Trip Sheet Management",
+        "Standard Email & Chat Support"
+      ]
+    },
+    {
+      "id": "easytrack-pro",
+      "name": "EasyTrack Pro Logistics",
+      "tagline": "For growing commercial fleets & transport companies",
+      "priceINR": 14999,
+      "priceUSD": 179,
+      "period": "month",
+      "features": [
+        "Up to 50 Fleet Vehicles",
+        "Multi-Branch Owner & Dispatcher Portals",
+        "Automated Fuel & Ledger Analytics",
+        "Route Optimization & Delay Predictor",
+        "Priority 24/7 Support"
+      ]
+    },
+    {
+      "id": "easytrack-custom",
+      "name": "Enterprise Custom SaaS",
+      "tagline": "Custom SaaS built specifically for your fleet or workflow",
+      "priceINR": 49999,
+      "priceUSD": 599,
+      "period": "month / custom",
+      "features": [
+        "Unlimited Vehicles & Multi-Tenant Support",
+        "Custom Feature Engineering & ERP Integrations",
+        "White-Label Mobile App & Custom Branding",
+        "Dedicated Cloud Server Infrastructure",
+        "Dedicated Account Executive"
+      ]
+    }
+  ]
+}

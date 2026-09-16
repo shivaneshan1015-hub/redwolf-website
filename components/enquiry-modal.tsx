@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles, ArrowRight, CheckCircle2, ArrowLeft, Send } from "lucide-react";
-import siteData from "@/data/site-data.json";
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -27,15 +26,14 @@ export function EnquiryModal({ isOpen, onClose, initialProblemId }: EnquiryModal
   const [submitted, setSubmitted] = useState(false);
 
   const problemOptions = [
-    "SEO, AEO & GEO Search Dominance",
-    "Performance Ads (Google & Meta Ads)",
-    "Local SEO & Google Maps Ranking",
-    "Build a brand & visual identity",
-    "Build a high-converting website",
-    "Automate business workflow",
-    "Build custom web software",
-    "Build a SaaS product (like EasyTrack)",
-    "Full Digital Marketing Audit"
+    "GROW — Organic Search & AI Search Visibility (SEO/AEO/GEO)",
+    "GROW — Intent-Driven Performance Ads (Google & Meta Ads)",
+    "GROW — Local Search & Google Maps Visibility",
+    "DEFINE — Brand Strategy & Visual Identity",
+    "BUILD — High-Speed Web Application Engineering",
+    "BUILD — Business Workflow Platform & Automation",
+    "PRODUCTIZE — SaaS Architecture & Field App Engineering (EasyTrack)",
+    "Redwolf Diagnostic Consultation"
   ];
 
   const handleNext = () => {

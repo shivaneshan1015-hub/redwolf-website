@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
-import insights from "@/data/insights.json";
+import { siteConfig } from "@/lib/config";
+import { getInsights, getSolutions, getIndustries, getCaseStudies } from "@/lib/cms";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://redwolf.digital";
+  const baseUrl = siteConfig.url;
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -12,25 +13,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/services/seo-aeo-geo`,
+      url: `${baseUrl}/solutions`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/performance-ads`,
+      url: `${baseUrl}/industries`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/local-seo`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/web-applications`,
+      url: `${baseUrl}/work`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -47,14 +42,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/diagnostic`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
-  const insightRoutes: MetadataRoute.Sitemap = insights.map((article) => ({
-    url: `${baseUrl}/insights/${article.slug}`,
-    lastModified: new Date(article.date),
+  const solutionRoutes: MetadataRoute.Sitemap = getSolutions().map((sol) => ({
+    url: `${baseUrl}/solutions/${sol.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  const industryRoutes: MetadataRoute.Sitemap = getIndustries().map((ind) => ({
+    url: `${baseUrl}/industries/${ind.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  const workRoutes: MetadataRoute.Sitemap = getCaseStudies().map((work) => ({
+    url: `${baseUrl}/work/${work.slug}`,
+    lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...insightRoutes];
+  const insightRoutes: MetadataRoute.Sitemap = getInsights().map((article) => ({
+    url: `${baseUrl}/insights/${article.slug}`,
+    lastModified: new Date(article.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...solutionRoutes, ...industryRoutes, ...workRoutes, ...insightRoutes];
 }
