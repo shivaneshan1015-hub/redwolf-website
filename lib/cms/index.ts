@@ -131,6 +131,22 @@ export function getAuthorById(id: string): AuthorContent | undefined {
   return authorsContent[id] || Object.values(authorsContent).find((a) => a.id === id);
 }
 
+export function getRelatedIndustriesForSolution(solutionSlug: string): IndustryContent[] {
+  const sol = solutionsContent[solutionSlug];
+  if (!sol) return [];
+  return Object.values(industriesContent).filter(
+    (ind) => sol.relatedIndustrySlugs?.includes(ind.slug) || ind.relevantSolutionSlugs?.includes(solutionSlug)
+  );
+}
+
+export function getRelatedProductsForSolution(solutionSlug: string): ProductContent[] {
+  const sol = solutionsContent[solutionSlug];
+  if (!sol || !sol.relatedProductSlugs) return [];
+  return sol.relatedProductSlugs
+    .map((slug) => productsContent[slug])
+    .filter((p): p is ProductContent => Boolean(p));
+}
+
 // 9. TESTIMONIALS
 export function getTestimonials(): TestimonialContent[] {
   return Object.values(testimonialsContent);
@@ -144,6 +160,10 @@ export function getFAQs(category?: string): FAQContent[] {
 
 export function getFAQsByPage(page: string): FAQContent[] {
   return faqsContent.filter((f) => f.page === page);
+}
+
+export function getFAQsForSolution(solutionSlug: string): FAQContent[] {
+  return faqsContent.filter((f) => f.relatedSolutionSlug === solutionSlug);
 }
 
 // 11. GLOBAL CONTENT
