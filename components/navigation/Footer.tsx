@@ -2,10 +2,11 @@ import React from "react";
 import Link from "next/link";
 import { Compass } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
-import { brandData } from "@/data/brand";
+import { getBrandContent } from "@/lib/cms";
 import { primaryNavigation, globalCTAs } from "@/data/navigation";
 
 export function Footer() {
+  const brandData = getBrandContent();
   const currentYear = new Date().getFullYear();
   const solutionsGroup = primaryNavigation.find((g) => g.name === "Solutions");
   const industriesGroup = primaryNavigation.find((g) => g.name === "Industries");

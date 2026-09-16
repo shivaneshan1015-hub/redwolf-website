@@ -6,12 +6,14 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { SolutionCard, WorkCard, InsightCard } from "@/components/ui/cards";
 import { RedwolfSystemLine } from "@/components/ui/system-line";
 import { ProblemSignalCard } from "@/components/ui/problem-signal";
-import { brandData } from "@/data/brand";
-import { solutionsData } from "@/data/solutions";
-import { industriesData } from "@/data/industries";
-import { workData } from "@/data/work";
-import { productsData } from "@/data/products";
-import { insightsData } from "@/data/insights";
+import {
+  getBrandContent,
+  getSolutionBySlug,
+  getIndustries,
+  getCaseStudies,
+  getProductBySlug,
+  getInsights,
+} from "@/lib/cms";
 import { Compass, ArrowRight } from "lucide-react";
 
 export const metadata = constructMetadata({
@@ -22,9 +24,16 @@ export const metadata = constructMetadata({
 });
 
 export default function HomePage() {
-  const easytrack = productsData.easytrack;
-  const works = Object.values(workData);
-  const insights = Object.values(insightsData);
+  const brandData = getBrandContent();
+  const easytrack = getProductBySlug("easytrack")!;
+  const works = getCaseStudies();
+  const insights = getInsights();
+  const industries = getIndustries();
+
+  const growSol = getSolutionBySlug("grow")!;
+  const defineSol = getSolutionBySlug("define")!;
+  const buildSol = getSolutionBySlug("build")!;
+  const productizeSol = getSolutionBySlug("productize")!;
 
   return (
     <div className="space-y-20 sm:space-y-28 pb-20 pt-20 sm:pt-24">
@@ -203,31 +212,31 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <SolutionCard
-              name={solutionsData.grow.name}
-              heroHeadline={solutionsData.grow.heroHeadline}
-              summary={solutionsData.grow.summary}
-              href={`/solutions/${solutionsData.grow.slug}`}
+              name={growSol.name}
+              heroHeadline={growSol.heroHeadline}
+              summary={growSol.summary}
+              href={`/solutions/${growSol.slug}`}
             />
 
             <SolutionCard
-              name={solutionsData.define.name}
-              heroHeadline={solutionsData.define.heroHeadline}
-              summary={solutionsData.define.summary}
-              href={`/solutions/${solutionsData.define.slug}`}
+              name={defineSol.name}
+              heroHeadline={defineSol.heroHeadline}
+              summary={defineSol.summary}
+              href={`/solutions/${defineSol.slug}`}
             />
 
             <SolutionCard
-              name={solutionsData.build.name}
-              heroHeadline={solutionsData.build.heroHeadline}
-              summary={solutionsData.build.summary}
-              href={`/solutions/${solutionsData.build.slug}`}
+              name={buildSol.name}
+              heroHeadline={buildSol.heroHeadline}
+              summary={buildSol.summary}
+              href={`/solutions/${buildSol.slug}`}
             />
 
             <SolutionCard
-              name={solutionsData.productize.name}
-              heroHeadline={solutionsData.productize.heroHeadline}
-              summary={solutionsData.productize.summary}
-              href={`/solutions/${solutionsData.productize.slug}`}
+              name={productizeSol.name}
+              heroHeadline={productizeSol.heroHeadline}
+              summary={productizeSol.summary}
+              href={`/solutions/${productizeSol.slug}`}
             />
           </div>
         </section>
@@ -331,7 +340,7 @@ export default function HomePage() {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.values(industriesData).map((ind) => (
+            {industries.map((ind) => (
               <Link
                 key={ind.id}
                 href={`/industries/${ind.slug}`}
