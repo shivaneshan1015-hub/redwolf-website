@@ -67,6 +67,12 @@ export function getRelatedWorkForSolution(solutionSlug: string): CaseStudyConten
   );
 }
 
+export function getRelatedWorkForIndustry(industrySlug: string): CaseStudyContent[] {
+  return Object.values(workContent).filter((w) =>
+    w.relatedIndustrySlug === industrySlug
+  );
+}
+
 // 5. PRODUCTS
 export function getProducts(): ProductContent[] {
   return Object.values(productsContent);
@@ -91,6 +97,18 @@ export function getRelatedInsightsForIndustry(industrySlug: string): InsightCont
   );
 }
 
+export function getRelatedInsightsForSolution(solutionSlug: string): InsightContent[] {
+  return Object.values(insightsContent).filter((ins) =>
+    ins.relatedSolutionSlugs.includes(solutionSlug)
+  );
+}
+
+export function getRelatedInsightsForWork(workSlug: string): InsightContent[] {
+  return Object.values(insightsContent).filter((ins) =>
+    ins.relatedWorkSlugs.includes(workSlug)
+  );
+}
+
 // 7. PROOF
 export function getProofItems(): ProofContent[] {
   return Object.values(proofContent);
@@ -107,6 +125,10 @@ export function getAuthors(): AuthorContent[] {
 
 export function getAuthorBySlug(slug: string): AuthorContent | undefined {
   return authorsContent[slug];
+}
+
+export function getAuthorById(id: string): AuthorContent | undefined {
+  return authorsContent[id] || Object.values(authorsContent).find((a) => a.id === id);
 }
 
 // 9. TESTIMONIALS
@@ -128,3 +150,4 @@ export function getFAQsByPage(page: string): FAQContent[] {
 export function getGlobalContent(): GlobalContent {
   return globalContent;
 }
+

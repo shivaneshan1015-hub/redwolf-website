@@ -106,6 +106,7 @@ export interface SolutionContent {
   outcomes?: string[];
   relatedIndustrySlugs: string[];
   relatedWorkSlugs: string[];
+  relatedProductSlugs?: string[];
   relatedInsightSlugs: string[];
   iconName: string;
   cta: CTARef;
@@ -124,6 +125,7 @@ export interface IndustryContent {
   relevantRedwolfSystems: string[];
   relevantSolutionSlugs: string[];
   relatedWorkSlugs: string[];
+  relatedProductSlugs?: string[];
   relatedInsightSlugs: string[];
   cta: CTARef;
   seo: SEOData;

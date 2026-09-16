@@ -24,7 +24,8 @@ export const industriesContent: Record<string, IndustryContent> = {
       "Retailer Credit & Ledger Control Console",
     ],
     relevantSolutionSlugs: ["build", "productize", "grow"],
-    relatedWorkSlugs: ["easytrack"],
+    relatedWorkSlugs: [],
+    relatedProductSlugs: ["easytrack"],
     relatedInsightSlugs: ["local-seo-google-maps-pack-ranking-strategy"],
     cta: {
       label: "Explore FMCG Solutions",

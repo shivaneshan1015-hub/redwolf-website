@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import insights from "@/data/insights.json";
+import { getInsights } from "@/lib/cms";
 
 export const metadata: Metadata = {
   title: "Redwolf Insights — Digital Growth & Technology Knowledge Hub",
@@ -18,6 +18,8 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
+  const insights = getInsights();
+
   return (
     <div className="pt-24 pb-20 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -52,7 +54,7 @@ export default function InsightsPage() {
                   {article.title}
                 </h2>
                 <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
-                  {article.summary}
+                  {article.excerpt}
                 </p>
               </div>
 

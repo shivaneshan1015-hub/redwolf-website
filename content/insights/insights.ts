@@ -84,7 +84,7 @@ With browser privacy changes, client-side tracking pixels lose up to 30% of conv
   "local-seo-google-maps-pack-ranking-strategy": {
     id: "local-seo-google-maps-pack-ranking-strategy",
     slug: "local-seo-google-maps-pack-ranking-strategy",
-    title: "Dominating Local Search: Google Maps & Local Pack Ranking Strategy",
+    title: "Local Search Strategy: Google Maps & Local Pack Ranking Guide",
     excerpt: "A tactical guide to ranking physical business units and regional service outlets in the Google Local 3-Pack.",
     category: "Digital Growth",
     type: "LOCAL DISCOVERABILITY",
@@ -114,7 +114,7 @@ Encourage verified customers to leave detailed reviews referencing specific serv
       },
     ],
     seo: {
-      title: "Dominating Local Search: Google Maps Ranking Strategy | Redwolf",
+      title: "Local Search Strategy: Google Maps Ranking Guide | Redwolf",
       description: "Tactical guide to ranking physical business units and regional service outlets in the Google Local 3-Pack.",
       keywords: ["Local SEO guide", "Google Maps pack ranking", "Google Business Profile", "regional search"],
     },

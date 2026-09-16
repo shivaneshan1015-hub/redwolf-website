@@ -141,7 +141,7 @@ export const solutionsContent: Record<string, SolutionContent> = {
     positioning: "We design and build web applications, business platforms, and automation systems around how your business actually works.",
     summary: "Eliminate manual chaos, spreadsheets, paper clipboards, and disconnected tools by engineering custom digital workflow platforms.",
     shortDescription: "Turn business processes into digital systems.",
-    workflow: ["MANUAL", "UNDERSTAND", "MAP", "DIGITIZE", "CONNECT", "MEASURE"],
+    workflow: ["MANUAL", "UNDERSTAND", "MAP", "DESIGN", "DIGITIZE", "CONNECT", "MEASURE"],
     systems: [
       {
         title: "Business Process Platforms",
@@ -246,7 +246,8 @@ export const solutionsContent: Record<string, SolutionContent> = {
       "Commercialized software products generated from internal expertise.",
     ],
     relatedIndustrySlugs: ["fmcg-distribution"],
-    relatedWorkSlugs: ["easytrack"],
+    relatedWorkSlugs: [],
+    relatedProductSlugs: ["easytrack"],
     relatedInsightSlugs: ["how-to-rank-on-chatgpt-perplexity-gemini-geo-guide"],
     iconName: "Box",
     cta: {

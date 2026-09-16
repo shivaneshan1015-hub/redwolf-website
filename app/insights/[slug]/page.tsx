@@ -3,13 +3,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import insights from "@/data/insights.json";
+import { getInsights, getInsightBySlug } from "@/lib/cms";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
+  const insights = getInsights();
   return insights.map((article) => ({
     slug: article.slug,
   }));
@@ -17,7 +18,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const article = insights.find((a) => a.slug === resolvedParams.slug);
+  const article = getInsightBySlug(resolvedParams.slug);
 
   if (!article) {
     return {
@@ -27,14 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${article.title} | Redwolf Insights`,
-    description: article.summary,
+    description: article.excerpt,
     keywords: [article.category, "Redwolf GEO guide", "AEO voice search optimization"],
   };
 }
 
 export default async function InsightArticlePage({ params }: Props) {
   const resolvedParams = await params;
-  const article = insights.find((a) => a.slug === resolvedParams.slug);
+  const article = getInsightBySlug(resolvedParams.slug);
 
   if (!article) {
     notFound();
@@ -44,8 +45,8 @@ export default async function InsightArticlePage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": article.title,
-    "description": article.summary,
-    "datePublished": article.date,
+    "description": article.excerpt,
+    "datePublished": article.publishedAt,
     "author": {
       "@type": "Organization",
       "name": "Redwolf",
@@ -93,7 +94,7 @@ export default async function InsightArticlePage({ params }: Props) {
               {article.category}
             </span>
             <span className="text-slate-400">{article.readTime}</span>
-            <span className="text-slate-500">• Published {article.date}</span>
+            <span className="text-slate-500">• Published {article.publishedAt}</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight">
@@ -101,7 +102,7 @@ export default async function InsightArticlePage({ params }: Props) {
           </h1>
 
           <p className="text-slate-300 text-lg leading-relaxed border-l-4 border-red-500 pl-4 py-1 italic bg-slate-900/50 rounded-r-xl">
-            {article.summary}
+            {article.excerpt}
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, X, Send, Sparkles } from "lucide-react";
+import { MessageCircle, X, Sparkles } from "lucide-react";
 
 interface WhatsAppWidgetProps {
   onOpenEnquiry?: () => void;

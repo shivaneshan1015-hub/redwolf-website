@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles, ArrowRight, CheckCircle2, ArrowLeft, Send } from "lucide-react";
-import siteData from "@/data/site-data.json";
 
 interface EnquiryModalProps {
   isOpen: boolean;
