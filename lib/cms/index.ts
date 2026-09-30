@@ -35,7 +35,11 @@ export function getSolutions(): SolutionContent[] {
 }
 
 export function getSolutionBySlug(slug: string): SolutionContent | undefined {
-  return solutionsContent[slug];
+  return solutionsContent[slug] || Object.values(solutionsContent).find((s) => s.slug === slug);
+}
+
+export function getSolutionById(id: string): SolutionContent | undefined {
+  return Object.values(solutionsContent).find((s) => s.id === id);
 }
 
 // 3. INDUSTRIES
@@ -44,7 +48,11 @@ export function getIndustries(): IndustryContent[] {
 }
 
 export function getIndustryBySlug(slug: string): IndustryContent | undefined {
-  return industriesContent[slug];
+  return industriesContent[slug] || Object.values(industriesContent).find((i) => i.slug === slug);
+}
+
+export function getIndustryById(id: string): IndustryContent | undefined {
+  return Object.values(industriesContent).find((i) => i.id === id);
 }
 
 // 4. CASE STUDIES / WORK
@@ -57,7 +65,11 @@ export function getFeaturedCaseStudies(): CaseStudyContent[] {
 }
 
 export function getCaseStudyBySlug(slug: string): CaseStudyContent | undefined {
-  return workContent[slug];
+  return workContent[slug] || Object.values(workContent).find((w) => w.slug === slug);
+}
+
+export function getCaseStudyById(id: string): CaseStudyContent | undefined {
+  return Object.values(workContent).find((w) => w.id === id);
 }
 
 export function getRelatedWorkForSolution(solutionSlug: string): CaseStudyContent[] {
@@ -79,7 +91,11 @@ export function getProducts(): ProductContent[] {
 }
 
 export function getProductBySlug(slug: string): ProductContent | undefined {
-  return productsContent[slug];
+  return productsContent[slug] || Object.values(productsContent).find((p) => p.slug === slug);
+}
+
+export function getProductById(id: string): ProductContent | undefined {
+  return Object.values(productsContent).find((p) => p.id === id);
 }
 
 // 6. INSIGHTS
@@ -88,7 +104,11 @@ export function getInsights(): InsightContent[] {
 }
 
 export function getInsightBySlug(slug: string): InsightContent | undefined {
-  return insightsContent[slug];
+  return insightsContent[slug] || Object.values(insightsContent).find((ins) => ins.slug === slug);
+}
+
+export function getInsightById(id: string): InsightContent | undefined {
+  return Object.values(insightsContent).find((ins) => ins.id === id);
 }
 
 export function getRelatedInsightsForIndustry(industrySlug: string): InsightContent[] {
@@ -109,13 +129,23 @@ export function getRelatedInsightsForWork(workSlug: string): InsightContent[] {
   );
 }
 
+export function getRelatedInsightsForProduct(productSlug: string): InsightContent[] {
+  return Object.values(insightsContent).filter((ins) =>
+    ins.relatedProductSlugs?.includes(productSlug)
+  );
+}
+
 // 7. PROOF
 export function getProofItems(): ProofContent[] {
   return Object.values(proofContent);
 }
 
 export function getProofBySlug(slug: string): ProofContent | undefined {
-  return proofContent[slug];
+  return proofContent[slug] || Object.values(proofContent).find((p) => p.slug === slug);
+}
+
+export function getProofById(id: string): ProofContent | undefined {
+  return Object.values(proofContent).find((p) => p.id === id);
 }
 
 // 8. AUTHORS
@@ -124,7 +154,7 @@ export function getAuthors(): AuthorContent[] {
 }
 
 export function getAuthorBySlug(slug: string): AuthorContent | undefined {
-  return authorsContent[slug];
+  return authorsContent[slug] || Object.values(authorsContent).find((a) => a.slug === slug);
 }
 
 export function getAuthorById(id: string): AuthorContent | undefined {
@@ -152,6 +182,14 @@ export function getTestimonials(): TestimonialContent[] {
   return Object.values(testimonialsContent);
 }
 
+export function getTestimonialBySlug(slug: string): TestimonialContent | undefined {
+  return testimonialsContent[slug] || Object.values(testimonialsContent).find((t) => t.slug === slug);
+}
+
+export function getTestimonialById(id: string): TestimonialContent | undefined {
+  return Object.values(testimonialsContent).find((t) => t.id === id);
+}
+
 // 10. FAQS
 export function getFAQs(category?: string): FAQContent[] {
   if (!category) return faqsContent;
@@ -166,8 +204,17 @@ export function getFAQsForSolution(solutionSlug: string): FAQContent[] {
   return faqsContent.filter((f) => f.relatedSolutionSlug === solutionSlug);
 }
 
+export function getFAQsForIndustry(industrySlug: string): FAQContent[] {
+  return faqsContent.filter((f) => f.relatedIndustrySlug === industrySlug);
+}
+
+export function getFAQsForProduct(productSlug: string): FAQContent[] {
+  return faqsContent.filter((f) => f.relatedProductSlug === productSlug);
+}
+
 // 11. GLOBAL CONTENT
 export function getGlobalContent(): GlobalContent {
   return globalContent;
 }
+
 

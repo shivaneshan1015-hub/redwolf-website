@@ -202,6 +202,7 @@ export interface ProductContent {
   capabilities: string[];
   relatedIndustrySlugs: string[];
   relatedSolutionSlugs: string[];
+  relatedWorkSlugs?: string[];
   cta: {
     primaryText: string;
     secondaryText: string;
@@ -254,6 +255,9 @@ export interface ProofContent {
   author?: string;
   role?: string;
   company?: string;
+  relatedWorkSlug?: string;
+  relatedSolutionSlug?: string;
+  relatedIndustrySlug?: string;
 }
 
 // 8. AUTHOR CONTENT MODEL
