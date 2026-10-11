@@ -1,9 +1,9 @@
 import { BrandContent } from "@/types/content";
 
 export const brandContent: BrandContent = {
-  name: "Redwolf",
+  name: "Redwolf Digital",
   category: "Digital Growth & Technology Company",
-  positioning: "Redwolf is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
+  positioning: "Redwolf Digital is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
   essence: "We turn business problems into digital systems.",
   promise: "From business problem to digital solution.",
   tagline: "From problem to digital solution.",

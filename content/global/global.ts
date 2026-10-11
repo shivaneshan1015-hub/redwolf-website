@@ -1,8 +1,8 @@
 import { GlobalContent } from "@/types/content";
 
 export const globalContent: GlobalContent = {
-  siteName: "Redwolf",
-  positioning: "Redwolf is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
+  siteName: "Redwolf Digital",
+  positioning: "Redwolf Digital is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
   promise: "From business problem to digital solution.",
   tagline: "From problem to digital solution.",
   commonCTAs: {
@@ -45,7 +45,7 @@ export const globalContent: GlobalContent = {
     },
   },
   footerLinks: [
-    { label: "About Redwolf", href: "/about" },
+    { label: "About Redwolf Digital", href: "/about" },
     { label: "Work", href: "/work" },
     { label: "EasyTrack", href: "/products/easytrack" },
     { label: "Insights", href: "/insights" },

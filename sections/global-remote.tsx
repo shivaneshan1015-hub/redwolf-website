@@ -23,7 +23,7 @@ export function GlobalRemoteSection({ onOpenEnquiry }: GlobalRemoteProps) {
                 {siteData.brand.deliveryModel}
               </h2>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Whether you are a startup in North America, an enterprise in Europe, or a commercial brand in Asia, Redwolf delivers seamless digital engineering with real-time remote collaboration.
+                Whether you are a startup in North America, an enterprise in Europe, or a commercial brand in Asia, Redwolf Digital delivers seamless digital engineering with real-time remote collaboration.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 font-mono text-xs text-slate-300">

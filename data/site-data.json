@@ -1,10 +1,10 @@
 {
   "brand": {
-    "name": "Redwolf",
+    "name": "Redwolf Digital",
     "tagline": "From problem to digital solution.",
-    "positioning": "Redwolf is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
+    "positioning": "Redwolf Digital is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
     "headline": "From business problem to digital solution.",
-    "subheadline": "Redwolf combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.",
+    "subheadline": "Redwolf Digital combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.",
     "deliveryModel": "Based in South India. Partnering with businesses worldwide."
   },
   "marketingServices": [
@@ -139,7 +139,7 @@
       "client": "Sri Nantha Glasses & Stickers",
       "industry": "Automotive & Vehicle Body Building",
       "challenge": "An automotive glass supplier and window assembler needed a clear web presence to showcase ready-to-fit aluminum sliding window assemblies and vehicle glass options.",
-      "intervention": "Redwolf re-architected brand positioning around ready-to-fit window assembly solutions, built an interactive Vehicle Glass Finder wizard, and optimized local search profiles.",
+      "intervention": "Redwolf Digital re-architected brand positioning around ready-to-fit window assembly solutions, built an interactive Vehicle Glass Finder wizard, and optimized local search profiles.",
       "solution": "Brand Positioning + Vehicle Glass Finder + Local Search Architecture",
       "highlights": ["Interactive 7-Step Vehicle Glass Finder", "Ready-to-Fit Window Assembly Positioning", "Direct WhatsApp Quote Integration"]
     },
@@ -148,7 +148,7 @@
       "client": "Mahalakshmi Tours & Travels",
       "industry": "Travel & Transport Operations",
       "challenge": "Travelers struggled to compare tour package itineraries and vehicle options on mobile devices, leading to dropped calls.",
-      "intervention": "Redwolf structured transparent day-by-day package itineraries, mobile tour showcases, and instant 1-tap WhatsApp consultation pathways.",
+      "intervention": "Redwolf Digital structured transparent day-by-day package itineraries, mobile tour showcases, and instant 1-tap WhatsApp consultation pathways.",
       "solution": "Mobile Tour Catalog + WhatsApp Inquiry Integration",
       "highlights": ["Structured Day-by-Day Itineraries", "1-Tap WhatsApp Consultations", "Optimized Mobile Load Speed"]
     },
@@ -157,14 +157,14 @@
       "client": "Gateway Holidays",
       "industry": "Travel & Hospitality",
       "challenge": "Previous digital presence failed to reflect the premium quality of custom vacation planning services.",
-      "intervention": "Redwolf designed an editorial destination showcase, clear planning process guides, and custom holiday inquiry pathways.",
+      "intervention": "Redwolf Digital designed an editorial destination showcase, clear planning process guides, and custom holiday inquiry pathways.",
       "solution": "Editorial Destination Platform + Custom Inquiry Integration",
       "highlights": ["Editorial Visual Presentation", "Structured Custom Inquiry Engine", "Enhanced Traveler Confidence"]
     }
   ],
   "productShowcase": {
     "name": "EasyTrack",
-    "tagline": "A SaaS product built by Redwolf",
+    "tagline": "A SaaS product built by Redwolf Digital",
     "headline": "Distribution operations, connected.",
     "description": "EasyTrack helps FMCG distributors manage field sales, van inventory, routes, orders, credit, collections and distribution operations from one connected platform.",
     "problemAddressed": "Manual order entry, unorganized van stock reconciliation, and lack of real-world offline connectivity on rural distribution routes.",

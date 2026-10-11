@@ -109,7 +109,7 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                 <div className="flex items-center gap-2">
                   <Terminal className="h-4 w-4 text-red-500" />
                   <span className="font-mono text-xs uppercase tracking-widest text-slate-300 font-bold">
-                    REDWOLF GROWTH ARCHITECTURE
+                    REDWOLF DIGITAL GROWTH ARCHITECTURE
                   </span>
                 </div>
                 <div className="flex gap-1.5">

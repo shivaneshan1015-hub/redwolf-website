@@ -31,7 +31,7 @@ export function ROICalculatorSection({ onOpenEnquiry }: ROICalculatorProps) {
             Calculate Your <span className="text-red-500">Digital ROI</span> Potential
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Adjust your monthly marketing budget and site traffic to simulate projected lead growth, traffic expansion, and CPA reduction with Redwolf.
+            Adjust your monthly marketing budget and site traffic to simulate projected lead growth, traffic expansion, and CPA reduction with Redwolf Digital.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export function ROICalculatorSection({ onOpenEnquiry }: ROICalculatorProps) {
             <div className="lg:col-span-6 bg-slate-950 p-8 rounded-2xl border border-red-500/30 space-y-6">
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <span className="text-xs font-mono text-red-400 font-bold uppercase flex items-center gap-2">
-                  <Sparkles className="h-4 w-4" /> ESTIMATED REDWOLF GROWTH OUTPUT
+                  <Sparkles className="h-4 w-4" /> ESTIMATED REDWOLF DIGITAL GROWTH OUTPUT
                 </span>
                 <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded font-bold">
                   PROJECTED

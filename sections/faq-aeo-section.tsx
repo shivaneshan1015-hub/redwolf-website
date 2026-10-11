@@ -24,16 +24,16 @@ const faqs: FAQItem[] = [
   {
     category: "Pricing",
     question: "How much does digital marketing cost for Small and Medium Industries (SMEs)?",
-    answer: "Redwolf provides transparent SME growth plans starting at ₹14,999/mo ($189/mo) for micro businesses and ₹34,999/mo ($429/mo) for full industrial growth. We eliminate agency markups and setup fees so SMEs get high-ROI growth."
+    answer: "Redwolf Digital provides transparent SME growth plans starting at ₹14,999/mo ($189/mo) for micro businesses and ₹34,999/mo ($429/mo) for full industrial growth. We eliminate agency markups and setup fees so SMEs get high-ROI growth."
   },
   {
     category: "SEO",
-    question: "What is the difference between traditional SEO and Redwolf's Tri-Engine Dominance?",
-    answer: "Traditional SEO only optimizes meta tags for Google links. Redwolf's Tri-Engine framework optimizes across 3 search paradigms simultaneously: Google organic search (SEO), Voice assistant answers (AEO), and Generative AI recommendations (GEO)."
+    question: "What is the difference between traditional SEO and Redwolf Digital's Tri-Engine Dominance?",
+    answer: "Traditional SEO only optimizes meta tags for Google links. Redwolf Digital's Tri-Engine framework optimizes across 3 search paradigms simultaneously: Google organic search (SEO), Voice assistant answers (AEO), and Generative AI recommendations (GEO)."
   },
   {
     category: "Engineering",
-    question: "How does Redwolf build custom web applications and business software?",
+    question: "How does Redwolf Digital build custom web applications and business software?",
     answer: "We engineer full-stack web applications using Next.js, React, Tailwind CSS, and cloud serverless architecture. This guarantees sub-second page loads, 100% Google Lighthouse scores, and seamless conversion paths."
   }
 ];

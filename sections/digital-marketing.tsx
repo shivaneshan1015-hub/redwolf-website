@@ -48,7 +48,7 @@ export function DigitalMarketingSection({ onOpenEnquiry }: DigitalMarketingSecti
             <span className="text-red-500">SEO, AEO, GEO & Paid Ads</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Redwolf is primarily a high-performance Digital Marketing agency. We drive qualified leads and organic search dominance across Google, Voice Search, AI Engine recommendations, and Meta/Google Ads.
+            Redwolf Digital is primarily a high-performance Digital Marketing agency. We drive qualified leads and organic search dominance across Google, Voice Search, AI Engine recommendations, and Meta/Google Ads.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export function DigitalMarketingSection({ onOpenEnquiry }: DigitalMarketingSecti
                 Rank on Google, Voice Assistants & AI Search Engines
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Traditional SEO alone is no longer enough. Redwolf optimizes your brand across traditional Google search results (**SEO**), voice search devices (**AEO**), and generative AI assistants like ChatGPT, Perplexity, and Gemini (**GEO**).
+                Traditional SEO alone is no longer enough. Redwolf Digital optimizes your brand across traditional Google search results (**SEO**), voice search devices (**AEO**), and generative AI assistants like ChatGPT, Perplexity, and Gemini (**GEO**).
               </p>
             </div>
 

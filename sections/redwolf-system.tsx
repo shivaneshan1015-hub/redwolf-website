@@ -44,7 +44,7 @@ export function RedwolfSystemSection({ onOpenEnquiry }: RedwolfSystemSectionProp
             <span>Integrated Capabilities Ecosystem</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
-            The <span className="text-red-500">Redwolf System</span>
+            The <span className="text-red-500">Redwolf Digital System</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
             One business problem often requires more than one digital discipline. We combine strategic consulting, brand craft, growth marketing, full-stack web, and custom software under one roof.
@@ -122,7 +122,7 @@ export function RedwolfSystemSection({ onOpenEnquiry }: RedwolfSystemSectionProp
                 <div className="space-y-2 pt-3 border-t border-slate-800">
                   <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 font-bold uppercase">
                     <CheckCircle2 className="h-4 w-4" />
-                    <span>Redwolf Solution</span>
+                    <span>Redwolf Digital Solution</span>
                   </div>
                   <p className="text-sm text-slate-200 font-medium">
                     {activeCap.solution}

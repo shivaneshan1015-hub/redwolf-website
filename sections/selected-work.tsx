@@ -26,7 +26,7 @@ export function SelectedWorkSection({ onOpenEnquiry }: SelectedWorkProps) {
             <span className="text-red-500">One way of thinking.</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            We don't apply cookie-cutter templates. Here is how Redwolf diagnoses business challenges and builds digital solutions across diverse industries.
+            We don't apply cookie-cutter templates. Here is how Redwolf Digital diagnoses business challenges and builds digital solutions across diverse industries.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export function SelectedWorkSection({ onOpenEnquiry }: SelectedWorkProps) {
               <div className="pt-4 border-t border-slate-800/80 space-y-4 mt-auto">
                 <div className="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-xs">
                   <span className="text-[10px] font-mono text-emerald-400 uppercase font-bold block mb-1">
-                    REDWOLF SOLUTION:
+                    REDWOLF DIGITAL SOLUTION:
                   </span>
                   <p className="text-slate-200 font-medium line-clamp-2">
                     {work.solution}
@@ -120,7 +120,7 @@ export function SelectedWorkSection({ onOpenEnquiry }: SelectedWorkProps) {
 
                 <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
                   <span className="text-xs font-mono text-amber-400 font-bold uppercase block">
-                    02. REDWOLF THINKING & INTERVENTION
+                    02. REDWOLF DIGITAL THINKING & INTERVENTION
                   </span>
                   <p className="text-slate-200">{activeModalWork.intervention}</p>
                 </div>

@@ -145,8 +145,8 @@ export const productsContent: Record<string, ProductContent> = {
       demoUrl: "https://easytrack-app.vercel.app/login",
     },
     seo: {
-      title: "EasyTrack — FMCG Distribution Management Software | Redwolf Product",
-      description: "EasyTrack is an enterprise FMCG distribution software engineered by Redwolf for field sales reps, van inventory, beat routes, retailer credit, and live collections.",
+      title: "EasyTrack — FMCG Distribution Management Software | Redwolf Digital Product",
+      description: "EasyTrack is an enterprise FMCG distribution software engineered by Redwolf Digital for field sales reps, van inventory, beat routes, retailer credit, and live collections.",
       keywords: [
         "EasyTrack SaaS",
         "FMCG distribution software India",

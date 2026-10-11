@@ -5,9 +5,9 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { getProductBySlug } from "@/lib/cms";
 
 export const metadata: Metadata = {
-  title: "EasyTrack — FMCG Distribution Management Software | Redwolf Product",
+  title: "EasyTrack — FMCG Distribution Management Software | Redwolf Digital Product",
   description:
-    "EasyTrack is an enterprise FMCG distribution software engineered by Redwolf for field sales reps, van inventory, beat routes, retailer credit, and live collections.",
+    "EasyTrack is an enterprise FMCG distribution software engineered by Redwolf Digital for field sales reps, van inventory, beat routes, retailer credit, and live collections.",
   keywords: [
     "EasyTrack SaaS",
     "FMCG distribution software India",
@@ -28,7 +28,7 @@ export default function EasyTrackProductPage() {
     "description": easytrack.summary,
     "brand": {
       "@type": "Brand",
-      "name": "Redwolf"
+      "name": "Redwolf Digital"
     },
     "offers": {
       "@type": "Offer",
@@ -60,7 +60,7 @@ export default function EasyTrackProductPage() {
             <div className="lg:col-span-8 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs uppercase tracking-wider">
                 <Cpu className="h-3.5 w-3.5" />
-                <span>REDWOLF PRODUCT • FMCG DISTRIBUTION SOFTWARE</span>
+                <span>REDWOLF DIGITAL PRODUCT • FMCG DISTRIBUTION SOFTWARE</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-heading font-extrabold tracking-tight">
                 {easytrack.heroHeadline}

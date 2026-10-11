@@ -132,7 +132,7 @@ export function ProductCard({ name, category, tagline, summary, href, className 
     <div className={`p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6 ${className}`}>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-400 bg-red-500/10 border border-red-500/20 px-3 py-1 rounded-full">
-          REDWOLF PRODUCT
+          REDWOLF DIGITAL PRODUCT
         </span>
         <span className="text-xs font-semibold text-slate-400">{category}</span>
       </div>

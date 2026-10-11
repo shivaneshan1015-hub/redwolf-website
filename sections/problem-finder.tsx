@@ -59,7 +59,7 @@ export function ProblemFinderSection({ onOpenEnquiryWithProblem }: ProblemFinder
             })}
           </div>
 
-          {/* Right Column: Redwolf Response & Solution Blueprint */}
+          {/* Right Column: Redwolf Digital Response & Solution Blueprint */}
           <div className="lg:col-span-6">
             <AnimatePresence mode="wait">
               <motion.div
@@ -72,7 +72,7 @@ export function ProblemFinderSection({ onOpenEnquiryWithProblem }: ProblemFinder
               >
                 <div className="flex items-center gap-2 font-mono text-xs text-red-400 font-bold uppercase tracking-wider">
                   <Sparkles className="h-4 w-4" />
-                  <span>REDWOLF DIAGNOSIS</span>
+                  <span>REDWOLF DIGITAL DIAGNOSIS</span>
                 </div>
 
                 <div className="space-y-2">

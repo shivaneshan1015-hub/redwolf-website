@@ -4,9 +4,9 @@ import { Cpu, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "BUILD — Custom Web Applications & Systems Engineering | Redwolf",
+  title: "BUILD — Custom Web Applications & Systems Engineering | Redwolf Digital",
   description:
-    "Turn business processes into digital systems with Redwolf's BUILD web application engineering capability.",
+    "Turn business processes into digital systems with Redwolf Digital's BUILD web application engineering capability.",
 };
 
 export default function WebApplicationsPage() {
@@ -37,7 +37,7 @@ export default function WebApplicationsPage() {
         <div className="p-8 rounded-2xl bg-gradient-to-r from-red-950/40 to-slate-900 border border-red-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-heading font-extrabold text-white">Ready to turn operational friction into software?</h3>
-            <p className="text-xs text-slate-400">Start a conversation with Redwolf software team.</p>
+            <p className="text-xs text-slate-400">Start a conversation with Redwolf Digital software team.</p>
           </div>
           <Link
             href="/contact"

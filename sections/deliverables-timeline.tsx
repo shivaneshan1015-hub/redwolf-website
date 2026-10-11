@@ -61,7 +61,7 @@ export function DeliverablesTimelineSection({ onOpenEnquiry }: DeliverablesTimel
             <span>Execution Roadmap</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
-            What Happens When You <span className="text-red-500">Partner With Redwolf</span>
+            What Happens When You <span className="text-red-500">Partner With Redwolf Digital</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
             No guesswork. Here is the exact 90-day roadmap we follow to deliver organic search dominance, high-ROI ads, and custom software builds.

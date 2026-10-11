@@ -72,7 +72,7 @@ export function Footer() {
           {/* Diagnostic & Conversation Card */}
           <div className="md:col-span-3 space-y-4 bg-slate-900/70 p-5 rounded-2xl border border-slate-800">
             <h4 className="font-heading font-extrabold text-xs text-white uppercase tracking-wider">
-              Redwolf Diagnostic
+              Redwolf Digital Diagnostic
             </h4>
             <p className="text-xs text-slate-300 leading-relaxed">
               Not sure which capability fits your current friction? Start with your business problem.
@@ -99,9 +99,9 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400 text-center sm:text-left">
-          <p>&copy; {currentYear} Redwolf. All rights reserved. {brandData.tagline}</p>
+          <p>&copy; {currentYear} Redwolf Digital. All rights reserved. {brandData.tagline}</p>
           <div className="flex items-center gap-4 text-[11px]">
-            <Link href="/about" className="hover:text-white transition-colors">About Redwolf</Link>
+            <Link href="/about" className="hover:text-white transition-colors">About Redwolf Digital</Link>
             <Link href="/work" className="hover:text-white transition-colors">Work</Link>
             <Link href="/products/easytrack" className="hover:text-white transition-colors">EasyTrack</Link>
             <Link href="/insights" className="hover:text-white transition-colors">Insights</Link>

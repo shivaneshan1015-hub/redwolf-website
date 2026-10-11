@@ -34,8 +34,8 @@ export const industriesContent: Record<string, IndustryContent> = {
       variant: "primary",
     },
     seo: {
-      title: "FMCG & Distribution Digital Systems | Redwolf Industry Solutions",
-      description: "Digitize FMCG field sales, van inventory loading, rural beat routes, and retailer credit management with Redwolf offline-first software systems.",
+      title: "FMCG & Distribution Digital Systems | Redwolf Digital Industry Solutions",
+      description: "Digitize FMCG field sales, van inventory loading, rural beat routes, and retailer credit management with Redwolf Digital offline-first software systems.",
       keywords: ["FMCG distribution software", "field sales app", "van inventory management", "beat route sales"],
     },
   },
@@ -70,7 +70,7 @@ export const industriesContent: Record<string, IndustryContent> = {
       variant: "primary",
     },
     seo: {
-      title: "Healthcare & Clinic Digital Systems | Redwolf Industry Solutions",
+      title: "Healthcare & Clinic Digital Systems | Redwolf Digital Industry Solutions",
       description: "Friction-free patient appointment intake, doctor specialty directories, and local search discoverability for hospitals and clinics.",
       keywords: ["healthcare web app", "patient booking portal", "clinic local SEO", "hospital website engineering"],
     },
@@ -106,7 +106,7 @@ export const industriesContent: Record<string, IndustryContent> = {
       variant: "primary",
     },
     seo: {
-      title: "Manufacturing & Industrial Digital Systems | Redwolf Industry Solutions",
+      title: "Manufacturing & Industrial Digital Systems | Redwolf Digital Industry Solutions",
       description: "Custom quote generation systems, dealer self-service portals, and industrial lead intake automation for manufacturing enterprises.",
       keywords: ["manufacturing web app", "custom quote configurator", "dealer portal software", "industrial lead automation"],
     },
@@ -142,7 +142,7 @@ export const industriesContent: Record<string, IndustryContent> = {
       variant: "primary",
     },
     seo: {
-      title: "Travel & Hospitality Digital Systems | Redwolf Industry Solutions",
+      title: "Travel & Hospitality Digital Systems | Redwolf Digital Industry Solutions",
       description: "Interactive tour itinerary builders, WhatsApp booking triggers, and direct customer discovery systems for tour operators and resorts.",
       keywords: ["travel booking software", "tour itinerary builder", "WhatsApp booking system", "resort direct booking"],
     },
@@ -181,7 +181,7 @@ export const industriesContent: Record<string, IndustryContent> = {
       variant: "primary",
     },
     seo: {
-      title: "SME Digital Transformation | Redwolf Industry Solutions",
+      title: "SME Digital Transformation | Redwolf Digital Industry Solutions",
       description: "Enterprise strategy, brand positioning, custom web engineering, and customer growth systems tailored for ambitious growing businesses.",
       keywords: ["SME digital transformation", "growing business software", "brand positioning SME", "custom business systems"],
     },

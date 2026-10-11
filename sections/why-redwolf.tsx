@@ -15,7 +15,7 @@ export function WhyRedwolfSection() {
             <span>Guiding Principles</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
-            Why <span className="text-red-500">Redwolf</span>
+            Why <span className="text-red-500">Redwolf Digital</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
             We avoid generic agency claims. Our work is driven by strict operational principles.

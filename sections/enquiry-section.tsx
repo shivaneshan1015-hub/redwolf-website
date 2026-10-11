@@ -25,7 +25,7 @@ export function EnquirySection({ onOpenEnquiry }: EnquirySectionProps) {
               Tell us what's <span className="text-red-500">not working</span>.
             </h2>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              You don't need to have the solution figured out. Start with the problem, and Redwolf will guide you to the right digital architecture.
+              You don't need to have the solution figured out. Start with the problem, and Redwolf Digital will guide you to the right digital architecture.
             </p>
           </div>
 

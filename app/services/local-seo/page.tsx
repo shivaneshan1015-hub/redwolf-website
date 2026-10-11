@@ -4,9 +4,9 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "GROW — Local SEO & Google Business Profile Systems | Redwolf",
+  title: "GROW — Local SEO & Google Business Profile Systems | Redwolf Digital",
   description:
-    "Make your regional business units easier to find and trust with Redwolf's GROW Local SEO & GBP Optimization systems.",
+    "Make your regional business units easier to find and trust with Redwolf Digital's GROW Local SEO & GBP Optimization systems.",
 };
 
 export default function LocalSEOPage() {
@@ -37,7 +37,7 @@ export default function LocalSEOPage() {
         <div className="p-8 rounded-2xl bg-gradient-to-r from-red-950/40 to-slate-900 border border-red-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-heading font-extrabold text-white">Need local discoverability for your branches?</h3>
-            <p className="text-xs text-slate-400">Start a conversation with Redwolf strategy & growth team.</p>
+            <p className="text-xs text-slate-400">Start a conversation with Redwolf Digital strategy & growth team.</p>
           </div>
           <Link
             href="/contact"

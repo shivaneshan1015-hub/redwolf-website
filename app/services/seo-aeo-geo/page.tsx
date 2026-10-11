@@ -4,9 +4,9 @@ import { Search, Bot, Sparkles, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "GROW — Technical SEO, AEO & GEO Search Optimization | Redwolf",
+  title: "GROW — Technical SEO, AEO & GEO Search Optimization | Redwolf Digital",
   description:
-    "Future-proof your business search visibility across Google SEO, Voice AEO, and AI Search Engines (ChatGPT, Perplexity, Google Gemini) with Redwolf's GROW capability.",
+    "Future-proof your business search visibility across Google SEO, Voice AEO, and AI Search Engines (ChatGPT, Perplexity, Google Gemini) with Redwolf Digital's GROW capability.",
   keywords: [
     "SEO strategy",
     "AEO Answer Engine Optimization",
@@ -25,7 +25,7 @@ export default function SEOAEOGEOPage() {
     "name": "SEO, AEO & GEO Search Optimization",
     "provider": {
       "@type": "Organization",
-      "name": "Redwolf",
+      "name": "Redwolf Digital",
       "url": "https://redwolf.in"
     },
     "serviceType": "Search Engine & AI Optimization",
@@ -68,7 +68,7 @@ export default function SEOAEOGEOPage() {
             Rank on Google, Voice Devices & <span className="text-red-500">AI Search Engines</span>
           </h1>
           <p className="text-slate-300 text-lg leading-relaxed">
-            Search is no longer limited to traditional Google links. Buyers ask Siri for local services and rely on ChatGPT, Perplexity, and Gemini for business recommendations. Redwolf deploys a Tri-Engine Search Strategy (SEO + AEO + GEO) across search surfaces.
+            Search is no longer limited to traditional Google links. Buyers ask Siri for local services and rely on ChatGPT, Perplexity, and Gemini for business recommendations. Redwolf Digital deploys a Tri-Engine Search Strategy (SEO + AEO + GEO) across search surfaces.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export default function SEOAEOGEOPage() {
         <div className="p-8 rounded-2xl bg-gradient-to-r from-red-950/40 to-slate-900 border border-red-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-heading font-extrabold text-white">Ready to make your business easier to find?</h3>
-            <p className="text-xs text-slate-400">Start a conversation with Redwolf strategy & growth team.</p>
+            <p className="text-xs text-slate-400">Start a conversation with Redwolf Digital strategy & growth team.</p>
           </div>
           <Link
             href="/contact"

@@ -10,7 +10,7 @@ import { solutionsData } from "@/data/solutions";
 
 export const metadata = constructMetadata({
   title: "Design System & Foundational Primitives",
-  description: "Internal design system validation route for Redwolf UI tokens, typography, buttons, forms, and system components.",
+  description: "Internal design system validation route for Redwolf Digital UI tokens, typography, buttons, forms, and system components.",
   pathname: "/design-system/",
   noindex: true,
 });
@@ -23,9 +23,9 @@ export default function DesignSystemPage() {
         <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-500 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
           PHASE 17 FOUNDATION
         </span>
-        <h1 className="text-4xl font-heading font-extrabold text-white">Redwolf Design System</h1>
+        <h1 className="text-4xl font-heading font-extrabold text-white">Redwolf Digital Design System</h1>
         <p className="text-slate-400 text-sm max-w-2xl">
-          Visual tokens, typography scale, UI primitives, and signature system components for the Redwolf website architecture.
+          Visual tokens, typography scale, UI primitives, and signature system components for the Redwolf Digital website architecture.
         </p>
       </div>
 
@@ -34,12 +34,12 @@ export default function DesignSystemPage() {
         <SectionHeading eyebrow="TOKENS" title="Color Palette & Semantic Ratio" />
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 text-xs font-mono">
           <div className="p-4 rounded-xl bg-[#E53935] text-white border border-red-400/30 space-y-1">
-            <span className="font-bold block">Redwolf Red</span>
+            <span className="font-bold block">Redwolf Digital Red</span>
             <span>#E53935</span>
             <span className="text-[10px] opacity-80 block">Accent (5%)</span>
           </div>
           <div className="p-4 rounded-xl bg-[#0B1220] text-white border border-slate-700 space-y-1">
-            <span className="font-bold block">Redwolf Navy</span>
+            <span className="font-bold block">Redwolf Digital Navy</span>
             <span>#0B1220</span>
             <span className="text-[10px] opacity-80 block">Dark (25%)</span>
           </div>
@@ -102,7 +102,7 @@ export default function DesignSystemPage() {
           <div>
             <span className="text-xs font-mono text-slate-500 block mb-1">Body Large (18px Inter)</span>
             <p className="text-lg text-slate-300 leading-relaxed max-w-3xl">
-              Redwolf combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.
+              Redwolf Digital combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.
             </p>
           </div>
         </div>
@@ -138,9 +138,9 @@ export default function DesignSystemPage() {
         </div>
       </section>
 
-      {/* 4. REDWOLF SYSTEM LINE */}
+      {/* 4. REDWOLF DIGITAL SYSTEM LINE */}
       <section className="space-y-6">
-        <SectionHeading eyebrow="SIGNATURE VISUAL" title="Redwolf System Line (6-Stage Methodology)" />
+        <SectionHeading eyebrow="SIGNATURE VISUAL" title="Redwolf Digital System Line (6-Stage Methodology)" />
         <RedwolfSystemLine activeStage="diagnose" />
       </section>
 

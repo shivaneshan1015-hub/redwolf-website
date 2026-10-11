@@ -18,7 +18,7 @@ export function BrandLogo({ variant = "header", className = "" }: BrandLogoProps
       <div className="relative h-10 w-auto flex items-center shrink-0">
         <Image
           src={src}
-          alt="Redwolf - Digital Solutions For All Your Problems"
+          alt="Redwolf Digital - Digital Solutions For All Your Problems"
           width={220}
           height={52}
           priority
