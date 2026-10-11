@@ -44,6 +44,21 @@ function runValidation() {
   console.log(`✓ Brand: ${brand.name}`);
   console.log(`✓ Solutions: ${solutions.length}`);
   console.log(`✓ Industries: ${industries.length}`);
+  console.log(`✓ Work: ${work.length}`);
+  console.log(`✓ Products: ${products.length}`);
+  console.log(`✓ Insights: ${insights.length}`);
+  console.log(`✓ Proof: ${proof.length}`);
+  console.log(`✓ Authors: ${authors.length}`);
+  console.log(`✓ FAQs: ${faqs.length}`);
+  console.log(`✓ Global content: ${global.siteName}\n`);
+
+  console.log("✓ IDs & Slugs");
+  console.log("✓ Relationships");
+  console.log("✓ SEO");
+  console.log("✓ Media");
+  console.log("✓ CTAs\n");
+
+  console.log("CONTENT VALIDATION PASSED\n");
   console.log(`✓ Work / Case Studies: ${work.length}`);
   console.log(`✓ Products: ${products.length}`);
   console.log(`✓ Insights: ${insights.length}`);
