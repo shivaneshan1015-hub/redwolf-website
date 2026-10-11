@@ -2,10 +2,9 @@ import React from "react";
 import { constructMetadata } from "@/lib/seo";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
-import { BasicCard, SolutionCard, WorkCard, ProductCard } from "@/components/ui/cards";
+import { SolutionCard, ProductCard } from "@/components/ui/cards";
 import { RedwolfSystemLine } from "@/components/ui/system-line";
 import { ProblemSignalCard } from "@/components/ui/problem-signal";
-import { brandData } from "@/data/brand";
 import { solutionsData } from "@/data/solutions";
 
 export const metadata = constructMetadata({
