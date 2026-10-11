@@ -5,11 +5,11 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { getInsights } from "@/lib/cms";
 
 export const metadata: Metadata = {
-  title: "Redwolf Insights — Digital Growth & Technology Knowledge Hub",
+  title: "Redwolf Digital Insights — Digital Growth & Technology Knowledge Hub",
   description:
     "Explore strategic articles and field notes on AI Search (AEO/GEO), custom web application engineering, SaaS product development, and digital transformation.",
   keywords: [
-    "Redwolf insights",
+    "Redwolf Digital insights",
     "Generative Engine Optimization guide",
     "AEO voice search guide",
     "digital growth strategy blog",
@@ -28,7 +28,7 @@ export default function InsightsPage() {
         <div className="space-y-4 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs uppercase tracking-wider">
             <BookOpen className="h-3.5 w-3.5" />
-            <span>Redwolf Field Notes</span>
+            <span>Redwolf Digital Field Notes</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-heading font-extrabold tracking-tight text-white">
             Practical Thinking on <span className="text-red-500">Digital Growth & Technology</span>

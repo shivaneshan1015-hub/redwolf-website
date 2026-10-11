@@ -16,7 +16,7 @@ export function MethodologySection({ onOpenEnquiry }: MethodologyProps) {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs uppercase tracking-wider">
             <Compass className="h-3.5 w-3.5" />
-            <span>How Redwolf Thinks</span>
+            <span>How Redwolf Digital Thinks</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight">
             We don't start with the solution. <br />
@@ -62,7 +62,7 @@ export function MethodologySection({ onOpenEnquiry }: MethodologyProps) {
               Ready to diagnose your business bottleneck?
             </h4>
             <p className="text-xs sm:text-sm text-slate-400">
-              Start with the problem. Redwolf will map the digital path.
+              Start with the problem. Redwolf Digital will map the digital path.
             </p>
           </div>
           <button

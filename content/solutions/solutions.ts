@@ -64,7 +64,7 @@ export const solutionsContent: Record<string, SolutionContent> = {
       variant: "primary",
     },
     seo: {
-      title: "GROW — Make Your Business Easier to Find, Trust & Choose | Redwolf",
+      title: "GROW — Make Your Business Easier to Find, Trust & Choose | Redwolf Digital",
       description: "Help qualified buyers discover your business, understand your value, build trust, and convert into active clients through technical SEO, AEO/GEO, and performance ads.",
       keywords: ["GROW solution", "Technical SEO", "AEO voice search", "GEO AI search", "Local SEO", "Performance ads"],
     },
@@ -128,7 +128,7 @@ export const solutionsContent: Record<string, SolutionContent> = {
       variant: "primary",
     },
     seo: {
-      title: "DEFINE — Make Your Business Clear Before You Make It Bigger | Redwolf",
+      title: "DEFINE — Make Your Business Clear Before You Make It Bigger | Redwolf Digital",
       description: "Align core brand positioning, message hierarchy, visual identity, and user experience design to accurately reflect the true scale of your business.",
       keywords: ["DEFINE solution", "Brand positioning", "UX UI design", "Information architecture", "Digital experience"],
     },
@@ -192,7 +192,7 @@ export const solutionsContent: Record<string, SolutionContent> = {
       variant: "primary",
     },
     seo: {
-      title: "BUILD — Turn Business Processes into Digital Systems | Redwolf",
+      title: "BUILD — Turn Business Processes into Digital Systems | Redwolf Digital",
       description: "Engineer custom web applications, business process platforms, and system automations built around how your business actually operates.",
       keywords: ["BUILD solution", "Web application development", "Business process automation", "Custom software engineering"],
     },
@@ -257,7 +257,7 @@ export const solutionsContent: Record<string, SolutionContent> = {
       variant: "primary",
     },
     seo: {
-      title: "PRODUCTIZE — Turn Ideas & Workflows into Software Products | Redwolf",
+      title: "PRODUCTIZE — Turn Ideas & Workflows into Software Products | Redwolf Digital",
       description: "Transform internal workflows and industry domain expertise into scalable multi-tenant SaaS products and offline-first mobile applications.",
       keywords: ["PRODUCTIZE solution", "SaaS product development", "Offline-first mobile app", "Multi-tenant architecture"],
     },

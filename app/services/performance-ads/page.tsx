@@ -4,9 +4,9 @@ import { TrendingUp, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "GROW — High-Intent Performance Ads Systems | Redwolf",
+  title: "GROW — High-Intent Performance Ads Systems | Redwolf Digital",
   description:
-    "Targeted Google & Meta ad architectures built around commercial buyer intent with Redwolf's GROW capability.",
+    "Targeted Google & Meta ad architectures built around commercial buyer intent with Redwolf Digital's GROW capability.",
 };
 
 export default function PerformanceAdsPage() {
@@ -37,7 +37,7 @@ export default function PerformanceAdsPage() {
         <div className="p-8 rounded-2xl bg-gradient-to-r from-red-950/40 to-slate-900 border border-red-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-heading font-extrabold text-white">Want to scale customer acquisition?</h3>
-            <p className="text-xs text-slate-400">Start a conversation with Redwolf strategy & growth team.</p>
+            <p className="text-xs text-slate-400">Start a conversation with Redwolf Digital strategy & growth team.</p>
           </div>
           <Link
             href="/contact"

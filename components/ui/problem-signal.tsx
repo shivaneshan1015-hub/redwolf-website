@@ -37,7 +37,7 @@ export function ProblemSignalCard({
 
       <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
         <span className="font-mono text-slate-400">
-          Redwolf Capability: <strong className="text-amber-400 font-bold">{suggestedCapability}</strong>
+          Redwolf Digital Capability: <strong className="text-amber-400 font-bold">{suggestedCapability}</strong>
         </span>
         <ArrowRight className="h-4 w-4 text-red-500 group-hover:translate-x-1 transition-transform" />
       </div>

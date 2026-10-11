@@ -17,9 +17,9 @@ import {
 import { Compass, ArrowRight } from "lucide-react";
 
 export const metadata = constructMetadata({
-  title: "Redwolf — From Business Problem to Digital Solution",
+  title: "Redwolf Digital — From Business Problem to Digital Solution",
   description:
-    "Redwolf is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
+    "Redwolf Digital is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
   pathname: "/",
 });
 
@@ -55,7 +55,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-                Redwolf combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.
+                Redwolf Digital combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -86,7 +86,7 @@ export default function HomePage() {
               <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-4 font-mono text-xs">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-slate-400 text-[11px]">
                   <span>OPERATIONAL MODEL</span>
-                  <span className="text-red-400 font-bold">REDWOLF SYSTEM</span>
+                  <span className="text-red-400 font-bold">REDWOLF DIGITAL SYSTEM</span>
                 </div>
 
                 <div className="space-y-3 pt-2">
@@ -100,7 +100,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-slate-950 border border-red-500/40 text-white flex items-center justify-between shadow-lg shadow-red-500/10">
-                    <span className="font-bold text-white">02. REDWOLF INTERVENTION</span>
+                    <span className="font-bold text-white">02. REDWOLF DIGITAL INTERVENTION</span>
                     <span className="text-[10px] text-amber-400">Discover → Build</span>
                   </div>
 
@@ -171,7 +171,7 @@ export default function HomePage() {
             <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-amber-500/30 flex flex-col justify-between space-y-4">
               <div className="space-y-2">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
-                  REDWOLF DIAGNOSTIC
+                  REDWOLF DIGITAL DIAGNOSTIC
                 </span>
                 <h3 className="text-lg font-heading font-bold text-white">Not sure which problem is primary?</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -186,7 +186,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 3. REDWOLF SYSTEM (6-STAGE METHODOLOGY) */}
+        {/* 3. REDWOLF DIGITAL SYSTEM (6-STAGE METHODOLOGY) */}
         <section className="bg-slate-900/90 text-white p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl space-y-8">
           <SectionHeading
             eyebrow="OPERATING SYSTEM"
@@ -266,7 +266,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="REAL BUSINESS INTERVENTIONS"
             title="Built around real business problems."
-            subtitle="Explore case studies showing how Redwolf turns operational friction into scalable digital systems."
+            subtitle="Explore case studies showing how Redwolf Digital turns operational friction into scalable digital systems."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -288,7 +288,7 @@ export default function HomePage() {
         <section className="bg-slate-900 text-white p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl space-y-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-400 bg-red-500/10 px-3.5 py-1.5 rounded-full border border-red-500/20">
-              REDWOLF PRODUCT
+              REDWOLF DIGITAL PRODUCT
             </span>
             <span className="text-xs font-mono text-slate-400">FMCG Distribution Management Software</span>
           </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
               Explore EasyTrack →
             </CTAButton>
             <CTAButton variant="secondary" href="/solutions/productize">
-              Build a product with Redwolf
+              Build a product with Redwolf Digital
             </CTAButton>
           </div>
         </section>
@@ -370,7 +370,7 @@ export default function HomePage() {
         {/* 9. INSIGHTS / FIELD NOTES */}
         <section>
           <SectionHeading
-            eyebrow="REDWOLF FIELD NOTES"
+            eyebrow="REDWOLF DIGITAL FIELD NOTES"
             title="Practical thinking from digital battlegrounds."
             subtitle="Observations, experiments and field notes from the intersection of business, technology, growth and digital systems."
           />
@@ -395,7 +395,7 @@ export default function HomePage() {
         <section className="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 p-8 sm:p-12 rounded-3xl border border-amber-500/30 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-2xl">
             <span className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-              REDWOLF DIAGNOSTIC
+              REDWOLF DIGITAL DIAGNOSTIC
             </span>
             <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-white">
               You don&apos;t need to know the solution. Start with the problem.

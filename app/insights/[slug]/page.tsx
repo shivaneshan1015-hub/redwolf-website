@@ -22,14 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!article) {
     return {
-      title: "Article Not Found | Redwolf Insights",
+      title: "Article Not Found | Redwolf Digital Insights",
     };
   }
 
   return {
-    title: `${article.title} | Redwolf Insights`,
+    title: `${article.title} | Redwolf Digital Insights`,
     description: article.excerpt,
-    keywords: [article.category, "Redwolf GEO guide", "AEO voice search optimization"],
+    keywords: [article.category, "Redwolf Digital GEO guide", "AEO voice search optimization"],
   };
 }
 
@@ -49,7 +49,7 @@ export default async function InsightArticlePage({ params }: Props) {
     "datePublished": article.publishedAt,
     "author": {
       "@type": "Organization",
-      "name": "Redwolf",
+      "name": "Redwolf Digital",
       "url": "https://redwolf.in"
     }
   };
@@ -129,7 +129,7 @@ export default async function InsightArticlePage({ params }: Props) {
         <div className="p-8 rounded-2xl bg-gradient-to-r from-red-950/40 to-slate-900 border border-red-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-heading font-extrabold text-white">Have a similar business or technical challenge?</h3>
-            <p className="text-xs text-slate-400">Talk to Redwolf strategy & engineering.</p>
+            <p className="text-xs text-slate-400">Talk to Redwolf Digital strategy & engineering.</p>
           </div>
           <Link
             href="/contact"

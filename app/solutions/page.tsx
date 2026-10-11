@@ -10,11 +10,11 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { CapabilityComparisonMatrix } from "@/components/ui/capability-comparison";
 
 export const metadata: Metadata = {
-  title: "Digital Solutions Architecture | GROW, DEFINE, BUILD, PRODUCTIZE | Redwolf",
+  title: "Digital Solutions Architecture | GROW, DEFINE, BUILD, PRODUCTIZE | Redwolf Digital",
   description:
-    "Explore Redwolf's 4 core capability systems: GROW (acquisition), DEFINE (brand & UX), BUILD (custom software), and PRODUCTIZE (SaaS creation). Turn business problems into digital systems.",
+    "Explore Redwolf Digital's 4 core capability systems: GROW (acquisition), DEFINE (brand & UX), BUILD (custom software), and PRODUCTIZE (SaaS creation). Turn business problems into digital systems.",
   keywords: [
-    "Redwolf solutions",
+    "Redwolf Digital solutions",
     "Digital growth strategy",
     "Brand positioning",
     "Custom web applications",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     "Business automation",
   ],
   openGraph: {
-    title: "Digital Solutions Architecture | Redwolf",
-    description: "Different problems need different systems. Discover how Redwolf turns business problems into digital systems.",
+    title: "Digital Solutions Architecture | Redwolf Digital",
+    description: "Different problems need different systems. Discover how Redwolf Digital turns business problems into digital systems.",
     type: "website",
     url: "https://redwolf.in/solutions",
   },
@@ -63,7 +63,7 @@ export default function SolutionsIndexPage() {
             <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1">
                 <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
-                  REDWOLF OPERATING SYSTEM
+                  REDWOLF DIGITAL OPERATING SYSTEM
                 </span>
                 <p className="text-sm font-heading font-bold text-slate-200">
                   DISCOVER → DIAGNOSE → DESIGN → BUILD → DEPLOY → EVOLVE
@@ -185,7 +185,7 @@ export default function SolutionsIndexPage() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
-              Run the Redwolf Diagnostic Engine
+              Run the Redwolf Digital Diagnostic Engine
             </h2>
 
             <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">

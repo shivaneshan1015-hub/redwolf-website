@@ -29,7 +29,7 @@ export const faqsContent: FAQContent[] = [
     id: "why-choose-custom-web-app-over-off-the-shelf-software",
     slug: "why-choose-custom-web-app-over-off-the-shelf-software",
     question: "How do custom business web applications compare to off-the-shelf software?",
-    answer: "Off-the-shelf software forces your staff to adapt to generic workflows. Custom web applications engineered by Redwolf digitize your exact operational processes, eliminating manual workarounds and spreadsheets.",
+    answer: "Off-the-shelf software forces your staff to adapt to generic workflows. Custom web applications engineered by Redwolf Digital digitize your exact operational processes, eliminating manual workarounds and spreadsheets.",
     category: "Software Engineering",
     relatedSolutionSlug: "build",
   },

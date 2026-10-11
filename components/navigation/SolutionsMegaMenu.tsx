@@ -19,7 +19,7 @@ export function SolutionsMegaMenu({ onClose }: SolutionsMegaMenuProps) {
       <div className="max-w-7xl mx-auto space-y-6">
         <div className="flex items-center justify-between pb-3 border-b border-slate-800/60">
           <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-red-500 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
-            REDWOLF CAPABILITIES
+            REDWOLF DIGITAL CAPABILITIES
           </span>
           <span className="text-xs text-slate-400 font-mono">
             Problem-first software & growth systems

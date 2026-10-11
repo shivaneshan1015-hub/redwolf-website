@@ -20,24 +20,24 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: "Redwolf | From Business Problem to Digital Solution",
+  title: "Redwolf Digital | From Business Problem to Digital Solution",
   description: siteConfig.positioning,
   keywords: [
-    "Redwolf",
+    "Redwolf Digital",
     "Digital growth and technology company",
     "Business digital transformation",
     "Custom web application engineering",
     "SaaS product development",
     "FMCG distribution software",
     "Technical SEO and local search",
-    "Redwolf System"
+    "Redwolf Digital System"
   ],
-  authors: [{ name: "Redwolf Strategy & Engineering" }],
+  authors: [{ name: "Redwolf Digital Strategy & Engineering" }],
   alternates: {
     canonical: siteConfig.url
   },
   openGraph: {
-    title: "Redwolf | From Business Problem to Digital Solution",
+    title: "Redwolf Digital | From Business Problem to Digital Solution",
     description: siteConfig.positioning,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redwolf | Digital Growth & Technology Company",
+    title: "Redwolf Digital | Digital Growth & Technology Company",
     description: siteConfig.positioning,
   },
   robots: {
@@ -99,7 +99,7 @@ export default function RootLayout({
       {
         "@type": "LocalBusiness",
         "@id": `${siteConfig.url}/#localbusiness`,
-        "name": "Redwolf",
+        "name": "Redwolf Digital",
         "image": `${siteConfig.url}/logo.png`,
         "telephone": siteConfig.phone,
         "address": {

@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "test": "npx tsx --test tests/validation-and-spam.test.ts tests/rate-limiter.test.ts tests/storage-persistence.test.ts tests/api-route-security.test.ts tests/enquiry-modal-contract.test.ts",
     "content:validate": "npx tsx scripts/validate-content.ts"
   },
   "dependencies": {

@@ -13,7 +13,7 @@ export function WhatsAppWidget({ onOpenEnquiry, phoneNumber = "919000000000" }: 
 
   const handleDirectWhatsApp = () => {
     const message = encodeURIComponent(
-      "Hello Redwolf Team! I am interested in your Digital Marketing & App Development services."
+      "Hello Redwolf Digital Team! I am interested in your Digital Marketing & App Development services."
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };
@@ -29,7 +29,7 @@ export function WhatsAppWidget({ onOpenEnquiry, phoneNumber = "919000000000" }: 
                 <MessageCircle className="h-4 w-4 fill-current" />
               </div>
               <div>
-                <div className="text-xs font-bold text-white">Chat with Redwolf</div>
+                <div className="text-xs font-bold text-white">Chat with Redwolf Digital</div>
                 <div className="text-[10px] text-emerald-400 font-mono">Typically replies instantly</div>
               </div>
             </div>

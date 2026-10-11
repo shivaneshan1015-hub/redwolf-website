@@ -1,6 +1,6 @@
 # M12 — Content Architecture & Validation System
 
-This document outlines the architecture, data models, CMS access layer, relationship integrity rules, and automated validation for the **Redwolf Website**.
+This document outlines the architecture, data models, CMS access layer, relationship integrity rules, and automated validation for the **Redwolf Digital Website**.
 
 ---
 

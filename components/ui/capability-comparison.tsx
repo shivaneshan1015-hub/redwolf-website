@@ -48,7 +48,7 @@ export function CapabilityComparisonMatrix() {
           Matching Your Business Friction to the Right System
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-          Redwolf capabilities correspond to specific operational challenges. Identify your primary friction point below to explore the intervention.
+          Redwolf Digital capabilities correspond to specific operational challenges. Identify your primary friction point below to explore the intervention.
         </p>
       </div>
 

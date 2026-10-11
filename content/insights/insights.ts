@@ -38,7 +38,7 @@ Perplexity and Gemini ingest content that directly mirrors conversational user i
       },
     ],
     seo: {
-      title: "How to Rank on ChatGPT, Perplexity & Gemini: GEO Guide | Redwolf",
+      title: "How to Rank on ChatGPT, Perplexity & Gemini: GEO Guide | Redwolf Digital",
       description: "Generative Engine Optimization (GEO) strategies to ensure LLMs recommend your business in direct conversational answers.",
       keywords: ["GEO guide", "ChatGPT SEO", "Perplexity ranking", "AI search optimization"],
     },
@@ -76,7 +76,7 @@ With browser privacy changes, client-side tracking pixels lose up to 30% of conv
       },
     ],
     seo: {
-      title: "Scaling Google & Meta Ads: CPA Reduction Funnel Guide | Redwolf",
+      title: "Scaling Google & Meta Ads: CPA Reduction Funnel Guide | Redwolf Digital",
       description: "Learn how to reduce Customer Acquisition Cost (CPA) by aligning ad targeting with high-intent landing page conversion flows.",
       keywords: ["Google Ads strategy", "Meta ads CPA", "performance marketing", "conversion funnel"],
     },
@@ -114,7 +114,7 @@ Encourage verified customers to leave detailed reviews referencing specific serv
       },
     ],
     seo: {
-      title: "Local Search Strategy: Google Maps Ranking Guide | Redwolf",
+      title: "Local Search Strategy: Google Maps Ranking Guide | Redwolf Digital",
       description: "Tactical guide to ranking physical business units and regional service outlets in the Google Local 3-Pack.",
       keywords: ["Local SEO guide", "Google Maps pack ranking", "Google Business Profile", "regional search"],
     },

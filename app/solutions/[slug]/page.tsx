@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!solution) {
     return {
-      title: "Solution Not Found | Redwolf",
+      title: "Solution Not Found | Redwolf Digital",
     };
   }
 
