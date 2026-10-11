@@ -3,41 +3,98 @@ import Link from "next/link";
 import { constructMetadata } from "@/lib/seo";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTAButton } from "@/components/ui/cta-button";
-import { SolutionCard, WorkCard, InsightCard } from "@/components/ui/cards";
-import { RedwolfSystemLine } from "@/components/ui/system-line";
-import { ProblemSignalCard } from "@/components/ui/problem-signal";
+import { InsightCard } from "@/components/ui/cards";
+import { getInsights } from "@/lib/cms";
 import {
-  getBrandContent,
-  getSolutionBySlug,
-  getIndustries,
-  getCaseStudies,
-  getProductBySlug,
-  getInsights,
-} from "@/lib/cms";
-import { Compass, ArrowRight } from "lucide-react";
+  ArrowRight,
+  Search,
+  Layers,
+  Workflow,
+  TrendingUp,
+  Compass,
+  Cpu,
+  Boxes,
+} from "lucide-react";
 
 export const metadata = constructMetadata({
   title: "Redwolf Digital — From Business Problem to Digital Solution",
   description:
-    "Redwolf Digital is a digital growth and technology company that helps businesses solve growth, operational and product challenges through strategy, design, marketing and software.",
+    "Redwolf Digital helps growing businesses attract the right customers, turn interest into action, and build smarter digital systems.",
   pathname: "/",
 });
 
 export default function HomePage() {
-  const brandData = getBrandContent();
-  const easytrack = getProductBySlug("easytrack")!;
-  const works = getCaseStudies();
   const insights = getInsights();
-  const industries = getIndustries();
 
-  const growSol = getSolutionBySlug("grow")!;
-  const defineSol = getSolutionBySlug("define")!;
-  const buildSol = getSolutionBySlug("build")!;
-  const productizeSol = getSolutionBySlug("productize")!;
+  const capabilities = [
+    {
+      slug: "grow",
+      name: "GROW",
+      supportingLine: "Reach the right audience.",
+      description:
+        "Help potential customers discover your business through search, content and digital marketing.",
+      items: "SEO · Content · Digital marketing · Performance ads",
+      icon: TrendingUp,
+    },
+    {
+      slug: "define",
+      name: "DEFINE",
+      supportingLine: "Find the right direction.",
+      description:
+        "Clarify business challenges, customer needs and priorities before committing to a solution.",
+      items: "Discovery · Strategy · Planning · Digital roadmaps",
+      icon: Compass,
+    },
+    {
+      slug: "build",
+      name: "BUILD",
+      supportingLine: "Turn ideas into useful tools.",
+      description:
+        "Create digital experiences and systems designed around real business requirements.",
+      items: "Websites · Web applications · Integrations · Automation",
+      icon: Cpu,
+    },
+    {
+      slug: "productize",
+      name: "PRODUCTIZE",
+      supportingLine: "Shape repeatable solutions.",
+      description:
+        "Explore how recurring business needs can be addressed through focused digital products and reusable systems.",
+      items: "Digital products · Reusable workflows · Product development",
+      icon: Boxes,
+    },
+  ];
+
+  const workSteps = [
+    {
+      step: "01",
+      title: "Understand",
+      description:
+        "We listen to your challenges, learn about your business and clarify what you want to achieve.",
+    },
+    {
+      step: "02",
+      title: "Define",
+      description:
+        "We identify priorities and discuss the appropriate approach, deliverables and project scope.",
+    },
+    {
+      step: "03",
+      title: "Build & Deliver",
+      description:
+        "We work on the agreed solution, keeping the work aligned with the requirements and priorities established for the project.",
+    },
+    {
+      step: "04",
+      title: "Review & Next Steps",
+      description:
+        "We review the agreed deliverables, address the items included in the project scope, and clarify any follow-up work or next steps.",
+    },
+  ];
 
   return (
     <div className="space-y-20 sm:space-y-28 pb-20 pt-20 sm:pt-24">
-      {/* 1. HERO SECTION */}
+      {/* SECTION 1 — HERO */}
       <section className="relative bg-[#0B1220] text-white pt-8 pb-20 sm:pb-28 overflow-hidden border-b border-slate-800/80">
         <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -47,7 +104,7 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-block text-[11px] font-mono font-bold uppercase tracking-widest bg-red-500/10 text-red-400 border border-red-500/20 px-3.5 py-1.5 rounded-full">
-                DIGITAL GROWTH × TECHNOLOGY × PRODUCTS
+                STRATEGY · GROWTH · DIGITAL SYSTEMS
               </span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white tracking-tight leading-[1.05]">
@@ -55,30 +112,22 @@ export default function HomePage() {
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-                Redwolf Digital combines strategy, growth, design and technology to help businesses grow, operate smarter and build what comes next.
+                Redwolf Digital helps growing businesses attract the right customers, turn interest into action, and build smarter digital systems.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <CTAButton variant="primary" size="lg" href="/contact">
-                  Start a conversation
+                  Discuss Your Business Challenge
                 </CTAButton>
 
-                <CTAButton variant="secondary" size="lg" href="/work">
-                  Explore our work
+                <CTAButton variant="secondary" size="lg" href="/solutions">
+                  Explore How We Help
                 </CTAButton>
               </div>
 
-              {/* Diagnostic Quick Link */}
-              <div className="pt-3 border-t border-slate-800/80 flex items-center gap-2">
-                <Compass className="h-4 w-4 text-amber-400 shrink-0" />
-                <span className="text-xs text-slate-300">Not sure what you need?</span>
-                <Link
-                  href="/diagnostic"
-                  className="text-xs font-bold text-amber-400 hover:text-amber-300 underline decoration-amber-400/40 hover:decoration-amber-300 transition-all"
-                >
-                  Find your digital path →
-                </Link>
-              </div>
+              <p className="text-xs text-slate-400 pt-1 leading-relaxed max-w-xl">
+                From your first growth challenge to a more connected digital operation, we help you identify the right next step.
+              </p>
             </div>
 
             {/* Right Visual Diagram */}
@@ -123,257 +172,237 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-        {/* 2. PROBLEM SIGNALS SECTION */}
-        <section>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-28">
+        {/* SECTION 2 — PROBLEMS WE HELP SOLVE */}
+        <section aria-labelledby="problems-heading">
           <SectionHeading
-            eyebrow="PROBLEM-FIRST APPROACH"
-            title="Your business doesn't need another vendor."
-            subtitle="It needs someone who understands what's actually getting in the way."
+            eyebrow="PROBLEMS WE HELP SOLVE"
+            title="Help for your business challenges."
+            subtitle="Recognize what is getting in the way before choosing a technology or service."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ProblemSignalCard
-              category="GROWTH"
-              problemStatement="We're doing marketing, but the right customers aren't finding us."
-              suggestedCapability="GROW"
-              href="/solutions/grow"
-            />
-
-            <ProblemSignalCard
-              category="OPERATIONS"
-              problemStatement="Our team still depends on spreadsheets, calls and manual processes."
-              suggestedCapability="BUILD"
-              href="/solutions/build"
-            />
-
-            <ProblemSignalCard
-              category="BRAND"
-              problemStatement="Our website doesn't represent the business we've become."
-              suggestedCapability="DEFINE"
-              href="/solutions/define"
-            />
-
-            <ProblemSignalCard
-              category="TECHNOLOGY"
-              problemStatement="We know what we want to build, but don't know where to start."
-              suggestedCapability="BUILD"
-              href="/solutions/build"
-            />
-
-            <ProblemSignalCard
-              category="PRODUCT"
-              problemStatement="We have a workflow that could become software."
-              suggestedCapability="PRODUCTIZE"
-              href="/solutions/productize"
-            />
-
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-amber-500/30 flex flex-col justify-between space-y-4">
-              <div className="space-y-2">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
-                  REDWOLF DIGITAL DIAGNOSTIC
-                </span>
-                <h3 className="text-lg font-heading font-bold text-white">Not sure which problem is primary?</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Take our diagnostic questionnaire to identify your core digital path.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="p-3 bg-red-500/10 text-red-400 rounded-xl w-fit border border-red-500/20">
+                  <Search className="h-6 w-6" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400 block pb-1">
+                    Getting discovered
+                  </span>
+                  <h3 className="text-xl font-heading font-extrabold text-white">
+                    Attract the right customers.
+                  </h3>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-3">
+                  <p>Your business has something valuable to offer. Are the right people finding it?</p>
+                  <p className="text-slate-400">
+                    Improve how potential customers discover and understand your business through search, useful content, and targeted digital marketing.
+                  </p>
+                </div>
               </div>
 
-              <CTAButton variant="phone" size="sm" href="/diagnostic">
-                Start Diagnostic →
+              <div className="pt-4 border-t border-slate-800/80">
+                <span className="text-[11px] font-mono text-slate-400 block mb-1">Relevant capabilities:</span>
+                <p className="text-xs font-semibold text-slate-200">
+                  SEO · Content strategy · Digital marketing · Performance advertising
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="p-3 bg-red-500/10 text-red-400 rounded-xl w-fit border border-red-500/20">
+                  <Layers className="h-6 w-6" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400 block pb-1">
+                    Turning interest into action
+                  </span>
+                  <h3 className="text-xl font-heading font-extrabold text-white">
+                    Make every interaction clearer.
+                  </h3>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-3">
+                  <p>Getting attention is only part of the job. What happens next?</p>
+                  <p className="text-slate-400">
+                    Help visitors understand your offer, navigate the next step, and take meaningful action with clearer websites, landing pages, and conversion journeys.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-slate-800/80">
+                <span className="text-[11px] font-mono text-slate-400 block mb-1">Relevant capabilities:</span>
+                <p className="text-xs font-semibold text-slate-200">
+                  Website design and development · UX · Landing pages · Conversion measurement
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="p-3 bg-red-500/10 text-red-400 rounded-xl w-fit border border-red-500/20">
+                  <Workflow className="h-6 w-6" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400 block pb-1">
+                    Making work run better
+                  </span>
+                  <h3 className="text-xl font-heading font-extrabold text-white">
+                    Build more connected operations.
+                  </h3>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-3">
+                  <p>Are repetitive tasks and disconnected tools making work harder than it needs to be?</p>
+                  <p className="text-slate-400">
+                    Identify opportunities to simplify workflows, connect systems, and build digital tools around the way your business operates.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-slate-800/80">
+                <span className="text-[11px] font-mono text-slate-400 block mb-1">Relevant capabilities:</span>
+                <p className="text-xs font-semibold text-slate-200">
+                  Workflow automation · Integrations · Web applications · Digital products
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 p-4 bg-slate-950/80 rounded-2xl border border-slate-800 text-center text-xs sm:text-sm text-slate-300 font-mono">
+            You don&apos;t need to start with a specific technology or service. Start with the problem you need to solve.
+          </div>
+        </section>
+
+        {/* SECTION 3 — HOW REDWOLF HELPS */}
+        <section aria-labelledby="how-redwolf-helps-heading">
+          <SectionHeading
+            eyebrow="HOW REDWOLF HELPS"
+            title="The right solution starts with the right problem."
+            subtitle="Every business has different challenges. We bring together strategy, marketing, design and technology to help you identify what needs to change and choose a practical way forward."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {capabilities.map((cap) => {
+              const Icon = cap.icon;
+              return (
+                <Link
+                  key={cap.slug}
+                  href={`/solutions/${cap.slug}`}
+                  className="group p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-red-500/50 transition-all duration-300 flex flex-col justify-between space-y-6"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 bg-red-500/10 text-red-400 rounded-xl border border-red-500/20">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-500 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
+                          {cap.name}
+                        </span>
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-slate-500 group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-white group-hover:text-red-400 transition-colors">
+                        {cap.supportingLine}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-2">
+                        {cap.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-800/80 space-y-2">
+                    <span className="text-[11px] font-mono text-slate-400 block">Capabilities:</span>
+                    <p className="text-xs font-semibold text-slate-200">{cap.items}</p>
+                    <div className="pt-2 flex items-center text-xs font-bold text-red-400 group-hover:text-red-300">
+                      <span>Explore {cap.name} capability →</span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 max-w-xl text-center sm:text-left">
+              <h3 className="text-xl font-heading font-extrabold text-white">Not sure where to start?</h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Tell us what is getting in the way. We&apos;ll start by understanding the challenge and discussing a suitable next step.
+              </p>
+            </div>
+            <CTAButton variant="primary" size="md" href="/contact" className="shrink-0">
+              Discuss Your Business Challenge →
+            </CTAButton>
+          </div>
+        </section>
+
+        {/* SECTION 4 — HOW WE WORK */}
+        <section aria-labelledby="how-we-work-heading">
+          <SectionHeading
+            eyebrow="HOW WE WORK"
+            title="Good work starts with understanding the problem."
+            subtitle="We begin by understanding your business, clarifying what needs to change, and identifying a practical way forward. From there, the scope and next steps depend on the solution your business needs."
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {workSteps.map((ws) => (
+              <div
+                key={ws.step}
+                className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4"
+              >
+                <div className="space-y-3">
+                  <span className="text-xs font-mono font-bold text-red-400 bg-red-500/10 border border-red-500/20 px-2.5 py-1 rounded-md inline-block">
+                    {ws.step}
+                  </span>
+                  <h3 className="text-lg font-heading font-extrabold text-white">
+                    {ws.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {ws.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 text-center space-y-4 max-w-2xl mx-auto">
+            <h3 className="text-xl font-heading font-extrabold text-white">
+              Every project starts with a conversation.
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              You don&apos;t need a complete brief or a ready-made solution. Start by telling us what&apos;s holding your business back.
+            </p>
+            <div className="pt-2">
+              <CTAButton variant="primary" size="md" href="/contact">
+                Discuss Your Business Challenge →
               </CTAButton>
             </div>
           </div>
         </section>
 
-        {/* 3. REDWOLF DIGITAL SYSTEM (6-STAGE METHODOLOGY) */}
-        <section className="bg-slate-900/90 text-white p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl space-y-8">
-          <SectionHeading
-            eyebrow="OPERATING SYSTEM"
-            title="Start with the problem. Build from there."
-            subtitle="Every engagement starts by understanding the business, identifying what is actually getting in the way, and designing the right path forward."
-            light={true}
-          />
-
-          <RedwolfSystemLine />
-
-          <div className="p-4 bg-slate-950/80 rounded-2xl border border-slate-800 text-center text-xs text-slate-400 font-mono">
-            The solution is different every time. The thinking stays consistent.
-          </div>
-        </section>
-
-        {/* 4. CAPABILITY MODEL (SOLUTIONS) */}
-        <section>
-          <SectionHeading
-            eyebrow="CAPABILITY MODEL"
-            title="Different problems need different systems."
-            subtitle="Explore how our four core capabilities combine to solve specific growth and operational friction."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <SolutionCard
-              name={growSol.name}
-              heroHeadline={growSol.heroHeadline}
-              summary={growSol.summary}
-              href={`/solutions/${growSol.slug}`}
+        {/* SECTION 5 — INSIGHTS */}
+        <section aria-labelledby="insights-heading">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <SectionHeading
+              eyebrow="INSIGHTS & FIELD NOTES"
+              title="Ideas for your next digital move."
+              subtitle="Explore practical perspectives on digital visibility, customer conversion and better business systems."
+              className="mb-0"
             />
-
-            <SolutionCard
-              name={defineSol.name}
-              heroHeadline={defineSol.heroHeadline}
-              summary={defineSol.summary}
-              href={`/solutions/${defineSol.slug}`}
-            />
-
-            <SolutionCard
-              name={buildSol.name}
-              heroHeadline={buildSol.heroHeadline}
-              summary={buildSol.summary}
-              href={`/solutions/${buildSol.slug}`}
-            />
-
-            <SolutionCard
-              name={productizeSol.name}
-              heroHeadline={productizeSol.heroHeadline}
-              summary={productizeSol.summary}
-              href={`/solutions/${productizeSol.slug}`}
-            />
+            <Link
+              href="/insights"
+              className="text-xs font-mono font-bold text-red-400 hover:text-red-300 uppercase tracking-wider shrink-0 transition-colors hidden sm:inline-flex items-center gap-1.5"
+            >
+              <span>Explore All Insights →</span>
+            </Link>
           </div>
-        </section>
-
-        {/* 5. CORE PRINCIPLES */}
-        <section className="bg-slate-900/80 p-8 sm:p-12 rounded-3xl border border-slate-800 space-y-8">
-          <SectionHeading
-            eyebrow="OUR PHILOSOPHY"
-            title="The way we solve matters as much as what we build."
-            subtitle="Five core principles that guide every strategy, line of code, and digital experience."
-            light={true}
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brandData.principles.map((pr, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
-                <span className="text-xs font-mono font-bold text-red-400">0{idx + 1}.</span>
-                <h3 className="text-base font-heading font-bold text-white">{pr.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{pr.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* 6. SELECTED WORK */}
-        <section>
-          <SectionHeading
-            eyebrow="REAL BUSINESS INTERVENTIONS"
-            title="Built around real business problems."
-            subtitle="Explore case studies showing how Redwolf Digital turns operational friction into scalable digital systems."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {works.map((wk) => (
-              <WorkCard
-                key={wk.id}
-                client={wk.client}
-                category={wk.category}
-                industry={wk.industry}
-                summary={wk.summary}
-                href={`/work/${wk.slug}`}
-                capabilitiesUsed={wk.capabilitiesUsed}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* 7. EASYTRACK FEATURE */}
-        <section className="bg-slate-900 text-white p-8 sm:p-12 rounded-3xl border border-slate-800 shadow-2xl space-y-8">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-400 bg-red-500/10 px-3.5 py-1.5 rounded-full border border-red-500/20">
-              REDWOLF DIGITAL PRODUCT
-            </span>
-            <span className="text-xs font-mono text-slate-400">FMCG Distribution Management Software</span>
-          </div>
-
-          <div className="max-w-3xl space-y-3">
-            <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-white">
-              {easytrack.heroHeadline}
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              {easytrack.summary}
-            </p>
-          </div>
-
-          {/* Workflow Diagram */}
-          <div className="p-6 bg-slate-950/90 rounded-2xl border border-slate-800 space-y-4">
-            <span className="text-[11px] font-mono text-slate-400 font-bold uppercase tracking-wider block">
-              OFFLINE-FIRST DISTRIBUTION WORKFLOW
-            </span>
-            <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
-              {easytrack.workflow.map((wf, idx) => (
-                <React.Fragment key={wf}>
-                  <span className="bg-slate-900 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-800 font-semibold">
-                    {wf}
-                  </span>
-                  {idx < easytrack.workflow.length - 1 && (
-                    <ArrowRight className="h-3.5 w-3.5 text-red-500 shrink-0" />
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <CTAButton variant="primary" href="/products/easytrack">
-              Explore EasyTrack →
-            </CTAButton>
-            <CTAButton variant="secondary" href="/solutions/productize">
-              Build a product with Redwolf Digital
-            </CTAButton>
-          </div>
-        </section>
-
-        {/* 8. TARGET INDUSTRIES */}
-        <section>
-          <SectionHeading
-            eyebrow="TARGET INDUSTRIES"
-            title="Industry Workflows We Systemize"
-            subtitle="Tailored digital solutions built around the unique operational realities of specific industry sectors."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((ind) => (
-              <Link
-                key={ind.id}
-                href={`/industries/${ind.slug}`}
-                className="group p-6 rounded-2xl bg-glass-card border border-slate-800 hover:border-red-500/40 transition-all space-y-4 flex flex-col justify-between"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-heading font-bold text-white group-hover:text-red-400 transition-colors">
-                      {ind.name}
-                    </span>
-                    <ArrowRight className="h-4 w-4 text-slate-500 group-hover:text-red-400 group-hover:translate-x-1 transition-all" />
-                  </div>
-                  <h4 className="text-sm font-heading font-bold text-slate-200">{ind.heroHeadline}</h4>
-                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-3">
-                    {ind.businessReality}
-                  </p>
-                </div>
-
-                <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
-                  <span>Explore {ind.name} →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* 9. INSIGHTS / FIELD NOTES */}
-        <section>
-          <SectionHeading
-            eyebrow="REDWOLF DIGITAL FIELD NOTES"
-            title="Practical thinking from digital battlegrounds."
-            subtitle="Observations, experiments and field notes from the intersection of business, technology, growth and digital systems."
-          />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {insights.map((ins) => (
@@ -389,43 +418,34 @@ export default function HomePage() {
               />
             ))}
           </div>
-        </section>
 
-        {/* 10. DIAGNOSTIC CTA BANNER */}
-        <section className="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 p-8 sm:p-12 rounded-3xl border border-amber-500/30 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-              REDWOLF DIGITAL DIAGNOSTIC
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-white">
-              You don&apos;t need to know the solution. Start with the problem.
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Answer diagnostic questions regarding your business friction and receive a personalized capability recommendation and digital path.
-            </p>
+          <div className="text-center pt-6 sm:hidden">
+            <Link
+              href="/insights"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-red-400 hover:text-red-300 uppercase tracking-wider"
+            >
+              <span>Explore All Insights →</span>
+            </Link>
           </div>
-
-          <CTAButton variant="phone" size="lg" href="/diagnostic" className="shrink-0">
-            Find your digital path →
-          </CTAButton>
         </section>
 
-        {/* 11. FINAL CONTACT CTA SECTION */}
-        <section className="bg-slate-900 text-white p-8 sm:p-12 rounded-3xl border border-slate-800 text-center space-y-6">
+        {/* SECTION 6 — FINAL CTA */}
+        <section aria-labelledby="final-cta-heading" className="bg-slate-900 text-white p-8 sm:p-14 rounded-3xl border border-slate-800 text-center space-y-6">
           <div className="max-w-2xl mx-auto space-y-3">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-500">START A CONVERSATION</span>
-            <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-white">Let&apos;s start with the problem.</h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Tell us what&apos;s getting in the way of your business growth or operations. We&apos;ll help you design the right digital system.
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-500">
+              START A CONVERSATION
+            </span>
+            <h2 id="final-cta-heading" className="text-3xl sm:text-5xl font-heading font-extrabold text-white">
+              Have a business challenge to solve?
+            </h2>
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              Start a conversation with Redwolf Digital.
             </p>
           </div>
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <CTAButton variant="primary" size="lg" href="/contact">
-              Start a conversation →
-            </CTAButton>
-            <CTAButton variant="secondary" size="lg" href="tel:+919943673790">
-              Call +91 99436 73790
+              Discuss Your Business Challenge →
             </CTAButton>
           </div>
         </section>
