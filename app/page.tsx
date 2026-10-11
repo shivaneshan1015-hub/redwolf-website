@@ -176,6 +176,7 @@ export default function HomePage() {
         {/* SECTION 2 — PROBLEMS WE HELP SOLVE */}
         <section aria-labelledby="problems-heading">
           <SectionHeading
+            id="problems-heading"
             eyebrow="PROBLEMS WE HELP SOLVE"
             title="Help for your business challenges."
             subtitle="Recognize what is getting in the way before choosing a technology or service."
@@ -281,6 +282,7 @@ export default function HomePage() {
         {/* SECTION 3 — HOW REDWOLF HELPS */}
         <section aria-labelledby="how-redwolf-helps-heading">
           <SectionHeading
+            id="how-redwolf-helps-heading"
             eyebrow="HOW REDWOLF HELPS"
             title="The right solution starts with the right problem."
             subtitle="Every business has different challenges. We bring together strategy, marketing, design and technology to help you identify what needs to change and choose a practical way forward."
@@ -346,6 +348,7 @@ export default function HomePage() {
         {/* SECTION 4 — HOW WE WORK */}
         <section aria-labelledby="how-we-work-heading">
           <SectionHeading
+            id="how-we-work-heading"
             eyebrow="HOW WE WORK"
             title="Good work starts with understanding the problem."
             subtitle="We begin by understanding your business, clarifying what needs to change, and identifying a practical way forward. From there, the scope and next steps depend on the solution your business needs."
@@ -391,6 +394,7 @@ export default function HomePage() {
         <section aria-labelledby="insights-heading">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <SectionHeading
+              id="insights-heading"
               eyebrow="INSIGHTS & FIELD NOTES"
               title="Ideas for your next digital move."
               subtitle="Explore practical perspectives on digital visibility, customer conversion and better business systems."

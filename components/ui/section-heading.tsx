@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface SectionHeadingProps {
+  id?: string;
   eyebrow?: string;
   title: string;
   subtitle?: string;
@@ -10,6 +11,7 @@ export interface SectionHeadingProps {
 }
 
 export function SectionHeading({
+  id,
   eyebrow,
   title,
   subtitle,
@@ -33,6 +35,7 @@ export function SectionHeading({
         </span>
       )}
       <h2
+        id={id}
         className={`text-2xl sm:text-4xl font-heading font-extrabold tracking-tight leading-tight ${
           light ? "text-white" : "text-white"
         }`}
