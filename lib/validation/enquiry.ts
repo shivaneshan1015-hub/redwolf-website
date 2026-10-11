@@ -13,6 +13,30 @@ export interface EnquiryInput {
   contactPhone?: string;
   hpWebsite?: string; // Honeypot field
   formStartTime?: number; // Timestamp when user opened the form
+  source?: string;
+}
+
+export const APPROVED_HELP_CATEGORIES = [
+  "Marketing and customer growth",
+  "Website and conversions",
+  "Automation and digital systems",
+  "Web application or digital product",
+  "Not sure yet",
+] as const;
+
+export type HelpCategory = (typeof APPROVED_HELP_CATEGORIES)[number];
+
+export const SOLUTION_PRESELECTION_MAP: Record<string, HelpCategory> = {
+  grow: "Marketing and customer growth",
+  define: "Website and conversions",
+  build: "Automation and digital systems",
+  productize: "Web application or digital product",
+};
+
+export function resolveHelpCategory(solutionParam?: string | null): HelpCategory {
+  if (!solutionParam) return "Not sure yet";
+  const normalized = solutionParam.trim().toLowerCase();
+  return SOLUTION_PRESELECTION_MAP[normalized] || "Not sure yet";
 }
 
 export interface ValidatedEnquiryData {
@@ -73,10 +97,14 @@ export function isValidPhone(phone: string | undefined | null): boolean {
   return PHONE_REGEX.test(clean);
 }
 
+export interface EnquiryValidationOptions {
+  requireContactJourney?: boolean;
+}
+
 /**
  * Main validation and sanitization for enquiry submissions.
  */
-export function validateEnquiry(input: unknown): ValidationResult {
+export function validateEnquiry(input: unknown, options?: EnquiryValidationOptions): ValidationResult {
   const errors: Record<string, string> = {};
 
   if (!input || typeof input !== "object") {
@@ -87,6 +115,7 @@ export function validateEnquiry(input: unknown): ValidationResult {
   }
 
   const data = input as Record<string, unknown>;
+  const isContactJourney = data.source === "contact" || options?.requireContactJourney === true;
 
   // 1. Honeypot check (bot detection)
   if (data.hpWebsite && typeof data.hpWebsite === "string" && data.hpWebsite.trim().length > 0) {
@@ -128,18 +157,41 @@ export function validateEnquiry(input: unknown): ValidationResult {
     errors.contactEmail = "Please enter a valid email address.";
   }
 
-  // 5. Contact Phone validation (optional)
+  // 5. Contact Phone validation
   const rawPhone = typeof data.contactPhone === "string" ? data.contactPhone : "";
   const contactPhone = sanitizeString(rawPhone, 30);
-  if (contactPhone && !isValidPhone(contactPhone)) {
-    errors.contactPhone = "Please enter a valid phone number or leave blank.";
+  if (isContactJourney) {
+    if (!contactPhone) {
+      errors.contactPhone = "WhatsApp number is required.";
+    } else if (!isValidPhone(contactPhone)) {
+      errors.contactPhone = "Please enter a valid phone number with country code (e.g. +91 81227 12587).";
+    }
+  } else {
+    if (contactPhone && !isValidPhone(contactPhone)) {
+      errors.contactPhone = "Please enter a valid phone number or leave blank.";
+    }
   }
 
   // 6. Problem Category & Context
-  const problemCategory = sanitizeString(typeof data.problemCategory === "string" ? data.problemCategory : "General Inquiry", 150);
+  let problemCategory = sanitizeString(
+    typeof data.problemCategory === "string"
+      ? data.problemCategory
+      : (isContactJourney ? "Not sure yet" : "General Inquiry"),
+    150
+  );
+  if (isContactJourney && !problemCategory) {
+    problemCategory = "Not sure yet";
+  }
+
   const businessName = sanitizeString(typeof data.businessName === "string" ? data.businessName : "", 100);
   const businessIndustry = sanitizeString(typeof data.businessIndustry === "string" ? data.businessIndustry : "", 100);
   const successGoals = sanitizeString(typeof data.successGoals === "string" ? data.successGoals : "", 1000);
+
+  if (isContactJourney) {
+    if (!successGoals || successGoals.length < 10) {
+      errors.successGoals = "Please briefly describe your business challenge (minimum 10 characters).";
+    }
+  }
 
   if (Object.keys(errors).length > 0) {
     return {
