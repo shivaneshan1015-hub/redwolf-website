@@ -261,4 +261,70 @@ describe("Contact Journey Contract & Validation Tests", () => {
       "https://wa.me/918122712587?text=Hi%20Redwolf%20Digital%2C%20I'd%20like%20to%20discuss%20a%20business%20challenge."
     );
   });
+
+  test("11. Server-side category allowlist: enforces approved categories, rejects arbitrary strings, and handles missing/non-string values", () => {
+    const basePayload = {
+      source: "contact",
+      contactName: "Allowlist Test",
+      contactEmail: "test@redwolf.in",
+      contactPhone: "+91 81227 12587",
+      successGoals: "Valid length challenge description for allowlist test",
+      formStartTime: Date.now() - 5000,
+    };
+
+    // 11a: Every single one of the 5 approved categories is accepted
+    for (const category of APPROVED_HELP_CATEGORIES) {
+      const res = validateEnquiry({
+        ...basePayload,
+        problemCategory: category,
+      });
+      assert.equal(res.isValid, true, `Category '${category}' should be valid`);
+      assert.equal(res.sanitized?.problemCategory, category);
+    }
+
+    // 11b: Arbitrary / unapproved string is rejected
+    const unapprovedRes = validateEnquiry({
+      ...basePayload,
+      problemCategory: "Arbitrary Unapproved Growth Service",
+    });
+    assert.equal(unapprovedRes.isValid, false, "Arbitrary unapproved category must be rejected for contact journey");
+    assert.ok(unapprovedRes.errors.problemCategory, "Must set problemCategory validation error");
+
+    // 11c: Missing / omitted category defaults safely to 'Not sure yet'
+    const missingRes = validateEnquiry({
+      ...basePayload,
+      // problemCategory omitted
+    });
+    assert.equal(missingRes.isValid, true);
+    assert.equal(missingRes.sanitized?.problemCategory, "Not sure yet");
+
+    // 11d: Empty string defaults safely to 'Not sure yet'
+    const emptyRes = validateEnquiry({
+      ...basePayload,
+      problemCategory: "   ",
+    });
+    assert.equal(emptyRes.isValid, true);
+    assert.equal(emptyRes.sanitized?.problemCategory, "Not sure yet");
+
+    // 11e: Non-string category (e.g. number or object) defaults safely to 'Not sure yet'
+    const numberRes = validateEnquiry({
+      ...basePayload,
+      problemCategory: 9999,
+    });
+    assert.equal(numberRes.isValid, true);
+    assert.equal(numberRes.sanitized?.problemCategory, "Not sure yet");
+
+    // 11f: Modal submission without source='contact' preserves custom category strings
+    const modalRes = validateEnquiry({
+      contactName: "Modal User",
+      contactEmail: "modal@redwolf.in",
+      problemCategory: "GROW — Organic Search & AI Search Visibility (SEO/AEO/GEO)",
+      formStartTime: Date.now() - 5000,
+    });
+    assert.equal(modalRes.isValid, true);
+    assert.equal(
+      modalRes.sanitized?.problemCategory,
+      "GROW — Organic Search & AI Search Visibility (SEO/AEO/GEO)"
+    );
+  });
 });

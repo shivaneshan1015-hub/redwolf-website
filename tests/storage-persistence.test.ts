@@ -91,4 +91,103 @@ describe("Storage Persistence Layer", () => {
       if (originalSupabaseUrl) process.env.SUPABASE_URL = originalSupabaseUrl;
     }
   });
+
+  test("Supabase outbound fetch handles timeout safely", async () => {
+    setTestStorageProvider(null);
+    const originalFetch = globalThis.fetch;
+    const originalUrl = process.env.SUPABASE_URL;
+    const originalKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    try {
+      process.env.SUPABASE_URL = "https://example.supabase.co";
+      process.env.SUPABASE_SERVICE_ROLE_KEY = "test-key";
+
+      // Mock fetch simulating timeout
+      globalThis.fetch = async () => {
+        const err = new Error("The operation was aborted due to timeout");
+        err.name = "TimeoutError";
+        throw err;
+      };
+
+      const lead: LeadRecord = {
+        id: "RW-TIMEOUT-TEST",
+        createdAt: new Date().toISOString(),
+        problemCategory: "GROW",
+        businessName: "Timeout Corp",
+        businessIndustry: "Tech",
+        successGoals: "Test timeout handling",
+        contactName: "Timeout User",
+        contactEmail: "timeout@test.com",
+        contactPhone: "+91 81227 12587",
+        status: "new",
+      };
+
+      await assert.rejects(
+        async () => {
+          await persistLead(lead);
+        },
+        /Database persistence request timed out/
+      );
+    } finally {
+      globalThis.fetch = originalFetch;
+      process.env.SUPABASE_URL = originalUrl;
+      process.env.SUPABASE_SERVICE_ROLE_KEY = originalKey;
+    }
+  });
+
+  test("Webhook outbound fetch handles timeout and failure semantics", async () => {
+    setTestStorageProvider(null);
+    const originalFetch = globalThis.fetch;
+    const originalWebhook = process.env.LEAD_WEBHOOK_URL;
+    const originalSupabase = process.env.SUPABASE_URL;
+
+    try {
+      delete process.env.SUPABASE_URL;
+      delete process.env.SUPABASE_SERVICE_ROLE_KEY;
+      process.env.LEAD_WEBHOOK_URL = "https://webhook.example.com/leads";
+
+      // Mock fetch simulating timeout on webhook
+      globalThis.fetch = async () => {
+        const err = new Error("The operation was aborted due to timeout");
+        err.name = "TimeoutError";
+        throw err;
+      };
+
+      const lead: LeadRecord = {
+        id: "RW-WEBHOOK-TIMEOUT",
+        createdAt: new Date().toISOString(),
+        problemCategory: "GROW",
+        businessName: "Webhook Corp",
+        businessIndustry: "Tech",
+        successGoals: "Test webhook timeout",
+        contactName: "Webhook User",
+        contactEmail: "webhook@test.com",
+        contactPhone: "+91 81227 12587",
+        status: "new",
+      };
+
+      await assert.rejects(
+        async () => {
+          await persistLead(lead);
+        },
+        /Webhook dispatch request timed out/
+      );
+
+      // Mock fetch simulating HTTP 502 Bad Gateway
+      globalThis.fetch = async () => {
+        return new Response("Bad Gateway", { status: 502 });
+      };
+
+      await assert.rejects(
+        async () => {
+          await persistLead(lead);
+        },
+        /Webhook dispatch failed with HTTP 502/
+      );
+    } finally {
+      globalThis.fetch = originalFetch;
+      process.env.LEAD_WEBHOOK_URL = originalWebhook;
+      process.env.SUPABASE_URL = originalSupabase;
+    }
+  });
 });

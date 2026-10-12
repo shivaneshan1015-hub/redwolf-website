@@ -74,3 +74,34 @@ export function checkRateLimit(
 export function resetRateLimiter(): void {
   rateLimitStore.clear();
 }
+
+/**
+ * Resolves the client IP address using deployment-trusted headers.
+ *
+ * Hosting environment security model:
+ * On Vercel, the edge proxy sets `x-real-ip` to the authentic client IP address
+ * after stripping any client-supplied `x-real-ip` header. Therefore, `x-real-ip`
+ * is the authoritative, trusted source of the client IP in production.
+ *
+ * `x-forwarded-for` is only consulted as a secondary fallback for local development
+ * or test proxies where `x-real-ip` is absent.
+ */
+export function extractClientIp(request: Request): string {
+  // 1. Authoritative Vercel edge proxy header
+  const realIp = request.headers.get("x-real-ip");
+  if (realIp && realIp.trim().length > 0) {
+    return realIp.trim();
+  }
+
+  // 2. Secondary fallback for proxies where x-real-ip is not configured (e.g. tests)
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  if (forwardedFor && forwardedFor.trim().length > 0) {
+    const candidate = forwardedFor.split(",")[0].trim();
+    if (candidate.length > 0) {
+      return candidate;
+    }
+  }
+
+  // 3. Fallback when no IP header is available
+  return "127.0.0.1";
+}

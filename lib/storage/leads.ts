@@ -56,6 +56,8 @@ export function isPersistentStorageConfigured(): boolean {
   return hasSupabase || hasWebhook;
 }
 
+export const STORAGE_FETCH_TIMEOUT_MS = 5000;
+
 /**
  * Returns the active storage provider based on environment configuration.
  */
@@ -71,62 +73,78 @@ function getStorageProvider(): StorageProvider {
     return {
       async saveLead(lead: LeadRecord): Promise<void> {
         const endpoint = `${supabaseUrl.replace(/\/$/, "")}/rest/v1/enquiries`;
-        const res = await fetch(endpoint, {
-          method: "POST",
-          headers: {
-            apikey: serviceKey,
-            Authorization: `Bearer ${serviceKey}`,
-            "Content-Type": "application/json",
-            Prefer: "return=minimal",
-          },
-          body: JSON.stringify({
-            id: lead.id,
-            created_at: lead.createdAt,
-            problem_category: lead.problemCategory,
-            business_name: lead.businessName,
-            business_industry: lead.businessIndustry,
-            success_goals: lead.successGoals,
-            contact_name: lead.contactName,
-            contact_email: lead.contactEmail,
-            contact_phone: lead.contactPhone,
-            status: lead.status,
-          }),
-        });
+        try {
+          const res = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              apikey: serviceKey,
+              Authorization: `Bearer ${serviceKey}`,
+              "Content-Type": "application/json",
+              Prefer: "return=minimal",
+            },
+            body: JSON.stringify({
+              id: lead.id,
+              created_at: lead.createdAt,
+              problem_category: lead.problemCategory,
+              business_name: lead.businessName,
+              business_industry: lead.businessIndustry,
+              success_goals: lead.successGoals,
+              contact_name: lead.contactName,
+              contact_email: lead.contactEmail,
+              contact_phone: lead.contactPhone,
+              status: lead.status,
+            }),
+            signal: AbortSignal.timeout(STORAGE_FETCH_TIMEOUT_MS),
+          });
 
-        if (!res.ok) {
-          const errText = await res.text().catch(() => "Unknown error");
-          throw new Error(`Database persistence failed with HTTP ${res.status}: ${errText}`);
+          if (!res.ok) {
+            const errText = await res.text().catch(() => "Unknown error");
+            throw new Error(`Database persistence failed with HTTP ${res.status}: ${errText}`);
+          }
+        } catch (err: unknown) {
+          if (err instanceof Error && (err.name === "TimeoutError" || err.name === "AbortError")) {
+            throw new Error(`Database persistence request timed out after ${STORAGE_FETCH_TIMEOUT_MS}ms`);
+          }
+          throw err;
         }
       },
 
       async getLeads(): Promise<LeadRecord[]> {
         const endpoint = `${supabaseUrl.replace(/\/$/, "")}/rest/v1/enquiries?order=created_at.desc&limit=100`;
-        const res = await fetch(endpoint, {
-          method: "GET",
-          headers: {
-            apikey: serviceKey,
-            Authorization: `Bearer ${serviceKey}`,
-            Accept: "application/json",
-          },
-        });
+        try {
+          const res = await fetch(endpoint, {
+            method: "GET",
+            headers: {
+              apikey: serviceKey,
+              Authorization: `Bearer ${serviceKey}`,
+              Accept: "application/json",
+            },
+            signal: AbortSignal.timeout(STORAGE_FETCH_TIMEOUT_MS),
+          });
 
-        if (!res.ok) {
-          throw new Error(`Failed to fetch leads from database: HTTP ${res.status}`);
+          if (!res.ok) {
+            throw new Error(`Failed to fetch leads from database: HTTP ${res.status}`);
+          }
+
+          const data = await res.json();
+          return (data || []).map((row: Record<string, unknown>) => ({
+            id: String(row.id || ""),
+            createdAt: String(row.created_at || ""),
+            problemCategory: String(row.problem_category || ""),
+            businessName: String(row.business_name || ""),
+            businessIndustry: String(row.business_industry || ""),
+            successGoals: String(row.success_goals || ""),
+            contactName: String(row.contact_name || ""),
+            contactEmail: String(row.contact_email || ""),
+            contactPhone: String(row.contact_phone || ""),
+            status: (row.status as LeadRecord["status"]) || "new",
+          }));
+        } catch (err: unknown) {
+          if (err instanceof Error && (err.name === "TimeoutError" || err.name === "AbortError")) {
+            throw new Error(`Database fetch request timed out after ${STORAGE_FETCH_TIMEOUT_MS}ms`);
+          }
+          throw err;
         }
-
-        const data = await res.json();
-        return (data || []).map((row: Record<string, unknown>) => ({
-          id: String(row.id || ""),
-          createdAt: String(row.created_at || ""),
-          problemCategory: String(row.problem_category || ""),
-          businessName: String(row.business_name || ""),
-          businessIndustry: String(row.business_industry || ""),
-          successGoals: String(row.success_goals || ""),
-          contactName: String(row.contact_name || ""),
-          contactEmail: String(row.contact_email || ""),
-          contactPhone: String(row.contact_phone || ""),
-          status: (row.status as LeadRecord["status"]) || "new",
-        }));
       },
     };
   }
@@ -136,18 +154,26 @@ function getStorageProvider(): StorageProvider {
   if (webhookUrl) {
     return {
       async saveLead(lead: LeadRecord): Promise<void> {
-        const res = await fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Lead-Source": "redwolf-digital-website",
-            ...(process.env.LEAD_WEBHOOK_SECRET ? { "X-Webhook-Secret": process.env.LEAD_WEBHOOK_SECRET } : {}),
-          },
-          body: JSON.stringify(lead),
-        });
+        try {
+          const res = await fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Lead-Source": "redwolf-digital-website",
+              ...(process.env.LEAD_WEBHOOK_SECRET ? { "X-Webhook-Secret": process.env.LEAD_WEBHOOK_SECRET } : {}),
+            },
+            body: JSON.stringify(lead),
+            signal: AbortSignal.timeout(STORAGE_FETCH_TIMEOUT_MS),
+          });
 
-        if (!res.ok) {
-          throw new Error(`Webhook dispatch failed with HTTP ${res.status}`);
+          if (!res.ok) {
+            throw new Error(`Webhook dispatch failed with HTTP ${res.status}`);
+          }
+        } catch (err: unknown) {
+          if (err instanceof Error && (err.name === "TimeoutError" || err.name === "AbortError")) {
+            throw new Error(`Webhook dispatch request timed out after ${STORAGE_FETCH_TIMEOUT_MS}ms`);
+          }
+          throw err;
         }
       },
       async getLeads(): Promise<LeadRecord[]> {

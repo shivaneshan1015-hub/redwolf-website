@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { validateEnquiry } from "@/lib/validation/enquiry";
-import { checkRateLimit } from "@/lib/security/rate-limiter";
+import { checkRateLimit, extractClientIp } from "@/lib/security/rate-limiter";
+import { timingSafeCompare } from "@/lib/security/timing-safe";
 import {
   persistLead,
   retrieveLeadsForAdmin,
@@ -12,7 +13,7 @@ import {
  * POST /api/enquiries
  * Secure endpoint for submitting consultation requests.
  * Features:
- * - IP rate limiting
+ * - IP rate limiting with trusted client IP resolution
  * - Bot honeypot & timing verification
  * - Server-side sanitization & validation
  * - Safe error handling (no leaked database errors, stack traces, or credentials)
@@ -21,11 +22,7 @@ import {
 export async function POST(request: Request) {
   try {
     // 1. IP extraction & rate limiting
-    const forwardedFor = request.headers.get("x-forwarded-for");
-    const clientIp = forwardedFor
-      ? forwardedFor.split(",")[0].trim()
-      : request.headers.get("x-real-ip") || "127.0.0.1";
-
+    const clientIp = extractClientIp(request);
     const rateLimit = checkRateLimit(clientIp);
     if (!rateLimit.allowed) {
       return NextResponse.json(
@@ -157,7 +154,7 @@ export async function GET(request: Request) {
   }
 
   const token = authHeader.substring(7).trim();
-  if (token !== adminApiKey) {
+  if (!timingSafeCompare(token, adminApiKey)) {
     return NextResponse.json(
       { error: "Invalid credentials." },
       { status: 401 }

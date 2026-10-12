@@ -281,4 +281,81 @@ describe("Enquiry API Security & Access Control (/api/enquiries)", () => {
     assert.equal(data.leads.length, 1);
     assert.equal(data.leads[0].id, "RW-AUTH-001");
   });
+
+  test("8. Rate limiting bucket binds to trusted x-real-ip even when client forges x-forwarded-for", async () => {
+    const trustedIp = "203.0.113.88";
+    const payload = {
+      contactName: "Rate Limit Tester",
+      contactEmail: "tester@domain.com",
+      formStartTime: Date.now() - 5000,
+    };
+
+    // Attacker rotates X-Forwarded-For across requests while platform x-real-ip remains constant
+    for (let i = 1; i <= 5; i++) {
+      const res = await POST(
+        new Request("http://localhost:3000/api/enquiries", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-real-ip": trustedIp,
+            "x-forwarded-for": `198.51.100.${i}, 10.0.0.1`, // Forged rotating client IP
+          },
+          body: JSON.stringify(payload),
+        })
+      );
+      assert.equal(res.status, 201);
+    }
+
+    // 6th request with different forged X-Forwarded-For but same x-real-ip must be blocked (429)
+    const blockedRes = await POST(
+      new Request("http://localhost:3000/api/enquiries", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-real-ip": trustedIp,
+          "x-forwarded-for": "198.51.100.999, 10.0.0.1",
+        },
+        body: JSON.stringify(payload),
+      })
+    );
+    assert.equal(blockedRes.status, 429, "Forging X-Forwarded-For must not evade rate limiting when x-real-ip is present");
+  });
+
+  test("9. Timing-safe admin comparison rejects tokens of differing lengths and contents", async () => {
+    // Differing length (shorter)
+    const shortReq = new Request("http://localhost:3000/api/enquiries", {
+      method: "GET",
+      headers: { Authorization: "Bearer short" },
+    });
+    assert.equal((await GET(shortReq)).status, 401);
+
+    // Differing length (longer)
+    const longReq = new Request("http://localhost:3000/api/enquiries", {
+      method: "GET",
+      headers: { Authorization: `Bearer ${TEST_ADMIN_KEY}-extra-bytes` },
+    });
+    assert.equal((await GET(longReq)).status, 401);
+
+    // Same length, single character altered
+    const sameLengthBadToken = TEST_ADMIN_KEY.substring(0, TEST_ADMIN_KEY.length - 1) + "X";
+    const sameLenReq = new Request("http://localhost:3000/api/enquiries", {
+      method: "GET",
+      headers: { Authorization: `Bearer ${sameLengthBadToken}` },
+    });
+    assert.equal((await GET(sameLenReq)).status, 401);
+
+    // Empty Bearer token
+    const emptyBearerReq = new Request("http://localhost:3000/api/enquiries", {
+      method: "GET",
+      headers: { Authorization: "Bearer " },
+    });
+    assert.equal((await GET(emptyBearerReq)).status, 401);
+
+    // Correct token succeeds
+    const validReq = new Request("http://localhost:3000/api/enquiries", {
+      method: "GET",
+      headers: { Authorization: `Bearer ${TEST_ADMIN_KEY}` },
+    });
+    assert.equal((await GET(validReq)).status, 200);
+  });
 });

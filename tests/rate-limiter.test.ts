@@ -1,6 +1,6 @@
 import { test, describe, beforeEach } from "node:test";
 import assert from "node:assert/strict";
-import { checkRateLimit, resetRateLimiter } from "../lib/security/rate-limiter";
+import { checkRateLimit, resetRateLimiter, extractClientIp } from "../lib/security/rate-limiter";
 
 describe("Rate Limiter Layer", () => {
   beforeEach(() => {
@@ -42,5 +42,34 @@ describe("Rate Limiter Layer", () => {
     // ip2 should still be allowed
     const ip2First = checkRateLimit(ip2, limit, 60000);
     assert.equal(ip2First.allowed, true);
+  });
+
+  test("extractClientIp: prioritizes trusted x-real-ip over forged x-forwarded-for", () => {
+    // Simulated attacker attempting to spoof IP via X-Forwarded-For while platform sets x-real-ip
+    const reqWithBoth = new Request("http://localhost:3000/api/enquiries", {
+      headers: {
+        "x-real-ip": "203.0.113.50",
+        "x-forwarded-for": "198.51.100.99, 10.0.0.1",
+      },
+    });
+
+    const resolvedIp = extractClientIp(reqWithBoth);
+    assert.equal(resolvedIp, "203.0.113.50", "Must prioritize authoritative x-real-ip over client-supplied x-forwarded-for");
+  });
+
+  test("extractClientIp: falls back to x-forwarded-for when x-real-ip is absent", () => {
+    const reqForwarded = new Request("http://localhost:3000/api/enquiries", {
+      headers: {
+        "x-forwarded-for": "198.51.100.22, 10.0.0.1",
+      },
+    });
+
+    const resolvedIp = extractClientIp(reqForwarded);
+    assert.equal(resolvedIp, "198.51.100.22", "Falls back to first hop in x-forwarded-for when x-real-ip is omitted");
+  });
+
+  test("extractClientIp: defaults safely to 127.0.0.1 when no headers are present", () => {
+    const emptyReq = new Request("http://localhost:3000/api/enquiries");
+    assert.equal(extractClientIp(emptyReq), "127.0.0.1");
   });
 });

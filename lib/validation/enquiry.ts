@@ -173,14 +173,27 @@ export function validateEnquiry(input: unknown, options?: EnquiryValidationOptio
   }
 
   // 6. Problem Category & Context
-  let problemCategory = sanitizeString(
-    typeof data.problemCategory === "string"
-      ? data.problemCategory
-      : (isContactJourney ? "Not sure yet" : "General Inquiry"),
-    150
-  );
-  if (isContactJourney && !problemCategory) {
-    problemCategory = "Not sure yet";
+  let problemCategory: string;
+  if (isContactJourney) {
+    const rawCategory = typeof data.problemCategory === "string" ? data.problemCategory.trim() : "";
+    if (!rawCategory) {
+      // Missing, empty or non-string category safely defaults to approved fallback
+      problemCategory = "Not sure yet";
+    } else if (APPROVED_HELP_CATEGORIES.includes(rawCategory as HelpCategory)) {
+      problemCategory = rawCategory;
+    } else {
+      errors.problemCategory = "Please select an approved help category or choose 'Not sure yet'.";
+      problemCategory = "Not sure yet";
+    }
+  } else {
+    // Legacy modal and generic enquiry flow
+    problemCategory = sanitizeString(
+      typeof data.problemCategory === "string" ? data.problemCategory : "General Inquiry",
+      150
+    );
+    if (!problemCategory) {
+      problemCategory = "General Inquiry";
+    }
   }
 
   const businessName = sanitizeString(typeof data.businessName === "string" ? data.businessName : "", 100);
