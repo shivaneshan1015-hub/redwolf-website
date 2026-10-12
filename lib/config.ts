@@ -8,7 +8,7 @@ export const siteConfig = {
   tagline: "From problem to digital solution.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://redwolf.in",
   ogImage: "https://redwolf.in/images/og-default.png",
-  phone: "+91 99436 73790",
+  phone: "+91 81227 12587",
   email: "hello@redwolf.in",
   address: {
     city: "Madurai",

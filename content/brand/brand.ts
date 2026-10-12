@@ -16,7 +16,7 @@ export const brandContent: BrandContent = {
     region: "Tamil Nadu",
     country: "India",
   },
-  phone: "+91 99436 73790",
+  phone: "+91 81227 12587",
   email: "hello@redwolf.in",
   social: {
     linkedin: "https://linkedin.com/company/redwolf-digital",

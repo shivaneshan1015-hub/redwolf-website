@@ -163,10 +163,10 @@
     }
   ],
   "productShowcase": {
-    "name": "EasyTrack",
-    "tagline": "A SaaS product built by Redwolf Digital",
+    "name": "Field & Logistics Platform",
+    "tagline": "Custom operational software engineered by Redwolf Digital",
     "headline": "Distribution operations, connected.",
-    "description": "EasyTrack helps FMCG distributors manage field sales, van inventory, routes, orders, credit, collections and distribution operations from one connected platform.",
+    "description": "Custom platforms helping distributors manage field sales, van inventory, routes, orders, credit, collections and distribution operations from one connected platform.",
     "problemAddressed": "Manual order entry, unorganized van stock reconciliation, and lack of real-world offline connectivity on rural distribution routes.",
     "features": [
       "Offline-First Field Sales Ordering App",

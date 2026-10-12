@@ -30,37 +30,37 @@ export default function HomePage() {
     {
       slug: "grow",
       name: "GROW",
-      supportingLine: "Reach the right audience.",
+      supportingLine: "Marketing, discoverability and customer growth.",
       description:
-        "Help potential customers discover your business through search, content and digital marketing.",
-      items: "SEO · Content · Digital marketing · Performance ads",
+        "Help relevant customers discover and choose your business through targeted search, useful content, and digital marketing.",
+      items: "SEO · Content strategy · Digital marketing · Performance ads",
       icon: TrendingUp,
     },
     {
       slug: "define",
       name: "DEFINE",
-      supportingLine: "Find the right direction.",
+      supportingLine: "Strategy, positioning, research and digital direction.",
       description:
-        "Clarify business challenges, customer needs and priorities before committing to a solution.",
+        "Clarify business challenges, customer expectations, and digital priorities before committing budget or technology.",
       items: "Discovery · Strategy · Planning · Digital roadmaps",
       icon: Compass,
     },
     {
       slug: "build",
       name: "BUILD",
-      supportingLine: "Turn ideas into useful tools.",
+      supportingLine: "Websites, web applications and integrations.",
       description:
-        "Create digital experiences and systems designed around real business requirements.",
-      items: "Websites · Web applications · Integrations · Automation",
+        "Engineer responsive websites, custom web applications, and connected digital systems designed around how your business works.",
+      items: "Websites · Web applications · Integrations · Workflows",
       icon: Cpu,
     },
     {
       slug: "productize",
       name: "PRODUCTIZE",
-      supportingLine: "Shape repeatable solutions.",
+      supportingLine: "Automation, repeatable systems and digital products.",
       description:
-        "Explore how recurring business needs can be addressed through focused digital products and reusable systems.",
-      items: "Digital products · Reusable workflows · Product development",
+        "Turn manual processes into automated workflows, repeatable operational tools, and scalable digital products.",
+      items: "Digital products · Reusable workflows · Operational software",
       icon: Boxes,
     },
   ];
@@ -70,25 +70,25 @@ export default function HomePage() {
       step: "01",
       title: "Understand",
       description:
-        "We listen to your challenges, learn about your business and clarify what you want to achieve.",
+        "We listen to your challenges, learn how your business operates, and clarify what you want to achieve.",
     },
     {
       step: "02",
       title: "Define",
       description:
-        "We identify priorities and discuss the appropriate approach, deliverables and project scope.",
+        "We identify priorities, evaluate practical options, and agree on the right scope and approach.",
     },
     {
       step: "03",
       title: "Build & Deliver",
       description:
-        "We work on the agreed solution, keeping the work aligned with the requirements and priorities established for the project.",
+        "We engineer the agreed digital solution, keeping the work aligned with established business requirements.",
     },
     {
       step: "04",
       title: "Review & Next Steps",
       description:
-        "We review the agreed deliverables, address the items included in the project scope, and clarify any follow-up work or next steps.",
+        "We review the delivered solution against your goals, verify operational readiness, and clarify future direction.",
     },
   ];
 
@@ -340,7 +340,7 @@ export default function HomePage() {
               </p>
             </div>
             <CTAButton variant="primary" size="md" href="/contact" className="shrink-0">
-              Discuss Your Business Challenge →
+              Discuss Your Business Challenge
             </CTAButton>
           </div>
         </section>
@@ -384,7 +384,7 @@ export default function HomePage() {
             </p>
             <div className="pt-2">
               <CTAButton variant="primary" size="md" href="/contact">
-                Discuss Your Business Challenge →
+                Discuss Your Business Challenge
               </CTAButton>
             </div>
           </div>
@@ -449,7 +449,7 @@ export default function HomePage() {
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <CTAButton variant="primary" size="lg" href="/contact">
-              Discuss Your Business Challenge →
+              Discuss Your Business Challenge
             </CTAButton>
           </div>
         </section>

@@ -19,18 +19,18 @@ export const industriesContent: Record<string, IndustryContent> = {
       "Enforce automatic retailer credit limit controls at point of order capture.",
     ],
     relevantRedwolfSystems: [
-      "EasyTrack FMCG Distribution Platform",
+      "Field Sales & Distribution Platforms",
       "Offline-First Field Mobile Sync Engine",
       "Retailer Credit & Ledger Control Console",
     ],
     relevantSolutionSlugs: ["build", "productize", "grow"],
     relatedWorkSlugs: [],
-    relatedProductSlugs: ["easytrack"],
+    relatedProductSlugs: [],
     relatedInsightSlugs: ["local-seo-google-maps-pack-ranking-strategy"],
     cta: {
       label: "Explore FMCG Solutions",
       labelWithArrow: "Explore FMCG Solutions →",
-      href: "/industries/fmcg-distribution",
+      href: "/solutions/build",
       variant: "primary",
     },
     seo: {
@@ -66,7 +66,7 @@ export const industriesContent: Record<string, IndustryContent> = {
     cta: {
       label: "Explore Healthcare Solutions",
       labelWithArrow: "Explore Healthcare Solutions →",
-      href: "/industries/healthcare",
+      href: "/solutions/grow",
       variant: "primary",
     },
     seo: {
@@ -102,7 +102,7 @@ export const industriesContent: Record<string, IndustryContent> = {
     cta: {
       label: "Explore Manufacturing Solutions",
       labelWithArrow: "Explore Manufacturing Solutions →",
-      href: "/industries/manufacturing",
+      href: "/solutions/build",
       variant: "primary",
     },
     seo: {
@@ -138,7 +138,7 @@ export const industriesContent: Record<string, IndustryContent> = {
     cta: {
       label: "Explore Travel Solutions",
       labelWithArrow: "Explore Travel Solutions →",
-      href: "/industries/travel-hospitality",
+      href: "/solutions/grow",
       variant: "primary",
     },
     seo: {
@@ -177,7 +177,7 @@ export const industriesContent: Record<string, IndustryContent> = {
     cta: {
       label: "Explore SME Solutions",
       labelWithArrow: "Explore SME Solutions →",
-      href: "/industries/smes",
+      href: "/solutions/define",
       variant: "primary",
     },
     seo: {

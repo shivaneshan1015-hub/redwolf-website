@@ -51,7 +51,7 @@ export function EnquiryModal({ isOpen, onClose, initialProblemId }: EnquiryModal
     "DEFINE — Brand Strategy & Visual Identity",
     "BUILD — High-Speed Web Application Engineering",
     "BUILD — Business Workflow Platform & Automation",
-    "PRODUCTIZE — SaaS Architecture & Field App Engineering (EasyTrack)",
+    "PRODUCTIZE — SaaS Architecture & Field App Engineering",
     "Redwolf Digital Diagnostic Consultation"
   ];
 

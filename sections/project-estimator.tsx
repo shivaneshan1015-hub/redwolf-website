@@ -64,12 +64,12 @@ const serviceOptions: ServiceOption[] = [
     description: "iOS/Android app or custom web portal engineering"
   },
   {
-    id: "easytrack-saas",
-    name: "EasyTrack SaaS Fleet Integration",
+    id: "custom-saas",
+    name: "Custom SaaS & Fleet Integration",
     category: "tech",
     basePriceINR: 15000,
     basePriceUSD: 180,
-    description: "Proprietary logistics dispatch & live tracking SaaS setup"
+    description: "Custom logistics dispatch & live tracking SaaS setup"
   }
 ];
 

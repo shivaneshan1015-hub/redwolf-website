@@ -8,7 +8,7 @@ interface WhatsAppWidgetProps {
   phoneNumber?: string; // WhatsApp number
 }
 
-export function WhatsAppWidget({ onOpenEnquiry, phoneNumber = "919000000000" }: WhatsAppWidgetProps) {
+export function WhatsAppWidget({ onOpenEnquiry, phoneNumber = "918122712587" }: WhatsAppWidgetProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleDirectWhatsApp = () => {

@@ -15,27 +15,14 @@ export const globalContent: GlobalContent = {
     diagnostic: {
       label: "Find your digital path",
       labelWithArrow: "Find your digital path →",
-      href: "/diagnostic",
+      href: "/solutions",
       variant: "tertiary",
     },
     work: {
       label: "Explore our work",
       labelWithArrow: "Explore our work →",
-      href: "/work",
+      href: "/solutions",
       variant: "secondary",
-    },
-    easytrack: {
-      label: "Explore EasyTrack",
-      labelWithArrow: "Explore EasyTrack →",
-      href: "/products/easytrack",
-      variant: "primary",
-    },
-    easytrackDemo: {
-      label: "Request an EasyTrack demo",
-      labelWithArrow: "Request an EasyTrack demo →",
-      href: "https://easytrack-app.vercel.app/login",
-      variant: "primary",
-      external: true,
     },
     insights: {
       label: "Explore insights",
@@ -45,9 +32,8 @@ export const globalContent: GlobalContent = {
     },
   },
   footerLinks: [
-    { label: "About Redwolf Digital", href: "/about" },
-    { label: "Work", href: "/work" },
-    { label: "EasyTrack", href: "/products/easytrack" },
+    { label: "Solutions", href: "/solutions" },
     { label: "Insights", href: "/insights" },
+    { label: "Contact", href: "/contact" },
   ],
 };

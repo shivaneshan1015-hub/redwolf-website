@@ -25,7 +25,7 @@ Perplexity and Gemini ingest content that directly mirrors conversational user i
     relatedSolutionSlugs: ["grow", "define"],
     relatedIndustrySlugs: ["smes", "healthcare", "travel-hospitality"],
     relatedWorkSlugs: ["gateway-holidays"],
-    relatedProductSlugs: ["easytrack"],
+    relatedProductSlugs: [],
     tags: ["GEO", "AI Search", "ChatGPT SEO", "Perplexity AI", "Schema.org"],
     faqs: [
       {
@@ -105,7 +105,7 @@ Encourage verified customers to leave detailed reviews referencing specific serv
     relatedSolutionSlugs: ["grow"],
     relatedIndustrySlugs: ["fmcg-distribution", "healthcare", "smes"],
     relatedWorkSlugs: ["sri-nantha-glasses"],
-    relatedProductSlugs: ["easytrack"],
+    relatedProductSlugs: [],
     tags: ["Local SEO", "Google Maps", "GBP Optimization", "Local Pack"],
     faqs: [
       {

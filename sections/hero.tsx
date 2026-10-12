@@ -153,7 +153,7 @@ export function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
                   </div>
                   <div>
                     <div className="text-xs font-mono text-emerald-400 font-bold uppercase">REVENUE & PRODUCT RESULT</div>
-                    <div className="text-sm font-semibold text-white">#1 Rankings + EasyTrack SaaS Stack</div>
+                    <div className="text-sm font-semibold text-white">#1 Rankings + Custom SaaS Stack</div>
                   </div>
                 </div>
               </div>

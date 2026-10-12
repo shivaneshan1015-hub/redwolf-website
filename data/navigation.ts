@@ -45,57 +45,38 @@ export const primaryNavigation: NavGroup[] = [
   },
   {
     name: "Industries",
-    href: "/industries",
+    href: "/solutions",
     items: [
       {
         name: "FMCG & Distribution",
-        href: "/industries/fmcg-distribution",
+        href: "/solutions/build",
         description: "Field sales, van inventory & beat routes",
       },
       {
         name: "Healthcare",
-        href: "/industries/healthcare",
+        href: "/solutions/grow",
         description: "Patient booking & clinical trust portals",
       },
       {
         name: "Manufacturing",
-        href: "/industries/manufacturing",
+        href: "/solutions/build",
         description: "Custom quote systems & dealer portals",
       },
       {
         name: "Travel & Hospitality",
-        href: "/industries/travel-hospitality",
+        href: "/solutions/grow",
         description: "Tour discovery & instant WhatsApp bookings",
       },
       {
         name: "SMEs & Growing Businesses",
-        href: "/industries/smes",
+        href: "/solutions/define",
         description: "Enterprise digital transformation for SMEs",
-      },
-    ],
-  },
-  {
-    name: "Work",
-    href: "/work",
-  },
-  {
-    name: "Products",
-    href: "/products",
-    items: [
-      {
-        name: "EasyTrack",
-        href: "/products/easytrack",
-        description: "FMCG Distribution Management Software",
       },
     ],
   },
   {
     name: "Insights",
     href: "/insights",
-  },
-  {
-    name: "About",
-    href: "/about",
   },
 ];
 
@@ -108,22 +89,12 @@ export const globalCTAs = {
   diagnostic: {
     label: "Find your digital path",
     labelWithArrow: "Find your digital path →",
-    href: "/diagnostic",
+    href: "/solutions",
   },
   work: {
     label: "Explore our work",
     labelWithArrow: "Explore our work →",
-    href: "/work",
-  },
-  easytrack: {
-    label: "Explore EasyTrack",
-    labelWithArrow: "Explore EasyTrack →",
-    href: "/products/easytrack",
-  },
-  easytrackDemo: {
-    label: "Request an EasyTrack demo",
-    labelWithArrow: "Request an EasyTrack demo →",
-    href: "https://easytrack-app.vercel.app/login",
+    href: "/solutions",
   },
   insights: {
     label: "Explore insights",

@@ -312,8 +312,8 @@ export interface GlobalContent {
     primary: CTARef;
     diagnostic: CTARef;
     work: CTARef;
-    easytrack: CTARef;
-    easytrackDemo: CTARef;
+    easytrack?: CTARef;
+    easytrackDemo?: CTARef;
     insights: CTARef;
   };
   footerLinks: {

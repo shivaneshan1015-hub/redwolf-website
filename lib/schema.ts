@@ -35,20 +35,17 @@ export function generateWebSiteSchema() {
   };
 }
 
-export function generateSoftwareApplicationSchema() {
+export function generateSoftwareApplicationSchema(
+  name = "Business Application",
+  description = "Custom software application engineered by Redwolf Digital."
+) {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "EasyTrack",
-    operatingSystem: "Android, iOS, Web",
+    name,
+    operatingSystem: "Web",
     applicationCategory: "BusinessApplication",
-    description: "FMCG Distribution Management Software for field sales, van inventory, route optimization, and offline-first ordering.",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-    },
+    description,
   };
 }
 

@@ -101,10 +101,9 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400 text-center sm:text-left">
           <p>&copy; {currentYear} Redwolf Digital. All rights reserved. {brandData.tagline}</p>
           <div className="flex items-center gap-4 text-[11px]">
-            <Link href="/about" className="hover:text-white transition-colors">About Redwolf Digital</Link>
-            <Link href="/work" className="hover:text-white transition-colors">Work</Link>
-            <Link href="/products/easytrack" className="hover:text-white transition-colors">EasyTrack</Link>
+            <Link href="/solutions" className="hover:text-white transition-colors">Solutions</Link>
             <Link href="/insights" className="hover:text-white transition-colors">Insights</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>

@@ -111,19 +111,19 @@ export default function DesignSystemPage() {
       <section className="space-y-6">
         <SectionHeading eyebrow="UI PRIMITIVES" title="Button System & Interactive States" />
         <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-wrap items-center gap-4">
-          <CTAButton variant="primary" href="/contact/">
+          <CTAButton variant="primary" href="/contact">
             Start a conversation →
           </CTAButton>
 
-          <CTAButton variant="secondary" href="/work/">
-            Explore our work →
+          <CTAButton variant="secondary" href="/solutions">
+            Explore capabilities →
           </CTAButton>
 
-          <CTAButton variant="tertiary" href="/diagnostic/">
+          <CTAButton variant="tertiary" href="/solutions">
             Find your digital path →
           </CTAButton>
 
-          <CTAButton variant="phone" href="tel:+919943673790">
+          <CTAButton variant="phone" href="tel:+918122712587">
             Direct Helpline
           </CTAButton>
 
@@ -173,11 +173,11 @@ export default function DesignSystemPage() {
             href={`/solutions/${solutionsData.grow.slug}`}
           />
           <ProductCard
-            name="EasyTrack"
-            category="FMCG Distribution Management Software"
+            name="Field Operations Platform"
+            category="Operational Software Example"
             tagline="Distribution operations, connected."
-            summary="Helps FMCG distributors manage field sales, van inventory, routes, orders, credit, and collections from one connected platform."
-            href="/products/easytrack"
+            summary="Helps field teams manage orders, stock reconciliation, routes, and credit ledger controls from one connected interface."
+            href="/solutions/productize"
           />
         </div>
       </section>

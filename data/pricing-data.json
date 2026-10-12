@@ -79,8 +79,8 @@
   ],
   "saasPlans": [
     {
-      "id": "easytrack-starter",
-      "name": "EasyTrack Starter Fleet",
+      "id": "saas-starter",
+      "name": "Operational SaaS Starter",
       "tagline": "Ideal for regional fleet operators & small logistics",
       "priceINR": 4999,
       "priceUSD": 59,
@@ -94,8 +94,8 @@
       ]
     },
     {
-      "id": "easytrack-pro",
-      "name": "EasyTrack Pro Logistics",
+      "id": "saas-pro",
+      "name": "Operational SaaS Pro",
       "tagline": "For growing commercial fleets & transport companies",
       "priceINR": 14999,
       "priceUSD": 179,
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "id": "easytrack-custom",
+      "id": "saas-custom",
       "name": "Enterprise Custom SaaS",
       "tagline": "Custom SaaS built specifically for your fleet or workflow",
       "priceINR": 49999,
