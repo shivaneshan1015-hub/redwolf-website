@@ -7,6 +7,9 @@ export interface SEOProps {
   pathname: string;
   ogImage?: string;
   noindex?: boolean;
+  keywords?: string[];
+  type?: "website" | "article";
+  exactTitle?: boolean;
 }
 
 export function constructMetadata({
@@ -15,13 +18,18 @@ export function constructMetadata({
   pathname,
   ogImage = siteConfig.ogImage,
   noindex = false,
+  keywords,
+  type = "website",
+  exactTitle = false,
 }: SEOProps): Metadata {
   const baseUrl = siteConfig.url;
   const canonicalUrl = `${baseUrl}${pathname}`;
+  const finalTitle = exactTitle ? title : `${title} | ${siteConfig.name}`;
 
   return {
-    title: `${title} | ${siteConfig.name}`,
+    title: finalTitle,
     description,
+    keywords,
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: canonicalUrl,
@@ -38,12 +46,12 @@ export function constructMetadata({
       },
     },
     openGraph: {
-      title: `${title} | ${siteConfig.name}`,
+      title: finalTitle,
       description,
       url: canonicalUrl,
       siteName: siteConfig.name,
       locale: "en_IN",
-      type: "website",
+      type,
       images: [
         {
           url: ogImage,
@@ -55,7 +63,7 @@ export function constructMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${siteConfig.name}`,
+      title: finalTitle,
       description,
       images: [ogImage],
     },

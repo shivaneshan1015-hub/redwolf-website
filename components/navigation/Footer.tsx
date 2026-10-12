@@ -9,14 +9,13 @@ export function Footer() {
   const brandData = getBrandContent();
   const currentYear = new Date().getFullYear();
   const solutionsGroup = primaryNavigation.find((g) => g.name === "Solutions");
-  const industriesGroup = primaryNavigation.find((g) => g.name === "Industries");
 
   return (
     <footer className="bg-[#070B14] text-slate-400 py-16 border-t border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Brand Column */}
-          <div className="md:col-span-4 space-y-4">
+          <div className="md:col-span-5 space-y-4">
             <BrandLogo variant="footer" />
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
               &ldquo;{brandData.promise}&rdquo;
@@ -33,7 +32,7 @@ export function Footer() {
           </div>
 
           {/* Solutions Column */}
-          <div className="md:col-span-2 space-y-3">
+          <div className="md:col-span-3 space-y-3">
             <h4 className="font-heading font-extrabold text-xs text-white uppercase tracking-wider">
               Solutions
             </h4>
@@ -53,24 +52,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Industries Column */}
-          <div className="md:col-span-3 space-y-3">
-            <h4 className="font-heading font-extrabold text-xs text-white uppercase tracking-wider">
-              Industries
-            </h4>
-            <ul className="space-y-2 text-xs">
-              {industriesGroup?.items?.map((ind) => (
-                <li key={ind.name}>
-                  <Link href={ind.href} className="hover:text-red-400 transition-colors">
-                    {ind.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Diagnostic & Conversation Card */}
-          <div className="md:col-span-3 space-y-4 bg-slate-900/70 p-5 rounded-2xl border border-slate-800">
+          <div className="md:col-span-4 space-y-4 bg-slate-900/70 p-5 rounded-2xl border border-slate-800">
             <h4 className="font-heading font-extrabold text-xs text-white uppercase tracking-wider">
               Redwolf Digital Diagnostic
             </h4>

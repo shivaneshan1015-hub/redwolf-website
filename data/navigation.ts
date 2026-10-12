@@ -44,37 +44,6 @@ export const primaryNavigation: NavGroup[] = [
     ],
   },
   {
-    name: "Industries",
-    href: "/solutions",
-    items: [
-      {
-        name: "FMCG & Distribution",
-        href: "/solutions/build",
-        description: "Field sales, van inventory & beat routes",
-      },
-      {
-        name: "Healthcare",
-        href: "/solutions/grow",
-        description: "Patient booking & clinical trust portals",
-      },
-      {
-        name: "Manufacturing",
-        href: "/solutions/build",
-        description: "Custom quote systems & dealer portals",
-      },
-      {
-        name: "Travel & Hospitality",
-        href: "/solutions/grow",
-        description: "Tour discovery & instant WhatsApp bookings",
-      },
-      {
-        name: "SMEs & Growing Businesses",
-        href: "/solutions/define",
-        description: "Enterprise digital transformation for SMEs",
-      },
-    ],
-  },
-  {
     name: "Insights",
     href: "/insights",
   },
@@ -82,8 +51,8 @@ export const primaryNavigation: NavGroup[] = [
 
 export const globalCTAs = {
   primary: {
-    label: "Start a conversation",
-    labelWithArrow: "Start a conversation →",
+    label: "Start a Conversation",
+    labelWithArrow: "Start a Conversation →",
     href: "/contact",
   },
   diagnostic: {

@@ -34,6 +34,12 @@ export default function HomePage() {
       description:
         "Help relevant customers discover and choose your business through targeted search, useful content, and digital marketing.",
       items: "SEO · Content strategy · Digital marketing · Performance ads",
+      deliverables: [
+        "Technical SEO & indexation audits",
+        "High-intent content strategy & briefs",
+        "Targeted campaign architecture",
+        "Conversion tracking & attribution",
+      ],
       icon: TrendingUp,
     },
     {
@@ -43,6 +49,12 @@ export default function HomePage() {
       description:
         "Clarify business challenges, customer expectations, and digital priorities before committing budget or technology.",
       items: "Discovery · Strategy · Planning · Digital roadmaps",
+      deliverables: [
+        "Discovery findings & friction analysis",
+        "Strategic positioning & messaging hierarchy",
+        "Information architecture & UX wireframes",
+        "Requirements scoping & technical roadmaps",
+      ],
       icon: Compass,
     },
     {
@@ -52,6 +64,12 @@ export default function HomePage() {
       description:
         "Engineer responsive websites, custom web applications, and connected digital systems designed around how your business works.",
       items: "Websites · Web applications · Integrations · Workflows",
+      deliverables: [
+        "Responsive web applications (Next.js & TypeScript)",
+        "Custom internal portals & dashboards",
+        "System integrations (APIs, CRM, WhatsApp)",
+        "Structured operational database design",
+      ],
       icon: Cpu,
     },
     {
@@ -61,6 +79,12 @@ export default function HomePage() {
       description:
         "Turn manual processes into automated workflows, repeatable operational tools, and scalable digital products.",
       items: "Digital products · Reusable workflows · Operational software",
+      deliverables: [
+        "Process & workflow automation pipelines",
+        "Repeatable internal tools & admin portals",
+        "MVP feature scoping & software architecture",
+        "Multi-tenant SaaS & offline-first field apps",
+      ],
       icon: Boxes,
     },
   ];
@@ -202,6 +226,23 @@ export default function HomePage() {
                   <p className="text-slate-400">
                     Improve how potential customers discover and understand your business through search, useful content, and targeted digital marketing.
                   </p>
+                  <div className="pt-2 border-t border-slate-800/60 space-y-1.5 text-xs text-slate-400">
+                    <span className="font-mono text-[10px] text-slate-300 font-bold uppercase tracking-wider block">
+                      Common scenarios:
+                    </span>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Potential buyers search for your services, but find competitors instead.</span>
+                    </p>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Website visits rarely turn into qualified enquiries or inbound calls.</span>
+                    </p>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Advertising spend generates clicks without reaching decision-makers.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -232,6 +273,23 @@ export default function HomePage() {
                   <p className="text-slate-400">
                     Help visitors understand your offer, navigate the next step, and take meaningful action with clearer websites, landing pages, and conversion journeys.
                   </p>
+                  <div className="pt-2 border-t border-slate-800/60 space-y-1.5 text-xs text-slate-400">
+                    <span className="font-mono text-[10px] text-slate-300 font-bold uppercase tracking-wider block">
+                      Common scenarios:
+                    </span>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Visitors land on your pages but leave without reaching out or booking.</span>
+                    </p>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Offer details, pricing, or scope are unclear to first-time buyers.</span>
+                    </p>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Prospects lose interest before completing enquiry or onboarding forms.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -262,6 +320,23 @@ export default function HomePage() {
                   <p className="text-slate-400">
                     Identify opportunities to simplify workflows, connect systems, and build digital tools around the way your business operates.
                   </p>
+                  <div className="pt-2 border-t border-slate-800/60 space-y-1.5 text-xs text-slate-400">
+                    <span className="font-mono text-[10px] text-slate-300 font-bold uppercase tracking-wider block">
+                      Common scenarios:
+                    </span>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Operations rely on scattered spreadsheets, paper notes, or messaging chats.</span>
+                    </p>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Staff re-enter the same business data manually across disconnected tools.</span>
+                    </p>
+                    <p className="flex items-start gap-1.5">
+                      <span className="text-red-400 font-bold shrink-0">•</span>
+                      <span>Off-the-shelf software doesn’t fit how your team or field staff actually work.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -320,10 +395,25 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-800/80 space-y-2">
-                    <span className="text-[11px] font-mono text-slate-400 block">Capabilities:</span>
-                    <p className="text-xs font-semibold text-slate-200">{cap.items}</p>
-                    <div className="pt-2 flex items-center text-xs font-bold text-red-400 group-hover:text-red-300">
+                  <div className="pt-4 border-t border-slate-800/80 space-y-3">
+                    <div>
+                      <span className="text-[11px] font-mono text-slate-400 block mb-1">Services:</span>
+                      <p className="text-xs font-semibold text-slate-200">{cap.items}</p>
+                    </div>
+
+                    <div>
+                      <span className="text-[11px] font-mono text-slate-400 block mb-1.5">What you receive:</span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                        {cap.deliverables.map((deliv) => (
+                          <div key={deliv} className="flex items-center gap-1.5 text-xs text-slate-300">
+                            <span className="h-1.5 w-1.5 rounded-full bg-red-400 shrink-0" />
+                            <span className="line-clamp-1">{deliv}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="pt-1 flex items-center text-xs font-bold text-red-400 group-hover:text-red-300">
                       <span>Explore {cap.name} capability →</span>
                     </div>
                   </div>

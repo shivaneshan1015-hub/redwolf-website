@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { getInsights, getInsightBySlug } from "@/lib/cms";
+import { constructMetadata } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -26,11 +27,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
+  return constructMetadata({
     title: `${article.title} | Redwolf Digital Insights`,
     description: article.excerpt,
+    pathname: `/insights/${article.slug}`,
     keywords: [article.category, "Redwolf Digital GEO guide", "AEO voice search optimization"],
-  };
+    type: "article",
+    exactTitle: true,
+  });
 }
 
 export default async function InsightArticlePage({ params }: Props) {

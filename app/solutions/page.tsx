@@ -266,7 +266,96 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* 2. THE FOUR CAPABILITY AREAS */}
+      {/* 2. CHOOSING YOUR STARTING POINT */}
+      <section className="py-16 sm:py-20 border-b border-slate-800/80 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <SectionHeading
+            eyebrow="WHERE TO START"
+            title="Choosing the Right Starting Point for Your Business"
+            subtitle="You don't need to adopt every capability at once. Choose an entry point based on the specific challenge your business faces today."
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4 flex flex-col justify-between">
+              <div className="space-y-2">
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
+                  START WITH GROW IF:
+                </span>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+                  Your core services and operations are already functioning, but prospective customers are not finding your business online or web traffic is not converting into enquiries.
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-800/60">
+                <Link
+                  href="/solutions/grow"
+                  className="text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1"
+                >
+                  <span>Review GROW scope →</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4 flex flex-col justify-between">
+              <div className="space-y-2">
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20">
+                  START WITH DEFINE IF:
+                </span>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+                  You are planning a new initiative, navigating unclear scope, or need to clarify your positioning, messaging hierarchy, and user flows before investing in software or advertising.
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-800/60">
+                <Link
+                  href="/solutions/define"
+                  className="text-xs font-mono font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1"
+                >
+                  <span>Review DEFINE scope →</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4 flex flex-col justify-between">
+              <div className="space-y-2">
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20">
+                  START WITH BUILD IF:
+                </span>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+                  You already have defined technical or operational requirements and need responsive websites, custom web applications, or connected operational software engineered.
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-800/60">
+                <Link
+                  href="/solutions/build"
+                  className="text-xs font-mono font-bold text-blue-400 hover:text-blue-300 inline-flex items-center gap-1"
+                >
+                  <span>Review BUILD scope →</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-4 flex flex-col justify-between">
+              <div className="space-y-2">
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20">
+                  START WITH PRODUCTIZE IF:
+                </span>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+                  Your business has proven internal workflows, spreadsheets, or manual routines that you want to turn into automated pipelines or standalone digital software products.
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-800/60">
+                <Link
+                  href="/solutions/productize"
+                  className="text-xs font-mono font-bold text-purple-400 hover:text-purple-300 inline-flex items-center gap-1"
+                >
+                  <span>Review PRODUCTIZE scope →</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. THE FOUR CAPABILITY AREAS */}
       <div id="capabilities" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-16">
         <SectionHeading
           eyebrow="FOUR CORE CAPABILITIES"

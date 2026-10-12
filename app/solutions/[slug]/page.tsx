@@ -9,7 +9,6 @@ import {
   Boxes,
   AlertCircle,
   HelpCircle,
-  Building2,
   CheckCircle2,
   ShieldCheck,
   Phone,
@@ -23,7 +22,6 @@ import Link from "next/link";
 import {
   getSolutions,
   getSolutionBySlug,
-  getRelatedIndustriesForSolution,
   getRelatedProductsForSolution,
   getRelatedInsightsForSolution,
   getFAQsForSolution,
@@ -392,7 +390,6 @@ export default async function SolutionDetailPage({ params }: PageProps) {
   }
 
   const IconComponent = solution.iconName ? iconMap[solution.iconName] || Layers : Layers;
-  const relatedIndustries = getRelatedIndustriesForSolution(slug);
   const relatedProducts = getRelatedProductsForSolution(slug);
   const relatedInsights = getRelatedInsightsForSolution(slug);
   const faqs = getFAQsForSolution(slug);
@@ -828,33 +825,6 @@ export default async function SolutionDetailPage({ params }: PageProps) {
         </PageContainer>
       </SectionContainer>
 
-      {/* 7. CMS RELATIONSHIPS: INDUSTRIES */}
-      {relatedIndustries.length > 0 && (
-        <SectionContainer className="py-16 sm:py-24 border-b border-slate-800/80">
-          <PageContainer>
-            <SectionHeading
-              eyebrow="RELEVANT SECTORS"
-              title={`Sectors Commonly Utilizing ${solution.name}`}
-              subtitle="Tailored strategic, architectural, and operational systems across core business categories."
-            />
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              {relatedIndustries.map((ind) => (
-                <div
-                  key={ind.id}
-                  className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3"
-                >
-                  <Building2 className="h-5 w-5 text-red-400" />
-                  <div>
-                    <h4 className="text-sm font-heading font-bold text-white">{ind.name}</h4>
-                    <p className="text-xs text-slate-400 line-clamp-1">{ind.heroHeadline}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </PageContainer>
-        </SectionContainer>
-      )}
 
       {/* 8. CMS RELATIONSHIPS: RELATED PRODUCTS */}
       {relatedProducts.length > 0 && (

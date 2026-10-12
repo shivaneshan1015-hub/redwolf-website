@@ -122,6 +122,59 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
+        {/* What happens after you reach out */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-6">
+          <div className="space-y-1">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400">
+              NEXT STEPS
+            </span>
+            <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-white">
+              What happens after you reach out
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+              Every business challenge is unique. We review your details carefully to understand your situation before proposing any technical or strategic engagement.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+            <div className="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 space-y-2">
+              <span className="text-xs font-mono font-bold text-red-400 bg-red-500/10 px-2.5 py-1 rounded-md inline-block">
+                01. Review
+              </span>
+              <h3 className="text-sm font-heading font-bold text-white">
+                We review your challenge
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                We evaluate the growth obstacle, operational bottleneck, or software requirements described in your submission.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 space-y-2">
+              <span className="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md inline-block">
+                02. Direct Discussion
+              </span>
+              <h3 className="text-sm font-heading font-bold text-white">
+                We connect directly
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                We reach out via email or WhatsApp to clarify context, ask relevant technical questions, and understand your immediate priorities.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 space-y-2">
+              <span className="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md inline-block">
+                03. Practical Next Steps
+              </span>
+              <h3 className="text-sm font-heading font-bold text-white">
+                Determine the right path
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                We determine whether an exploratory discussion, discovery scoping, or a direct proposal is the most useful way forward.
+              </p>
+            </div>
+          </div>
+        </div>
       </PageContainer>
     </div>
   );

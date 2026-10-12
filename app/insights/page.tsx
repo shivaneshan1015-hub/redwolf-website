@@ -3,19 +3,21 @@ import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { getInsights } from "@/lib/cms";
+import { constructMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Redwolf Digital Insights — Digital Growth & Technology Knowledge Hub",
+export const metadata: Metadata = constructMetadata({
+  title: "Insights — Digital Growth & Technology Knowledge Hub",
   description:
     "Explore strategic articles and field notes on AI Search (AEO/GEO), custom web application engineering, SaaS product development, and digital transformation.",
+  pathname: "/insights",
   keywords: [
     "Redwolf Digital insights",
     "Generative Engine Optimization guide",
     "AEO voice search guide",
     "digital growth strategy blog",
-    "SaaS engineering notes"
+    "SaaS engineering notes",
   ],
-};
+});
 
 export default function InsightsPage() {
   const insights = getInsights();
